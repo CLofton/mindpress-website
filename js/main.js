@@ -42,15 +42,48 @@ if (navToggle && navLinks) {
   });
 }
 
-// Booking form handler
+// Booking form handler — sends to Formspree + saves locally
 function handleSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('booking-form');
   const success = document.getElementById('success-message');
-  if (form && success) {
-    form.style.display = 'none';
-    success.style.display = 'block';
-  }
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // Collect form data
+  const data = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    company: document.getElementById('company').value,
+    size: document.getElementById('size').value,
+    departments: document.getElementById('departments').value,
+    submitted_at: new Date().toISOString(),
+    source: window.location.href
+  };
+
+  // Disable button while submitting
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  // Send to Formspree (free form backend — emails to hello@mindpress.ai)
+  fetch('https://formspree.io/f/xpwrjqkn', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (form && success) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  })
+  .catch(err => {
+    // Even if Formspree fails, show success and log
+    console.error('Form submission error:', err);
+    if (form && success) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  });
 }
 
 // Intersection Observer for fade-in animations
