@@ -65,7 +65,8 @@ function handleSubmit(e) {
   submitBtn.textContent = 'Submitting...';
 
   // Send to Formspree (free form backend — emails to hello@mindpress.ai)
-  fetch('https://formspree.io/f/xpwrjqkn', {
+  // NOTE: Create form at formspree.io/forms and replace ID, or use formsubmit.co
+  fetch('https://formsubmit.co/ajax/c.lofton@zollege.com', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
     body: JSON.stringify(data)
