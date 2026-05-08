@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Shaping Call — MindPress</title>
+  <meta name="description" content="Book a free 30-minute shaping call. Our AI discovery bot will map your workflows and design your ideal agent team.">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
+      <div class="nav-links">
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="book.html" class="btn btn-nav">Book a Shaping Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="book-section">
+    <div class="container">
+      <div class="section-badge">Get Started</div>
+      <h1 class="hero-title" style="font-size: clamp(32px, 5vw, 52px);">Book a Free<br><span class="gradient-text">Shaping Call</span></h1>
+      <p class="hero-subtitle">30 minutes. No commitment. Our AI discovery bot will analyze your workflows and design your ideal agent team in real-time.</p>
+
+      <div class="book-card">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <h3 style="font-size: 20px; margin-bottom: 8px;">What happens on the call:</h3>
+          <div style="text-align: left; max-width: 400px; margin: 0 auto;">
+            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;We map your current team structure and workflows</p>
+            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;Our AI bot identifies automation opportunities</p>
+            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;We design your ideal agent team composition</p>
+            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;You get a custom ROI estimate before we hang up</p>
+          </div>
+        </div>
+
+        <form id="booking-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email *</label>
+            <input type="email" id="email" name="email" required placeholder="jane@company.com">
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name *</label>
+            <input type="text" id="company" name="company" required placeholder="Acme Corp">
+          </div>
+          <div class="form-group">
+            <label for="size">Company Size</label>
+            <select id="size" name="size">
+              <option value="">Select team size...</option>
+              <option value="1-10">1-10 employees</option>
+              <option value="11-50">11-50 employees</option>
+              <option value="51-200">51-200 employees</option>
+              <option value="201-1000">201-1,000 employees</option>
+              <option value="1000+">1,000+ employees</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="departments">Which departments do you want to augment?</label>
+            <textarea id="departments" name="departments" placeholder="e.g., Engineering, Marketing, Operations — or describe your biggest bottleneck"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
+            Book My Shaping Call →
+          </button>
+          <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px;">
+            We'll respond within 24 hours with available times. No spam, ever.
+          </p>
+        </form>
+
+        <div id="success-message" style="display: none; text-align: center; padding: 40px 0;">
+          <div style="font-size: 48px; margin-bottom: 16px;">🎉</div>
+          <h3 style="font-size: 22px; margin-bottom: 8px;">You're on the list!</h3>
+          <p style="color: var(--text-secondary);">We'll reach out within 24 hours to schedule your shaping call. Check your inbox.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-icon">◆</span> <strong>MindPress</strong>
+          <p>AI agent teams that replace entire departments.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="services.html">Services</a>
+          <a href="index.html#how-it-works">How It Works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="case-studies.html">Case Studies</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="mailto:hello@mindpress.ai">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MindPress AI, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
