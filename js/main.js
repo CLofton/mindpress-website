@@ -27,18 +27,16 @@ if (nav) {
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.style.display === 'flex';
-    navLinks.style.display = isOpen ? 'none' : 'flex';
-    navLinks.style.flexDirection = 'column';
-    navLinks.style.position = 'absolute';
-    navLinks.style.top = '64px';
-    navLinks.style.left = '0';
-    navLinks.style.right = '0';
-    navLinks.style.background = 'rgba(10, 10, 15, 0.98)';
-    navLinks.style.padding = '24px';
-    navLinks.style.gap = '16px';
-    navLinks.style.borderBottom = '1px solid var(--border)';
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('active');
+  });
+
+  // Click outside to close mobile nav
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+      navLinks.classList.remove('active');
+    }
   });
 }
 
@@ -104,7 +102,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Apply fade-in to cards
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.step-card, .capability-card, .pricing-card, .case-study-card, .team-card');
+  const cards = document.querySelectorAll('.step-card, .service-card, .capability-card, .pricing-card, .case-study-card, .team-card');
   cards.forEach((card, i) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
