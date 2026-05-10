@@ -3,126 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Shaping Call — MindPress</title>
- <meta name="description" content="Book a free 30-minute shaping call. Our AI discovery bot will map your workflows and design your ideal agent team.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◆</text></svg>">
-  <meta name="theme-color" content="#0a0a12">
- <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Book a Consultation | MindPress</title>
+  <meta name="description" content="Book a MindPress consultation to identify high-ROI AI workflows for accounting, HR, tax, FP&amp;A, EOS, sales, or custom operations.">
+  <meta name="theme-color" content="#050607">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#how">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
-        <a href="book.html" class="btn btn-nav active">Book a Shaping Call</a>
+        <a href="intake.html">AI Intake</a>
+        <a href="book.html" class="btn btn-nav active">Book Consultation</a>
       </div>
     </div>
   </nav>
 
-  <section style="background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(6,182,212,0.1)); border-bottom: 1px solid rgba(99,102,241,0.2); padding: 16px 24px; text-align: center;">
-    <p style="font-size: 15px; color: #c7d2fe;">🎙️ <strong>NEW:</strong> Try our <a href="intake.html" style="color: #818cf8; font-weight: 700; text-decoration: underline;">AI Voice Discovery</a> — talk to our AI bot instead of filling out a form</p>
-  </section>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Consultation</div>
+          <h1 class="page-title">Book a focused AI workflow consultation.</h1>
+          <p class="page-copy">Share a little context about your company. MindPress will use the call to identify the strongest AI starting point, the controls required, and the likely business case.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="book-section">
-    <div class="container">
-      <div class="section-badge">Get Started</div>
-      <h1 class="hero-title" style="font-size: clamp(32px, 5vw, 52px);">Book a Free<br><span class="gradient-text">Shaping Call</span></h1>
-      <p class="hero-subtitle">30 minutes. No commitment. Our AI discovery bot will analyze your workflows and design your ideal agent team in real-time.</p>
-
-      <div class="book-card">
-        <div style="text-align: center; margin-bottom: 32px;">
-          <h3 style="font-size: 20px; margin-bottom: 8px;">What happens on the call:</h3>
-          <div style="text-align: left; max-width: 400px; margin: 0 auto;">
-            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;We map your current team structure and workflows</p>
-            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;Our AI bot identifies automation opportunities</p>
-            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;We design your ideal agent team composition</p>
-            <p style="font-size: 14px; color: var(--text-secondary); padding: 6px 0;">✓ &nbsp;You get a custom ROI estimate before we hang up</p>
+    <section class="section">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">What to expect</div>
+          <h2 class="section-title">A practical conversation, not a generic demo.</h2>
+          <p class="section-copy">The best first engagement usually starts with one painful workflow that leadership can measure. The consultation is designed to find it quickly.</p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">Before</div>
+              <div>
+                <h3>Context review</h3>
+                <p>We review your form and identify likely workflow candidates before the call.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">During</div>
+              <div>
+                <h3>Workflow mapping</h3>
+                <p>We discuss current systems, owners, bottlenecks, review needs, and business impact.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">After</div>
+              <div>
+                <h3>Recommended starting point</h3>
+                <p>You receive a clear recommendation for where AI should be deployed first.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <form id="booking-form" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" required placeholder="Jane Smith">
-          </div>
-          <div class="form-group">
-            <label for="email">Work Email *</label>
-            <input type="email" id="email" name="email" required placeholder="jane@company.com">
-          </div>
-          <div class="form-group">
-            <label for="company">Company Name *</label>
-            <input type="text" id="company" name="company" required placeholder="Acme Corp">
-          </div>
-          <div class="form-group">
-            <label for="size">Company Size</label>
-            <select id="size" name="size">
-              <option value="">Select team size...</option>
-              <option value="1-10">1-10 employees</option>
-              <option value="11-50">11-50 employees</option>
-              <option value="51-200">51-200 employees</option>
-              <option value="201-1000">201-1,000 employees</option>
-              <option value="1000+">1,000+ employees</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="departments">Which departments do you want to augment?</label>
-            <textarea id="departments" name="departments" placeholder="e.g., Engineering, Marketing, Operations — or describe your biggest bottleneck"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
-            Book My Shaping Call →
-          </button>
-          <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px;">
-            We'll respond within 24 hours with available times. No spam, ever.
-          </p>
-        </form>
+        <div class="form-card">
+          <form id="booking-form" onsubmit="handleSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full name *</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+              </div>
+              <div class="form-group">
+                <label for="email">Work email *</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+              </div>
+              <div class="form-group">
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="company" required autocomplete="organization" placeholder="Acme Corp">
+              </div>
+              <div class="form-group">
+                <label for="size">Company size</label>
+                <select id="size" name="size">
+                  <option value="">Select one</option>
+                  <option value="1-10">1-10 employees</option>
+                  <option value="11-50">11-50 employees</option>
+                  <option value="51-200">51-200 employees</option>
+                  <option value="201-1000">201-1,000 employees</option>
+                  <option value="1000+">1,000+ employees</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="departments">Where should we look first?</label>
+                <textarea id="departments" name="departments" placeholder="Example: Month-end close, HR onboarding, sales prospecting, EOS follow-up, tax document intake, or a custom workflow."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-wide">Request Consultation</button>
+            <p class="form-note">MindPress will respond with next-step scheduling details. No spam or newsletter opt-in.</p>
+          </form>
 
-        <div id="success-message" style="display: none; text-align: center; padding: 40px 0;">
-          <div style="font-size: 48px; margin-bottom: 16px;">🎉</div>
-          <h3 style="font-size: 22px; margin-bottom: 8px;">You're booked!</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 24px;">We'll reach out within 24 hours to schedule your shaping call. Check your inbox at the email you provided.</p>
-          <div style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 12px; padding: 24px; margin-top: 16px;">
-            <h4 style="font-size: 16px; margin-bottom: 8px;">⚡ Can't wait? Start now.</h4>
-            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 16px;">Our AI Shaping Bot can analyze your workflows and design your agent team right now — no appointment needed.</p>
-            <a href="intake.html" class="btn btn-primary" style="display: inline-block;">🎙️ Talk to Our AI →</a>
+          <div id="success-message" class="success-panel is-hidden">
+            <h3>Request received.</h3>
+            <p class="muted-copy">MindPress will follow up with scheduling details and any clarifying questions needed before the consultation.</p>
+            <div class="hero-actions">
+              <a href="intake.html" class="btn btn-secondary">Start AI Intake</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section section-band">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Good fit</div>
+            <h2 class="section-title">This call is useful when AI needs to touch real operations.</h2>
+          </div>
+          <p class="section-copy">MindPress is strongest when the work is repeated, measurable, and important enough to deserve controls.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card">
+            <span class="card-kicker">Finance</span>
+            <h3>Close, reconcile, report</h3>
+            <p>Accounting and FP&amp;A workflows with repeatable inputs and recurring deadlines.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">People</span>
+            <h3>Hire, onboard, support</h3>
+            <p>HR workflows where consistency, documentation, and responsiveness matter.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Revenue</span>
+            <h3>Find, qualify, follow up</h3>
+            <p>Sales workflows with research, personalization, CRM hygiene, and handoff steps.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Management</span>
+            <h3>Track, escalate, decide</h3>
+            <p>EOS and leadership operating rhythms that need better follow-through.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
-          <p>AI agent teams that replace entire departments.</p>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
+          <p>AI services and consulting for companies ready to operationalize AI with controls, clarity, and measurable lift.</p>
         </div>
         <div class="footer-col">
-          <h4>Product</h4>
-          <a href="index.html#services">Services</a>
-          <a href="index.html#how">How It Works</a>
+          <h4>Services</h4>
+          <a href="services.html">AI Accounting</a>
+          <a href="services.html">AI HR</a>
+          <a href="services.html">AI Tax</a>
+          <a href="services.html">AI FP&amp;A</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
+          <a href="brand-guide.md">Brand Guide</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <h4>Start</h4>
+          <a href="book.html">Book Consultation</a>
+          <a href="intake.html">AI Intake</a>
+          <a href="services.html">View Services</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MindPress AI, Inc. All rights reserved.</p>
+        <p>&copy; 2026 MindPress AI. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

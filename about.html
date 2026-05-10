@@ -3,146 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — MindPress</title>
- <meta name="description" content="MindPress was founded by Chris Lofton to replace entire departments with AI agent teams. Learn our story, mission, and values.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◆</text></svg>">
-  <meta name="theme-color" content="#0a0a12">
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>About MindPress | AI Consulting for Operators</title>
+  <meta name="description" content="MindPress is an operator-led AI services and consulting firm helping companies deploy AI into finance, HR, tax, EOS, sales, and custom workflows.">
+  <meta name="theme-color" content="#050607">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#how">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#method">Method</a>
         <a href="about.html" class="active">About</a>
-        <a href="intake.html" class="btn btn-nav">🎙️ Talk to AI</a>
+        <a href="intake.html">AI Intake</a>
+        <a href="book.html" class="btn btn-nav">Book Consultation</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero about-hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">Our Story</div>
-      <h1 class="hero-title">Built by an Operator,<br>for <span class="gradient-text">Operators</span></h1>
-      <p class="hero-sub">MindPress exists because we lived the problem. Managing hundreds of people across hundreds of locations showed us what AI should actually do — replace the work, not the mission.</p>
-    </div>
-  </section>
-
-  <!-- ORIGIN STORY -->
-  <section class="section">
-    <div class="container" style="max-width: 800px;">
-      <div class="section-badge">The Beginning</div>
-      <h2 class="section-title">From 240+ Locations to AI Agent Teams</h2>
-      <div class="about-story">
-        <p>MindPress was founded by <strong>Chris Lofton</strong>, who spent years managing education programs across <strong class="highlight-primary">240+ locations</strong> with over <strong class="highlight-cyan">550+ instructors</strong>. At that scale, every operational inefficiency compounds — payroll errors cascade, HR bottlenecks multiply, and financial reporting becomes a full-time job.</p>
-        <p>Chris saw firsthand that the work of entire departments — accounting, HR, tax, FP&A — followed repeatable patterns. Patterns that humans executed reliably but slowly, and at enormous cost. The question wasn't whether AI could do this work. It was: <em>why isn't it already?</em></p>
-        <p>MindPress is the answer. We take the operational playbooks that run real businesses and deploy AI agent teams that execute them — faster, cheaper, and around the clock.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- MISSION -->
-  <section class="section section-dark">
-    <div class="container" style="text-align: center; max-width: 800px;">
-      <div class="section-badge">Mission</div>
-      <h2 class="section-title">Replace Departments with AI Agent Teams</h2>
-      <p class="mission-text">Every company runs on the same core departments — Accounting, HR, Tax, FP&A. These departments follow documented processes, handle structured data, and produce predictable outputs. That's exactly what AI agents excel at. Our mission is to make world-class back-office operations accessible to every business through AI — eliminating the cost, complexity, and headcount of traditional departments.</p>
-    </div>
-  </section>
-
-  <!-- VALUES -->
-  <section class="section">
-    <div class="container">
-      <div class="section-badge">What Drives Us</div>
-      <h2 class="section-title">Our Values</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">⚡</div>
-          <h3>Speed</h3>
-          <p>We deploy AI agent teams in 2 weeks, not 6 months. Speed is a feature, not a tradeoff. Your business can't wait — and with MindPress, it doesn't have to.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">🤖</div>
-          <h3>Automation</h3>
-          <p>If a human does it repeatedly, it should be automated. We don't build tools that require babysitting. Our agents run autonomously, escalate intelligently, and improve continuously.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">📊</div>
-          <h3>Results</h3>
-          <p>We measure everything in outcomes — cost saved, time recovered, errors eliminated. No vanity metrics. No vague promises. You see the impact in your P&L within 30 days.</p>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">About MindPress</div>
+          <h1 class="page-title">Operator-led AI consulting for the work behind the business.</h1>
+          <p class="page-copy">MindPress exists to help companies move beyond AI experiments and install reliable AI workflows into finance, people operations, tax, EOS, sales, and custom operating systems.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TEAM -->
-  <section class="section section-dark">
-    <div class="container" style="text-align: center; max-width: 700px;">
-      <div class="section-badge">Leadership</div>
-      <h2 class="section-title">Meet the Founder</h2>
-      <div class="service-card founder-card">
-        <div class="founder-avatar">CL</div>
-        <h3 class="founder-name">Chris Lofton</h3>
-        <p class="founder-role">Founder & CEO</p>
-        <p class="founder-bio">Operational leader with deep experience scaling education programs across 240+ locations and 550+ instructors. Chris brings a rare combination of large-scale operations management and AI engineering — building the systems that let businesses replace entire departments with intelligent agent teams.</p>
+    <section class="section">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Origin</div>
+          <h2 class="section-title">Built from operating complexity, not AI novelty.</h2>
+        </div>
+        <div class="quote-panel">
+          <p class="muted-copy">MindPress was founded by Chris Lofton after years of operating large education programs across hundreds of locations and instructors. At that scale, every back-office delay compounds: payroll, reporting, hiring, forecasting, compliance, and management cadence all become leverage points.</p>
+          <p class="muted-copy">The insight behind MindPress is direct: the most valuable AI work is often inside the repeatable processes that already run the company. Those workflows need consulting discipline, system integration, controls, and adoption support.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container" style="text-align:center; max-width: 700px;">
-      <h2 class="section-title">Ready to Get Started?</h2>
-      <p class="section-sub">Talk to our AI discovery bot. It takes 5 minutes and you'll get a custom proposal within 24 hours.</p>
-      <div class="hero-ctas" style="justify-content:center; margin-top: 32px;">
-        <a href="intake.html" class="btn btn-primary btn-lg">🎙️ Talk to Our AI →</a>
-        <a href="book.html" class="btn btn-outline btn-lg">Book a Human Call</a>
+    <section class="section section-band">
+      <div class="container feature-row">
+        <div>
+          <div class="eyebrow">Sister brand</div>
+          <h2 class="section-title">Related to Austin AI School, built for executives.</h2>
+          <p class="section-copy">Austin AI School helps people understand and use AI. MindPress takes that same commitment to practical AI fluency and applies it to companies that need AI embedded into operating workflows.</p>
+        </div>
+        <div class="feature-table" role="table" aria-label="Brand relationship">
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Shared DNA</div>
+            <div class="feature-table-value" role="cell">Technical confidence, practical education, and a belief that AI should make people more capable.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">MindPress shift</div>
+            <div class="feature-table-value" role="cell">More corporate, more operational, more focused on controls, ROI, and executive decision-making.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Visual link</div>
+            <div class="feature-table-value" role="cell">Deep dark base, cyan and mint continuity, with cobalt and brass added for consulting authority.</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Principles</div>
+            <h2 class="section-title">The standards behind every engagement.</h2>
+          </div>
+          <p class="section-copy">MindPress is designed for leadership teams that need AI to perform inside real constraints.</p>
+        </div>
+        <div class="grid-3">
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <div>
+              <h3>Practical before impressive</h3>
+              <p>We prioritize workflows with real business value, clear owners, and a path to adoption.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">02</span>
+            <div>
+              <h3>Controls before scale</h3>
+              <p>AI systems need approval paths, audit trails, and escalation rules before they touch sensitive work.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <div>
+              <h3>Measurement before claims</h3>
+              <p>Every engagement should tie back to cycle time, quality, margin, risk reduction, or revenue lift.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-band">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Leadership</div>
+          <h2 class="section-title">Led by an operator who understands scale.</h2>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Founder</span>
+          <h3>Chris Lofton</h3>
+          <p class="card-copy">Chris brings operating experience from education, distributed teams, and AI implementation. MindPress translates that background into consulting systems for companies that want AI to reduce complexity without losing executive control.</p>
+          <ul class="check-list">
+            <li>Large multi-location operations experience</li>
+            <li>AI workflow design and implementation focus</li>
+            <li>Bias toward measurable operating leverage</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">Start focused</div>
+          <h2 class="cta-title">Find the first workflow where AI will matter.</h2>
+          <p>A short consultation is enough to identify the strongest starting point and the controls it needs.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-primary">Book Consultation</a>
+          <a href="services.html" class="btn btn-secondary">View Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
-          <p>Service as Agentic Software</p>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
+          <p>AI services and consulting for companies ready to operationalize AI with controls, clarity, and measurable lift.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="index.html#services">AI Accounting</a>
-          <a href="index.html#services">AI HR</a>
-          <a href="index.html#services">AI Tax</a>
-          <a href="index.html#services">AI FP&A</a>
-          <a href="index.html#services">EOS Integration</a>
-          <a href="index.html#services">Custom AI Services</a>
+          <a href="services.html">AI Accounting</a>
+          <a href="services.html">AI HR</a>
+          <a href="services.html">AI Tax</a>
+          <a href="services.html">AI FP&amp;A</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="book.html">Book a Call</a>
-          <a href="intake.html">AI Discovery</a>
+          <a href="brand-guide.md">Brand Guide</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <h4>Start</h4>
+          <a href="book.html">Book Consultation</a>
+          <a href="intake.html">AI Intake</a>
+          <a href="services.html">View Services</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MindPress AI, Inc. All rights reserved.</p>
+        <p>&copy; 2026 MindPress AI. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,112 +1,112 @@
-// MindPress — Main JS
+// MindPress site interactions
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (event) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
-// Nav background on scroll
 const nav = document.querySelector('.nav');
 if (nav) {
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.style.borderBottomColor = 'rgba(30, 30, 46, 0.8)';
-    } else {
-      nav.style.borderBottomColor = 'rgba(22, 22, 37, 1)';
-    }
+    nav.style.borderBottomColor = window.scrollY > 50
+      ? 'rgba(234, 242, 255, 0.18)'
+      : 'rgba(234, 242, 255, 0.10)';
   });
 }
 
-// Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+
+function closeMenu() {
+  if (!navToggle || !navLinks) return;
+  navLinks.classList.remove('active');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    navLinks.classList.toggle('active');
+  navToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = navLinks.classList.toggle('active');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Click outside to close mobile nav
-  document.addEventListener('click', (e) => {
-    if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !navToggle.contains(e.target)) {
-      navLinks.classList.remove('active');
-    }
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!navLinks.classList.contains('active')) return;
+    if (navLinks.contains(event.target) || navToggle.contains(event.target)) return;
+    closeMenu();
   });
 }
 
-// Booking form handler — sends to Formspree + saves locally
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
+
   const form = document.getElementById('booking-form');
   const success = document.getElementById('success-message');
-  const submitBtn = form.querySelector('button[type="submit"]');
+  if (!form || !success) return;
 
-  // Collect form data
+  const submitBtn = form.querySelector('button[type="submit"]');
   const data = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    company: document.getElementById('company').value,
-    size: document.getElementById('size').value,
-    departments: document.getElementById('departments').value,
+    name: document.getElementById('name')?.value || '',
+    email: document.getElementById('email')?.value || '',
+    company: document.getElementById('company')?.value || '',
+    size: document.getElementById('size')?.value || '',
+    departments: document.getElementById('departments')?.value || '',
     submitted_at: new Date().toISOString(),
     source: window.location.href
   };
 
-  // Disable button while submitting
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Submitting...';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+  }
 
-  // Send to Formspree (free form backend — emails to hello@mindpress.ai)
-  // NOTE: Create form at formspree.io/forms and replace ID, or use formsubmit.co
   fetch('https://formsubmit.co/ajax/c.lofton@zollege.com', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
     body: JSON.stringify(data)
   })
-  .then(response => {
-    if (form && success) {
-      form.style.display = 'none';
-      success.style.display = 'block';
-    }
-  })
-  .catch(err => {
-    // Even if Formspree fails, show success and log
-    console.error('Form submission error:', err);
-    if (form && success) {
-      form.style.display = 'none';
-      success.style.display = 'block';
-    }
-  });
+    .catch((error) => {
+      console.error('Form submission error:', error);
+    })
+    .finally(() => {
+      form.classList.add('is-hidden');
+      success.classList.remove('is-hidden');
+    });
 }
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+window.handleSubmit = handleSubmit;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
-    }
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
   });
-}, observerOptions);
 
-// Apply fade-in to cards
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.step-card, .service-card, .capability-card, .pricing-card, .case-study-card, .team-card');
-  cards.forEach((card, i) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
-    observer.observe(card);
+  document.addEventListener('DOMContentLoaded', () => {
+    const animated = document.querySelectorAll('.card, .service-card, .method-card, .timeline-item, .quote-panel, .feature-table');
+    animated.forEach((element, index) => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(16px)';
+      element.style.transition = `opacity 420ms ease ${index * 40}ms, transform 420ms ease ${index * 40}ms`;
+      observer.observe(element);
+    });
   });
-});
+}

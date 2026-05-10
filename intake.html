@@ -3,82 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Discovery Call — MindPress</title>
- <meta name="description" content="Talk to our AI discovery bot. Tell us about your needs and we'll design the perfect AI solution.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◆</text></svg>">
-  <meta name="theme-color" content="#0a0a12">
- <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    .intake-hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 60px; }
-    .intake-badge { display: inline-block; padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; background: rgba(99,102,241,0.15); color: #818cf8; border: 1px solid rgba(99,102,241,0.3); margin-bottom: 24px; }
-    .intake-title { font-size: clamp(28px, 5vw, 48px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
-    .intake-sub { font-size: 18px; color: #94a3b8; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
-    .intake-widget-wrap { margin: 20px auto; max-width: 400px; }
-    .intake-alt { margin-top: 40px; padding: 20px; border-radius: 12px; background: rgba(30,30,46,0.5); border: 1px solid rgba(99,102,241,0.2); }
-    .intake-alt a { color: #818cf8; text-decoration: none; font-weight: 600; }
-    .intake-alt a:hover { text-decoration: underline; }
-    .intake-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto 0; text-align: left; }
-    .intake-step { padding: 20px; border-radius: 12px; background: rgba(30,30,46,0.4); border: 1px solid rgba(255,255,255,0.06); }
-    .intake-step-num { font-size: 24px; font-weight: 800; color: #6366f1; margin-bottom: 8px; }
-    .intake-step h4 { font-size: 15px; margin-bottom: 4px; }
-    .intake-step p { font-size: 13px; color: #64748b; }
-  </style>
+  <title>AI Intake | MindPress</title>
+  <meta name="description" content="Start the MindPress AI intake to describe your workflows and identify the best first AI implementation opportunity.">
+  <meta name="theme-color" content="#050607">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#how">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
-        <a href="intake.html" class="btn btn-nav active">🎙️ Talk to AI</a>
+        <a href="intake.html" class="active">AI Intake</a>
+        <a href="book.html" class="btn btn-nav">Book Consultation</a>
       </div>
     </div>
   </nav>
 
-  <section class="intake-hero">
-    <div class="intake-badge">✨ AI-Powered Discovery</div>
-    <h1 class="intake-title">Talk to Our <span class="gradient-text">AI Discovery Bot</span></h1>
-    <p class="intake-sub">Click the button below and tell us about your needs. Our AI will guide you through a quick discovery conversation and design the perfect solution — no forms, no waiting.</p>
-
-    <div class="intake-widget-wrap">
-      <elevenlabs-convai agent-id="agent_7101kr4rx2zwewc92vd2mpgwmqj2"></elevenlabs-convai>
-      <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-    </div>
-
-    <div class="intake-steps">
-      <div class="intake-step">
-        <div class="intake-step-num">01</div>
-        <h4>Click the mic</h4>
-        <p>Start talking to our AI assistant</p>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">AI intake</div>
+          <h1 class="page-title">Describe the workflow. We will help find the leverage.</h1>
+          <p class="page-copy">Use the AI intake to talk through where work is slow, manual, duplicated, or hard to monitor. MindPress will use that context to shape a practical next step.</p>
+        </div>
       </div>
-      <div class="intake-step">
-        <div class="intake-step-num">02</div>
-        <h4>Answer questions</h4>
-        <p>Tell us about your org and needs</p>
-      </div>
-      <div class="intake-step">
-        <div class="intake-step-num">03</div>
-        <h4>Get your proposal</h4>
-        <p>We'll email a custom plan within 24hrs</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="intake-alt">
-      <p style="color: #94a3b8; font-size: 14px;">Prefer to type? <a href="book.html">Fill out our booking form instead →</a></p>
-    </div>
-  </section>
+    <section class="section">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Start here</div>
+          <h2 class="section-title">A faster path to the right first project.</h2>
+          <p class="section-copy">The intake is useful when you know AI could help, but the starting point is not obvious. Talk through the business function, pain point, tools, and expected outcome.</p>
+          <ul class="check-list">
+            <li>Explain the work in plain language</li>
+            <li>Identify the systems, owners, and review points</li>
+            <li>Clarify whether the opportunity is finance, HR, tax, FP&amp;A, EOS, sales, or custom</li>
+            <li>Use the output to prepare a better consultation</li>
+          </ul>
+          <div class="hero-actions">
+            <a href="book.html" class="btn btn-secondary">Prefer a Form?</a>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="eyebrow">Voice intake</div>
+          <h2 class="section-title">Talk to MindPress AI.</h2>
+          <p class="section-copy">Start the conversation below and describe what you want to improve.</p>
+          <div class="intake-embed">
+            <elevenlabs-convai agent-id="agent_7101kr4rx2zwewc92vd2mpgwmqj2"></elevenlabs-convai>
+          </div>
+          <p class="small-note">If the widget does not load, use the consultation form and include the workflow you want to evaluate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-band">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Prompts to use</div>
+            <h2 class="section-title">What to tell the intake assistant.</h2>
+          </div>
+          <p class="section-copy">Specific process context produces a better recommendation.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="card-kicker">Pain</span>
+            <h3>What is slow or unreliable?</h3>
+            <p>Describe the recurring work, how often it happens, and what breaks when it is delayed.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Systems</span>
+            <h3>Where does the data live?</h3>
+            <p>Name the tools, spreadsheets, inboxes, documents, or systems of record involved.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Controls</span>
+            <h3>Who needs to approve it?</h3>
+            <p>Share what must be reviewed by a human and what can safely be automated or drafted.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
+          <p>AI services and consulting for companies ready to operationalize AI with controls, clarity, and measurable lift.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="services.html">AI Accounting</a>
+          <a href="services.html">AI HR</a>
+          <a href="services.html">AI Tax</a>
+          <a href="services.html">AI FP&amp;A</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="brand-guide.md">Brand Guide</a>
+          <a href="mailto:hello@mindpress.ai">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Start</h4>
+          <a href="book.html">Book Consultation</a>
+          <a href="intake.html">AI Intake</a>
+          <a href="services.html">View Services</a>
+        </div>
+      </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MindPress AI, Inc. All rights reserved.</p>
+        <p>&copy; 2026 MindPress AI. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

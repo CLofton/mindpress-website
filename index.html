@@ -3,252 +3,354 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindPress — Service as Agentic Software</title>
- <meta name="description" content="MindPress replaces entire departments with AI agent teams. AI-powered Accounting, HR, Tax, FP&A, and EOS Integration.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◆</text></svg>">
-  <meta name="theme-color" content="#0a0a12">
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>MindPress | AI Services and Consulting</title>
+  <meta name="description" content="MindPress is an AI services and consulting firm for accounting, HR, tax, FP&amp;A, EOS integration, sales, lead generation, and custom AI workflows.">
+  <meta name="theme-color" content="#050607">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#how">How It Works</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
-        <a href="intake.html" class="btn btn-nav">🎙️ Talk to AI</a>
+        <a href="intake.html">AI Intake</a>
+        <a href="book.html" class="btn btn-nav">Book Consultation</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">Service as Agentic Software</div>
-      <h1 class="hero-title">Replace Entire Departments<br>with <span class="gradient-text">AI Agent Teams</span></h1>
-      <p class="hero-sub">MindPress deploys AI agents that run your Accounting, HR, Tax, FP&A, and more — at 90% less cost than traditional staffing.</p>
-      <div class="hero-ctas">
-        <a href="intake.html" class="btn btn-primary btn-lg">🎙️ Talk to Our AI →</a>
-        <a href="book.html" class="btn btn-outline btn-lg">Book a Call</a>
+  <main>
+    <section class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.34" stroke="#6b8cff" stroke-width="1">
+            <path d="M125 630 C280 520 335 690 494 572 S765 380 942 506 1175 637 1320 500" fill="none"/>
+            <path d="M70 336 C260 270 376 402 520 312 S820 122 1006 280 1160 400 1380 290" fill="none"/>
+            <path d="M190 760 C420 650 552 708 690 590 S938 444 1240 700" fill="none"/>
+          </g>
+          <g opacity="0.92">
+            <circle cx="280" cy="520" r="5" fill="#2ad9d0"/>
+            <circle cx="494" cy="572" r="5" fill="#7ce7b8"/>
+            <circle cx="742" cy="430" r="7" fill="#d9a24c"/>
+            <circle cx="942" cy="506" r="5" fill="#2ad9d0"/>
+            <circle cx="1168" cy="610" r="5" fill="#6b8cff"/>
+            <circle cx="376" cy="402" r="5" fill="#6b8cff"/>
+            <circle cx="820" cy="122" r="6" fill="#2ad9d0"/>
+            <circle cx="1006" cy="280" r="5" fill="#d9a24c"/>
+          </g>
+          <g opacity="0.16" fill="none" stroke="#eef4ff">
+            <rect x="848" y="210" width="276" height="180" rx="8"/>
+            <path d="M884 262h154M884 304h202M884 346h108"/>
+            <rect x="220" y="248" width="210" height="132" rx="8"/>
+            <path d="M254 294h118M254 336h146"/>
+            <rect x="980" y="562" width="240" height="126" rx="8"/>
+            <path d="M1014 608h144M1014 650h92"/>
+          </g>
+        </svg>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">90%</span><span class="stat-label">Cost Reduction</span></div>
-        <div class="stat"><span class="stat-num">2 Wk</span><span class="stat-label">Deployment</span></div>
-        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Service Lines</span></div>
-        <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">AI Operations</span></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">AI services for operating teams</div>
+          <h1 class="hero-title">AI consulting for finance, people, and growth operations.</h1>
+          <p class="hero-copy">MindPress designs, deploys, and manages AI workflows for accounting, HR, tax, FP&amp;A, EOS, sales, lead generation, and custom business processes.</p>
+          <div class="hero-actions">
+            <a href="book.html" class="btn btn-primary">
+              Book Consultation
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h10M10 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="intake.html" class="btn btn-secondary">Start AI Intake</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-badge">What We Do</div>
-      <h2 class="section-title">AI Agent Service Lines</h2>
-      <p class="section-sub">Each service line is a fully managed AI agent team that replaces or augments an entire department. Deploy in 2 weeks. Cancel anytime.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3>AI-Powered Accounting</h3>
-          <p>Accounts payable, receivable, reconciliation, month-end close, financial statements. AI agents that never sleep, never make errors, and cost 90% less than a traditional team.</p>
-          <ul class="service-list">
-            <li>Automated AP/AR processing</li>
-            <li>Real-time reconciliation</li>
-            <li>Month-end close in hours, not weeks</li>
-            <li>GAAP-compliant reporting</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">👥</div>
-          <h3>AI-Powered HR</h3>
-          <p>Recruiting, onboarding, benefits administration, compliance, employee relations. A full HR department powered by AI agents.</p>
-          <ul class="service-list">
-            <li>Automated candidate screening & scheduling</li>
-            <li>Self-service onboarding flows</li>
-            <li>Benefits enrollment & management</li>
-            <li>Compliance monitoring & reporting</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏛️</div>
-          <h3>AI-Powered Tax</h3>
-          <p>Tax preparation, planning, compliance, and filing. AI agents that stay current on tax law and optimize your position year-round.</p>
-          <ul class="service-list">
-            <li>Federal & state tax preparation</li>
-            <li>Quarterly estimated tax calculations</li>
-            <li>Tax planning & optimization</li>
-            <li>Audit support & documentation</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📈</div>
-          <h3>AI-Powered FP&A</h3>
-          <p>Financial planning & analysis on autopilot. Budgeting, forecasting, variance analysis, and board reporting — generated in real-time.</p>
-          <ul class="service-list">
-            <li>Rolling forecasts & scenario modeling</li>
-            <li>Budget vs actual analysis</li>
-            <li>Automated board deck generation</li>
-            <li>KPI dashboards & alerts</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">⚙️</div>
-          <h3>EOS Integration</h3>
-          <p>Run your business on EOS with AI enforcement. Scorecards, rocks, L10 prep, accountability charts, and issue tracking — all managed by agents.</p>
-          <ul class="service-list">
-            <li>Automated scorecard tracking</li>
-            <li>Rock progress monitoring</li>
-            <li>L10 meeting prep & follow-up</li>
-            <li>Accountability chart management</li>
-          </ul>
-        </div>
-        <div class="service-card featured">
-          <div class="service-icon">🤖</div>
-          <h3>Custom AI Services</h3>
-          <p>Need something unique? We design and deploy custom AI agent systems for any business process. If a human does it repeatedly, we can automate it.</p>
-          <ul class="service-list">
-            <li>Custom AI agent development</li>
-            <li>Workflow automation & integration</li>
-            <li>AI chatbots & voice assistants</li>
-            <li>Data pipelines & analytics</li>
-            <li>Bespoke solutions for any department</li>
-          </ul>
-          <a href="intake.html" class="card-link">Talk to our AI about your needs →</a>
-        </div>
+    <div class="proof-strip" aria-label="MindPress proof points">
+      <div class="proof-item">
+        <span class="proof-value">7</span>
+        <span class="proof-label">AI service lines for core operations</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">2 wk</span>
+        <span class="proof-label">Typical workflow opportunity map</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">24/7</span>
+        <span class="proof-label">AI-assisted monitoring and execution</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">Board</span>
+        <span class="proof-label">Ready ROI, control, and adoption plans</span>
       </div>
     </div>
-  </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="how" class="section section-dark">
-    <div class="container">
-      <div class="section-badge">Process</div>
-      <h2 class="section-title">How It Works</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>Discovery</h3>
-          <p>Talk to our AI discovery bot or book a call. We map your workflows, identify automation opportunities, and design your agent team.</p>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Services</div>
+            <h2 class="section-title">AI implementation where business work actually happens.</h2>
+          </div>
+          <p class="section-copy">Each service combines workflow design, model selection, integration, governance, and ongoing optimization. The goal is practical lift, not a demo that never leaves a sandbox.</p>
         </div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>Deploy</h3>
-          <p>In 2 weeks, your AI agent team is live. We configure agents for your specific processes, integrate with your systems, and train your team.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>Optimize</h3>
-          <p>Agents learn and improve continuously. Monthly reviews, performance reports, and optimization. You focus on growth, agents handle operations.</p>
+        <div class="grid-3">
+          <article class="service-card">
+            <span class="service-kicker">Finance operations</span>
+            <h3>AI Accounting</h3>
+            <p>Automate recurring accounting workflows while keeping approvals, exception handling, and auditability intact.</p>
+            <ul class="service-list">
+              <li>AP, AR, reconciliation, and close support</li>
+              <li>Controller review paths and audit trails</li>
+              <li>Financial statement preparation workflows</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">People operations</span>
+            <h3>AI HR</h3>
+            <p>Reduce HR admin load across recruiting, onboarding, employee support, documentation, and compliance tracking.</p>
+            <ul class="service-list">
+              <li>Candidate screening and scheduling assistance</li>
+              <li>Onboarding knowledge bases and workflow routing</li>
+              <li>Policy, benefits, and compliance support</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Compliance</span>
+            <h3>AI Tax</h3>
+            <p>Coordinate tax preparation, planning, documentation, and deadline management with controlled AI assistance.</p>
+            <ul class="service-list">
+              <li>Document intake and classification</li>
+              <li>Quarterly planning and filing workflows</li>
+              <li>Audit support packets and evidence trails</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Planning</span>
+            <h3>AI FP&amp;A</h3>
+            <p>Turn operating data into rolling forecasts, scenario plans, KPI narratives, and board-ready reporting.</p>
+            <ul class="service-list">
+              <li>Budget vs. actuals variance analysis</li>
+              <li>Scenario models and forecast updates</li>
+              <li>Management reporting and dashboard briefs</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Operating system</span>
+            <h3>EOS Integration</h3>
+            <p>Use AI to keep scorecards, Rocks, L10 follow-up, issues, and accountability rhythms moving between meetings.</p>
+            <ul class="service-list">
+              <li>Scorecard data collection and exception alerts</li>
+              <li>Meeting preparation and follow-through</li>
+              <li>Accountability chart and issue management</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Revenue</span>
+            <h3>Sales and Lead Generation</h3>
+            <p>Build AI-assisted prospecting, qualification, CRM hygiene, meeting prep, and follow-up systems for growth teams.</p>
+            <ul class="service-list">
+              <li>Lead research, scoring, and segmentation</li>
+              <li>Personalized outbound and follow-up workflows</li>
+              <li>Pipeline reporting and deal intelligence</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Bespoke systems</span>
+            <h3>Custom AI Services</h3>
+            <p>For unique processes, MindPress maps the workflow and builds the right combination of agents, automations, and human review.</p>
+            <ul class="service-list">
+              <li>Custom assistants and internal tools</li>
+              <li>System integrations and data pipelines</li>
+              <li>Workflow automation for repeated work</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PRICING -->
-  <section class="section">
-    <div class="container">
-      <div class="section-badge">Pricing</div>
-      <h2 class="section-title">Simple, Transparent Pricing</h2>
-      <p class="section-sub">Replace a $150K/year employee with an AI agent for a fraction of the cost.</p>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Starter</h3>
-          <div class="price">$5K<span>/mo</span></div>
-          <p class="price-desc">3 AI agents, 1 department</p>
-          <ul>
-            <li>Single service line</li>
-            <li>Standard integrations</li>
-            <li>Email support</li>
-            <li>Monthly reporting</li>
+    <section class="section section-band">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Operating layer</div>
+          <h2 class="section-title">Designed for regulated, repeatable, revenue-critical work.</h2>
+          <p class="section-copy">MindPress does not drop generic chatbots into your business. We map the workflow, define the control points, connect the right systems, and install measurement so leaders can trust the output.</p>
+          <ul class="check-list">
+            <li>Human-in-the-loop review for sensitive decisions</li>
+            <li>Escalation logic for exceptions and edge cases</li>
+            <li>Documentation that supports handoff, audit, and training</li>
+            <li>Adoption plans for teams that need to use the system daily</li>
           </ul>
-          <a href="intake.html" class="btn btn-outline" style="width:100%">Get Started</a>
         </div>
-        <div class="pricing-card popular">
-          <div class="popular-tag">Most Popular</div>
-          <h3>Growth</h3>
-          <div class="price">$15K<span>/mo</span></div>
-          <p class="price-desc">10 AI agents, 3 departments</p>
-          <ul>
-            <li>Up to 3 service lines</li>
-            <li>Custom integrations</li>
-            <li>Dedicated success manager</li>
-            <li>Weekly reporting & optimization</li>
-          </ul>
-          <a href="intake.html" class="btn btn-primary" style="width:100%">Get Started</a>
-        </div>
-        <div class="pricing-card">
-          <h3>Enterprise</h3>
-          <div class="price">Custom</div>
-          <p class="price-desc">Unlimited agents & departments</p>
-          <ul>
-            <li>All service lines</li>
-            <li>Enterprise integrations</li>
-            <li>SLA & dedicated team</li>
-            <li>Real-time dashboards</li>
-          </ul>
-          <a href="book.html" class="btn btn-outline" style="width:100%">Contact Sales</a>
+        <div class="signal-panel" aria-hidden="true">
+          <svg viewBox="0 0 640 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="#263342">
+              <path d="M96 112h148l78 92h190"/>
+              <path d="M96 250h178l86-92h152"/>
+              <path d="M96 388h148l76-92h192"/>
+              <path d="M320 204v92"/>
+            </g>
+            <g>
+              <rect x="54" y="80" width="130" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="54" y="218" width="130" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="54" y="356" width="130" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="456" y="172" width="132" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="456" y="264" width="132" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <circle cx="320" cy="250" r="54" fill="#050607" stroke="#2ad9d0" stroke-width="2"/>
+              <circle cx="320" cy="250" r="18" fill="#2ad9d0"/>
+              <circle cx="96" cy="112" r="7" fill="#6b8cff"/>
+              <circle cx="96" cy="250" r="7" fill="#d9a24c"/>
+              <circle cx="96" cy="388" r="7" fill="#7ce7b8"/>
+              <circle cx="512" cy="204" r="7" fill="#2ad9d0"/>
+              <circle cx="512" cy="296" r="7" fill="#6b8cff"/>
+            </g>
+          </svg>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-
-
-  <!-- CTA -->
-  <section class="section section-dark cta-section">
-    <div class="container" style="text-align:center; max-width: 700px;">
-      <h2 class="section-title">Ready to Get Started?</h2>
-      <p class="section-sub">Talk to our AI discovery bot. It takes 5 minutes and you'll get a custom proposal within 24 hours.</p>
-      <div class="hero-ctas" style="justify-content:center; margin-top: 32px;">
-        <a href="intake.html" class="btn btn-primary btn-lg">🎙️ Talk to Our AI →</a>
-        <a href="book.html" class="btn btn-outline btn-lg">Book a Human Call</a>
+    <section id="method" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Method</div>
+            <h2 class="section-title">A consulting process built for deployment.</h2>
+          </div>
+          <p class="section-copy">Every engagement moves from diagnosis to a working operating system, with executive clarity at each step.</p>
+        </div>
+        <div class="grid-3">
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <div>
+              <h3>Map</h3>
+              <p>We identify high-frequency workflows, decision points, systems of record, and approval requirements.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">02</span>
+            <div>
+              <h3>Install</h3>
+              <p>We configure AI workflows, integrate source systems, write operating procedures, and test exception paths.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <div>
+              <h3>Optimize</h3>
+              <p>We measure adoption, cycle time, error rates, and ROI so each workflow improves after launch.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <section class="section section-band">
+      <div class="container feature-row">
+        <div>
+          <div class="eyebrow">Trust model</div>
+          <h2 class="section-title">AI expertise with consulting discipline.</h2>
+          <p class="section-copy">The brand promise is simple: AI should create leverage without weakening judgment, compliance, or accountability.</p>
+        </div>
+        <div class="feature-table" role="table" aria-label="MindPress trust model">
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Model fit</div>
+            <div class="feature-table-value" role="cell">Select the right model and automation architecture for the workflow, data sensitivity, and review burden.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Controls</div>
+            <div class="feature-table-value" role="cell">Define approvals, thresholds, logging, escalation paths, and owner accountability before launch.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Enablement</div>
+            <div class="feature-table-value" role="cell">Train operators and leaders on when to trust, when to review, and how to improve the system.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Measurement</div>
+            <div class="feature-table-value" role="cell">Report on cycle time, throughput, cost avoidance, quality, and business impact.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">Next step</div>
+          <h2 class="cta-title">Map the first workflow worth automating.</h2>
+          <p>Book a consultation or start with the AI intake. MindPress will help identify the highest-leverage place to begin.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-primary">Book Consultation</a>
+          <a href="intake.html" class="btn btn-secondary">Start AI Intake</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
-          <p>Service as Agentic Software</p>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
+          <p>AI services and consulting for companies ready to operationalize AI with controls, clarity, and measurable lift.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="#services">AI Accounting</a>
-          <a href="#services">AI HR</a>
-          <a href="#services">AI Tax</a>
-          <a href="#services">AI FP&A</a>
-          <a href="#services">EOS Integration</a>
-          <a href="#services">Custom AI Services</a>
-
+          <a href="services.html">AI Accounting</a>
+          <a href="services.html">AI HR</a>
+          <a href="services.html">AI Tax</a>
+          <a href="services.html">AI FP&amp;A</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="book.html">Book a Call</a>
-          <a href="intake.html">AI Discovery</a>
+          <a href="brand-guide.md">Brand Guide</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <h4>Start</h4>
+          <a href="book.html">Book Consultation</a>
+          <a href="intake.html">AI Intake</a>
+          <a href="services.html">View Services</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MindPress AI, Inc. All rights reserved.</p>
+        <p>&copy; 2026 MindPress AI. All rights reserved.</p>
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

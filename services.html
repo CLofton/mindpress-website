@@ -3,339 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Services — MindPress | Replace Departments with AI Agent Teams</title>
-  <meta name="description" content="MindPress AI services: AI Accounting, Finance, Marketing, Sales, Compliance, and Operations. Deploy specialized AI agent teams for every department.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mindpress.ai/services">
-  <meta property="og:title" content="AI Services — MindPress">
-  <meta property="og:description" content="Deploy specialized AI agent teams for accounting, finance, marketing, sales, compliance, and operations.">
-  <meta property="og:image" content="https://mindpress.ai/images/og-cover.png">
-  <link rel="canonical" href="https://mindpress.ai/services">
-  <link rel="stylesheet" href="css/style.css">
+  <title>AI Services | MindPress</title>
+  <meta name="description" content="Explore MindPress AI services for accounting, HR, tax, FP&amp;A, EOS integration, sales and lead generation, and custom AI workflows.">
+  <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <span class="logo-icon">&#9670;</span> MindPress
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
       </a>
-      <div class="nav-links">
-        <a href="services.html">Services</a>
-        <a href="index.html#how-it-works">How It Works</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="about.html">About</a>
-        <a href="book.html" class="btn btn-nav">Book a Shaping Call</a>
-      </div>
-      <button class="nav-toggle" aria-label="Menu">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <div class="nav-links">
+        <a href="services.html" class="active">Services</a>
+        <a href="index.html#method">Method</a>
+        <a href="about.html">About</a>
+        <a href="intake.html">AI Intake</a>
+        <a href="book.html" class="btn btn-nav">Book Consultation</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Page Hero -->
-  <section class="hero" style="padding: 140px 0 60px;">
-    <div class="container">
-      <div class="hero-badge">6 AI Service Lines</div>
-      <h1 class="hero-title">AI Agent Teams for<br><span class="gradient-text">Every Department</span></h1>
-      <p class="hero-subtitle">Each service deploys a specialized team of AI agents trained on industry best practices. They work 24/7, coordinate autonomously, and cost 90% less than human teams.</p>
-    </div>
-    <div class="hero-glow"></div>
-  </section>
-
-  <!-- Services Grid -->
-  <section class="section" style="padding-top: 40px;">
-    <div class="container">
-      <div class="services-detail-grid">
-
-        <!-- AI Accounting -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-icon-lg">📊</div>
-            <div>
-              <h2>AI Accounting</h2>
-              <p class="service-tagline">Autonomous bookkeeping, reconciliation, and financial reporting</p>
-            </div>
-          </div>
-          <div class="service-detail-body">
-            <p>Deploy AI agents that handle your entire accounting workflow -- from daily transaction categorization to monthly close. They never miss a deadline and learn your chart of accounts.</p>
-            <div class="service-capabilities-list">
-              <h4>What the agents handle:</h4>
-              <ul>
-                <li>Accounts payable and receivable processing</li>
-                <li>Bank reconciliation and transaction categorization</li>
-                <li>Monthly, quarterly, and annual close procedures</li>
-                <li>Expense report review and approval workflows</li>
-                <li>Financial statement preparation (P&L, Balance Sheet, Cash Flow)</li>
-                <li>Tax document preparation and compliance tracking</li>
-              </ul>
-            </div>
-            <div class="service-roi-bar">
-              <div class="service-roi-item">
-                <span class="service-roi-value">85%</span>
-                <span class="service-roi-label">Faster month-end close</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">$120K+</span>
-                <span class="service-roi-label">Annual savings vs. 1 FTE</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">99.8%</span>
-                <span class="service-roi-label">Accuracy rate</span>
-              </div>
-            </div>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">AI service lines</div>
+          <h1 class="page-title">Specialized AI consulting for core operating functions.</h1>
+          <p class="page-copy">MindPress helps leadership teams identify, design, and deploy the AI workflows that can improve cycle time, reduce manual work, and strengthen operating visibility.</p>
+          <div class="hero-actions">
+            <a href="book.html" class="btn btn-primary">Book Consultation</a>
+            <a href="intake.html" class="btn btn-secondary">Start AI Intake</a>
           </div>
         </div>
-
-        <!-- AI Finance -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-icon-lg">💰</div>
-            <div>
-              <h2>AI Finance</h2>
-              <p class="service-tagline">Financial planning, analysis, and strategic modeling</p>
-            </div>
-          </div>
-          <div class="service-detail-body">
-            <p>AI agents that build financial models, run scenario analyses, and produce investor-ready reports. From runway projections to board deck financials -- always current, always accurate.</p>
-            <div class="service-capabilities-list">
-              <h4>What the agents handle:</h4>
-              <ul>
-                <li>Financial modeling and scenario analysis (3/5/10-year projections)</li>
-                <li>Cash flow forecasting and runway management</li>
-                <li>Budget vs. actuals variance reporting</li>
-                <li>Investor reporting and board deck financials</li>
-                <li>Revenue recognition and SaaS metrics (ARR, MRR, churn, LTV)</li>
-                <li>Capital allocation and ROI analysis</li>
-              </ul>
-            </div>
-            <div class="service-roi-bar">
-              <div class="service-roi-item">
-                <span class="service-roi-value">3x</span>
-                <span class="service-roi-label">Faster reporting cycles</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">$150K+</span>
-                <span class="service-roi-label">Annual savings vs. 1 FTE</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">24/7</span>
-                <span class="service-roi-label">Real-time dashboards</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Marketing -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-icon-lg">📣</div>
-            <div>
-              <h2>AI Marketing</h2>
-              <p class="service-tagline">Full-stack growth: content, SEO, paid, email, and brand</p>
-            </div>
-          </div>
-          <div class="service-detail-body">
-            <p>A complete marketing department in AI form. Agents that build websites, write copy, run campaigns, analyze performance, and optimize spend -- all coordinating as a cohesive team.</p>
-            <div class="service-capabilities-list">
-              <h4>What the agents handle:</h4>
-              <ul>
-                <li>Website design, build, and ongoing optimization</li>
-                <li>Content strategy, blog posts, whitepapers, and case studies</li>
-                <li>SEO audit, keyword research, and on-page optimization</li>
-                <li>Email marketing campaigns and drip sequences</li>
-                <li>Social media content calendar and posting</li>
-                <li>Paid acquisition (Google Ads, LinkedIn, Meta) management</li>
-              </ul>
-            </div>
-            <div class="service-roi-bar">
-              <div class="service-roi-item">
-                <span class="service-roi-value">10x</span>
-                <span class="service-roi-label">Content output volume</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">$200K+</span>
-                <span class="service-roi-label">Annual savings vs. 2 FTEs</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">40%</span>
-                <span class="service-roi-label">Lower CAC</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Sales -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-icon-lg">🎯</div>
-            <div>
-              <h2>AI Sales</h2>
-              <p class="service-tagline">Pipeline management, outreach, and deal intelligence</p>
-            </div>
-          </div>
-          <div class="service-detail-body">
-            <p>AI agents that qualify leads, personalize outreach at scale, manage your CRM, and surface deal insights. They never forget to follow up and always know the next best action.</p>
-            <div class="service-capabilities-list">
-              <h4>What the agents handle:</h4>
-              <ul>
-                <li>Lead scoring, qualification, and routing</li>
-                <li>Personalized outreach sequences (email, LinkedIn)</li>
-                <li>CRM hygiene, pipeline management, and forecasting</li>
-                <li>Meeting prep and competitive intelligence briefings</li>
-                <li>Proposal and SOW generation</li>
-                <li>Win/loss analysis and deal retrospectives</li>
-              </ul>
-            </div>
-            <div class="service-roi-bar">
-              <div class="service-roi-item">
-                <span class="service-roi-value">5x</span>
-                <span class="service-roi-label">More qualified meetings</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">$180K+</span>
-                <span class="service-roi-label">Annual savings vs. 1 SDR + AE</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">30%</span>
-                <span class="service-roi-label">Higher close rate</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Compliance -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-icon-lg">🛡️</div>
-            <div>
-              <h2>AI Compliance</h2>
-              <p class="service-tagline">Regulatory monitoring, policy enforcement, and audit readiness</p>
-            </div>
-          </div>
-          <div class="service-detail-body">
-            <p>Stay ahead of regulatory changes with AI agents that monitor compliance requirements, maintain documentation, and keep you audit-ready 365 days a year. No more scrambling before audits.</p>
-            <div class="service-capabilities-list">
-              <h4>What the agents handle:</h4>
-              <ul>
-                <li>Regulatory change monitoring and impact assessment</li>
-                <li>Policy documentation and version control</li>
-                <li>SOC 2, HIPAA, GDPR, and SOX compliance tracking</li>
-                <li>Employee training compliance and certification tracking</li>
-                <li>Audit preparation and evidence collection</li>
-                <li>Risk assessment and mitigation planning</li>
-              </ul>
-            </div>
-            <div class="service-roi-bar">
-              <div class="service-roi-item">
-                <span class="service-roi-value">70%</span>
-                <span class="service-roi-label">Less audit prep time</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">$130K+</span>
-                <span class="service-roi-label">Annual savings vs. 1 FTE</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">0</span>
-                <span class="service-roi-label">Missed deadlines</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Operations -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-icon-lg">⚡</div>
-            <div>
-              <h2>AI Operations</h2>
-              <p class="service-tagline">Process automation, SOPs, vendor management, and operational excellence</p>
-            </div>
-          </div>
-          <div class="service-detail-body">
-            <p>The backbone of efficiency. AI ops agents that document processes, manage vendors, optimize workflows, and ensure nothing falls through the cracks. They turn chaos into systems.</p>
-            <div class="service-capabilities-list">
-              <h4>What the agents handle:</h4>
-              <ul>
-                <li>SOP creation, maintenance, and enforcement</li>
-                <li>Vendor evaluation, onboarding, and performance tracking</li>
-                <li>Process mapping, bottleneck identification, and optimization</li>
-                <li>Inventory and supply chain monitoring</li>
-                <li>KPI dashboards and operational reporting</li>
-                <li>Cross-department coordination and project management</li>
-              </ul>
-            </div>
-            <div class="service-roi-bar">
-              <div class="service-roi-item">
-                <span class="service-roi-value">60%</span>
-                <span class="service-roi-label">Process time reduction</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">$140K+</span>
-                <span class="service-roi-label">Annual savings vs. 1 FTE</span>
-              </div>
-              <div class="service-roi-item">
-                <span class="service-roi-value">100%</span>
-                <span class="service-roi-label">SOP coverage</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="section cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <h2>Not Sure Which Service<br>You Need First?</h2>
-        <p>Book a free shaping call. We will map your operations, identify the highest-ROI automation opportunities, and recommend the right agent team for your business.</p>
-        <div class="hero-ctas">
-          <a href="book.html" class="btn btn-primary btn-lg">Book a Shaping Call &rarr;</a>
-          <a href="pricing.html" class="btn btn-ghost btn-lg">View Pricing</a>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Coverage</div>
+            <h2 class="section-title">Seven ways to operationalize AI.</h2>
+          </div>
+          <p class="section-copy">Each service can stand alone or combine into a broader AI operating roadmap.</p>
         </div>
-        <p class="cta-note">No commitment. No credit card. Just a conversation about what's possible.</p>
+        <div class="grid-3">
+          <article class="service-card">
+            <span class="service-kicker">01</span>
+            <h3>AI Accounting</h3>
+            <p>For companies that need faster closes, cleaner books, better reconciliation, and lower accounting admin load.</p>
+            <ul class="service-list">
+              <li>AP and AR workflow automation</li>
+              <li>Transaction categorization and reconciliation support</li>
+              <li>Close checklist orchestration</li>
+              <li>Controller review and exception routing</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">02</span>
+            <h3>AI HR</h3>
+            <p>For teams that want AI support across recruiting, onboarding, employee service, policies, and compliance.</p>
+            <ul class="service-list">
+              <li>Candidate screening and interview coordination</li>
+              <li>New hire onboarding workflows</li>
+              <li>Employee knowledge assistant design</li>
+              <li>Policy and compliance documentation support</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">03</span>
+            <h3>AI Tax</h3>
+            <p>For tax teams and operators who need better document intake, planning cadence, and audit-ready evidence.</p>
+            <ul class="service-list">
+              <li>Tax document collection and classification</li>
+              <li>Federal, state, and local workflow tracking</li>
+              <li>Quarterly estimate support</li>
+              <li>Audit packets and source documentation</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">04</span>
+            <h3>AI FP&amp;A</h3>
+            <p>For leaders who need faster forecasting, cleaner KPI narratives, and board-ready financial intelligence.</p>
+            <ul class="service-list">
+              <li>Rolling forecast and scenario workflows</li>
+              <li>Budget vs. actuals variance narratives</li>
+              <li>Dashboard interpretation and executive briefs</li>
+              <li>Board deck finance support</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">05</span>
+            <h3>EOS Integration</h3>
+            <p>For companies running EOS that want AI to reinforce accountability between meetings.</p>
+            <ul class="service-list">
+              <li>Scorecard data collection and anomaly alerts</li>
+              <li>Rocks progress monitoring</li>
+              <li>L10 agenda preparation and follow-up</li>
+              <li>Issue tracking and accountability reminders</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">06</span>
+            <h3>Sales and Lead Generation</h3>
+            <p>For growth teams that need better prospecting, personalized outbound, CRM hygiene, and deal intelligence.</p>
+            <ul class="service-list">
+              <li>Lead research and scoring systems</li>
+              <li>Outbound personalization workflows</li>
+              <li>CRM cleanup and next-action support</li>
+              <li>Meeting preparation and follow-up generation</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">07</span>
+            <h3>Custom AI Services</h3>
+            <p>For processes that do not fit a standard category but repeat often enough to justify an AI operating layer.</p>
+            <ul class="service-list">
+              <li>Workflow discovery and AI opportunity mapping</li>
+              <li>Custom assistants, agents, and automation design</li>
+              <li>Internal tool and data pipeline integration</li>
+              <li>Governance, training, and optimization</li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <section class="section section-band">
+      <div class="container feature-row">
+        <div>
+          <div class="eyebrow">Engagement design</div>
+          <h2 class="section-title">Every service includes strategy, build, and adoption.</h2>
+          <p class="section-copy">AI value depends on much more than prompts. MindPress structures engagements around the full path from diagnosis to a workflow your team can actually use.</p>
+        </div>
+        <div class="feature-table" role="table" aria-label="Service engagement components">
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Discovery</div>
+            <div class="feature-table-value" role="cell">Map current process, systems, owners, data quality, decision points, and constraints.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Architecture</div>
+            <div class="feature-table-value" role="cell">Choose the right model, automation pattern, integrations, guardrails, and review flow.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Deployment</div>
+            <div class="feature-table-value" role="cell">Configure workflows, test edge cases, document SOPs, and train the team.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Optimization</div>
+            <div class="feature-table-value" role="cell">Review performance, adoption, quality, cost avoidance, and new automation opportunities.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Starting points</div>
+            <h2 class="section-title">Where AI usually creates the first lift.</h2>
+          </div>
+          <p class="section-copy">The best first workflow is usually frequent, rules-driven, painful, and measurable.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card">
+            <span class="card-kicker">Cycle time</span>
+            <h3>Month-end close</h3>
+            <p>Accounting workflows with repeated review steps, document intake, and status tracking.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Visibility</span>
+            <h3>Executive reporting</h3>
+            <p>Recurring analysis and narrative work for leadership, investors, boards, and managers.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Throughput</span>
+            <h3>Lead qualification</h3>
+            <p>Prospect research, scoring, outbound prep, CRM updates, and next-best-action support.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Accountability</span>
+            <h3>EOS follow-through</h3>
+            <p>Scorecards, issues, Rocks, L10 preparation, and cross-functional reminders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">Consultation</div>
+          <h2 class="cta-title">Not sure which service comes first?</h2>
+          <p>Book a consultation and MindPress will help rank the highest-ROI workflows for your team.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-primary">Book Consultation</a>
+          <a href="intake.html" class="btn btn-secondary">Start AI Intake</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">&#9670;</span> <strong>MindPress</strong>
-          <p>AI agent teams that replace entire departments. Built on Paperclip, powered by the world's best foundation models.</p>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
+          <p>AI services and consulting for companies ready to operationalize AI with controls, clarity, and measurable lift.</p>
         </div>
         <div class="footer-col">
-          <h4>Product</h4>
-          <a href="services.html">Services</a>
-          <a href="index.html#how-it-works">How It Works</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Case Studies</a>
-          <a href="book.html">Book a Demo</a>
+          <h4>Services</h4>
+          <a href="services.html">AI Accounting</a>
+          <a href="services.html">AI HR</a>
+          <a href="services.html">AI Tax</a>
+          <a href="services.html">AI FP&amp;A</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
+          <a href="brand-guide.md">Brand Guide</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
-          <a href="#">Careers</a>
-          <a href="#">Blog</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Security</a>
+          <h4>Start</h4>
+          <a href="book.html">Book Consultation</a>
+          <a href="intake.html">AI Intake</a>
+          <a href="services.html">View Services</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 MindPress AI, Inc. All rights reserved.</p>
+        <p>&copy; 2026 MindPress AI. All rights reserved.</p>
       </div>
     </div>
   </footer>
