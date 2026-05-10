@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10DLC Express | 10DLC Registration in Hours, Not Days — MindPress</title>
+  <meta name="description" content="AI-powered 10DLC registration that gets your business approved in hours instead of weeks. Pre-validation, smart campaign descriptions, and 95%+ first-time approval rate.">
+  <meta name="theme-color" content="#050607">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 10DLC page-specific styles */
+    .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .pain-card { padding: 28px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,70,90,0.04), rgba(255,255,255,0.018)); }
+    .pain-card .pain-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+    .pain-card h3 { margin: 0 0 8px; color: var(--text-strong); font-size: 1.15rem; font-weight: 750; }
+    .pain-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+    .pain-card .pain-stat { color: var(--danger); font-weight: 800; font-size: 1.1rem; }
+
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: steps; }
+    .step-card { position: relative; padding: 32px 28px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018)); }
+    .step-card::before { content: ""; position: absolute; top: -1px; right: 18px; left: 18px; height: 1px; background: linear-gradient(90deg, transparent, var(--teal), transparent); opacity: 0.65; }
+    .step-number { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid rgba(42,217,208,0.28); border-radius: var(--radius); color: var(--teal); background: rgba(42,217,208,0.08); font-weight: 820; font-size: 1.2rem; margin-bottom: 18px; }
+    .step-card h3 { margin: 0 0 10px; color: var(--text-strong); font-size: 1.2rem; font-weight: 750; }
+    .step-card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+    .step-connector { display: none; }
+
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature-card { padding: 28px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018)); }
+    .feature-card .feature-icon { font-size: 1.6rem; margin-bottom: 12px; display: block; }
+    .feature-card h3 { margin: 0 0 8px; color: var(--text-strong); font-size: 1.1rem; font-weight: 750; }
+    .feature-card p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .pricing-card { padding: 32px 28px; border: 1px solid var(--line-soft); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018)); display: flex; flex-direction: column; }
+    .pricing-card.featured { border-color: rgba(42,217,208,0.35); background: linear-gradient(180deg, rgba(42,217,208,0.06), rgba(255,255,255,0.018)); }
+    .pricing-card.featured::before { content: ""; position: absolute; top: -1px; right: 18px; left: 18px; height: 2px; background: linear-gradient(90deg, transparent, var(--teal), transparent); }
+    .pricing-label { color: var(--teal); font-size: 0.82rem; font-weight: 760; text-transform: uppercase; margin-bottom: 8px; }
+    .pricing-price { color: var(--text-strong); font-size: 2.5rem; font-weight: 820; line-height: 1; margin-bottom: 4px; }
+    .pricing-price span { font-size: 1rem; font-weight: 600; color: var(--text-muted); }
+    .pricing-desc { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 20px; }
+    .pricing-features { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 10px; flex: 1; }
+    .pricing-features li { position: relative; padding-left: 22px; color: var(--text-muted); font-size: 0.92rem; }
+    .pricing-features li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+
+    .waitlist-form { display: flex; gap: 12px; max-width: 520px; }
+    .waitlist-form input { flex: 1; min-height: 48px; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(5,6,7,0.66); color: var(--text); font: inherit; font-size: 0.95rem; }
+    .waitlist-form input::placeholder { color: var(--text-subtle); }
+    .waitlist-form .btn { min-height: 48px; white-space: nowrap; }
+
+    .comparison-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden; margin-top: 32px; }
+    .comparison-col { padding: 28px; }
+    .comparison-col:first-child { background: rgba(255,70,90,0.04); border-right: 1px solid var(--line-soft); }
+    .comparison-col:last-child { background: rgba(42,217,208,0.04); }
+    .comparison-col h3 { margin: 0 0 16px; font-size: 1.1rem; font-weight: 750; }
+    .comparison-col:first-child h3 { color: var(--danger); }
+    .comparison-col:last-child h3 { color: var(--teal); }
+    .comparison-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .comparison-col ul li { color: var(--text-muted); font-size: 0.92rem; padding-left: 22px; position: relative; }
+    .comparison-col:first-child ul li::before { content: "✗"; position: absolute; left: 0; color: var(--danger); font-weight: 700; }
+    .comparison-col:last-child ul li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+
+    .logo-10dlc { display: inline-flex; align-items: center; gap: 8px; }
+    .logo-10dlc .brand-word { font-size: 1.02rem; }
+    .logo-10dlc .product-word { font-size: 0.85rem; color: var(--teal); font-weight: 700; background: rgba(42,217,208,0.1); padding: 2px 8px; border-radius: 4px; margin-left: 4px; }
+
+    @media (max-width: 1020px) {
+      .feature-grid, .pricing-grid, .step-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .pain-grid, .comparison-row { grid-template-columns: 1fr; }
+      .comparison-col:first-child { border-right: none; border-bottom: 1px solid var(--line-soft); }
+      .waitlist-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+        <span class="product-word" style="font-size:0.82rem;color:var(--teal);font-weight:700;background:rgba(42,217,208,0.1);padding:2px 8px;border-radius:4px;margin-left:4px;">10DLC Express</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#waitlist" class="btn btn-nav">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.28" stroke="#6b8cff" stroke-width="1">
+            <path d="M125 630 C280 520 335 690 494 572 S765 380 942 506 1175 637 1320 500" fill="none"/>
+            <path d="M70 336 C260 270 376 402 520 312 S820 122 1006 280 1160 400 1380 290" fill="none"/>
+            <path d="M190 760 C420 650 552 708 690 590 S938 444 1240 700" fill="none"/>
+          </g>
+          <!-- Message bubble shapes -->
+          <g opacity="0.12" fill="none" stroke="#2ad9d0">
+            <rect x="180" y="200" width="160" height="80" rx="12"/>
+            <rect x="400" y="140" width="200" height="90" rx="12"/>
+            <rect x="1050" y="250" width="180" height="70" rx="12"/>
+            <rect x="800" y="500" width="220" height="85" rx="12"/>
+          </g>
+          <g opacity="0.85">
+            <circle cx="280" cy="520" r="4" fill="#2ad9d0"/>
+            <circle cx="494" cy="572" r="4" fill="#7ce7b8"/>
+            <circle cx="742" cy="430" r="6" fill="#d9a24c"/>
+            <circle cx="942" cy="506" r="4" fill="#2ad9d0"/>
+            <circle cx="1168" cy="610" r="4" fill="#6b8cff"/>
+            <circle cx="376" cy="402" r="4" fill="#6b8cff"/>
+          </g>
+          <!-- Checkmark symbols -->
+          <g opacity="0.15" stroke="#7ce7b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <path d="M260 240 l8 8 16-16"/>
+            <path d="M480 180 l8 8 16-16"/>
+            <path d="M1130 290 l8 8 16-16"/>
+            <path d="M880 540 l8 8 16-16"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">AI-Powered SMS Compliance</div>
+          <h1 class="hero-title">10DLC Registration in <span class="accent-text">Hours</span>, Not Days.</h1>
+          <p class="hero-copy">Stop wrestling with TCR forms, carrier rejections, and compliance jargon. Our AI handles brand registration, writes compliant campaign descriptions, pre-validates everything, and gets you approved — fast.</p>
+          <div class="hero-actions">
+            <a href="#waitlist" class="btn btn-primary">
+              Join the Waitlist
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h10M10 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof Strip -->
+    <div class="proof-strip" aria-label="10DLC Express proof points">
+      <div class="proof-item">
+        <span class="proof-value">95%+</span>
+        <span class="proof-label">First-time approval rate target</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">< 4 hrs</span>
+        <span class="proof-label">Average time to submission</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">80+</span>
+        <span class="proof-label">Pre-validation compliance checks</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">$0</span>
+        <span class="proof-label">Wasted on avoidable rejections</span>
+      </div>
+    </div>
+
+    <!-- Pain Points -->
+    <section class="section" id="pain-points">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">The Problem</div>
+            <h2 class="section-title">10DLC Registration Is <span class="accent-text">Broken</span></h2>
+            <p class="section-copy">Businesses need to send SMS — but the registration process is a maze of jargon, hidden rules, and weeks of waiting.</p>
+          </div>
+        </div>
+        <div class="pain-grid">
+          <div class="pain-card">
+            <span class="pain-icon">⏱️</span>
+            <h3>Weeks of Waiting</h3>
+            <p>Brand registration takes 1-5 days. Campaign approval takes 3-15 more. One rejection? Add another 1-2 weeks. Total: <span class="pain-stat">2-6 weeks</span> for most businesses.</p>
+          </div>
+          <div class="pain-card">
+            <span class="pain-icon">❌</span>
+            <h3>Sky-High Rejection Rates</h3>
+            <p>~30-40% of first-time campaign submissions get rejected. Vague descriptions, missing policy clauses, merge fields in samples — the gotchas are endless.</p>
+          </div>
+          <div class="pain-card">
+            <span class="pain-icon">🤯</span>
+            <h3>Compliance Alphabet Soup</h3>
+            <p>TCR, CSP, CNP, DCA, CTIA, A2P, EIN... Business owners didn't sign up to learn telecom jargon. They just want to text their customers.</p>
+          </div>
+          <div class="pain-card">
+            <span class="pain-icon">💸</span>
+            <h3>Hidden Costs Stack Up</h3>
+            <p>$15.75 per resubmission. $250 T-Mobile inactivity fee. Lost revenue while waiting. The real cost of a botched registration: <span class="pain-stat">$500-2,000+</span></p>
+          </div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-col">
+            <h3>Without 10DLC Express</h3>
+            <ul>
+              <li>40+ form fields to fill manually</li>
+              <li>Write campaign descriptions from scratch</li>
+              <li>Hope your privacy policy has the right clauses</li>
+              <li>Submit and wait days for rejection</li>
+              <li>Guess what went wrong, resubmit, repeat</li>
+              <li>2-6 weeks to get approved</li>
+            </ul>
+          </div>
+          <div class="comparison-col">
+            <h3>With 10DLC Express</h3>
+            <ul>
+              <li>Enter your URL + EIN, AI fills the rest</li>
+              <li>AI writes compliant descriptions for you</li>
+              <li>80+ checks validate everything before submission</li>
+              <li>Pre-validated submissions approve faster</li>
+              <li>AI diagnoses rejections and fixes them</li>
+              <li>Hours to submit, days to approve</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-band" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">How It Works</div>
+            <h2 class="section-title">Three Steps to <span class="accent-text">Done</span></h2>
+            <p class="section-copy">No telecom expertise required. Just your business URL, EIN, and 15 minutes.</p>
+          </div>
+        </div>
+        <div class="step-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Enter Your Business Info</h3>
+            <p>Paste your business URL and EIN. Our AI scrapes your website, cross-references your business data, and pre-fills every field of the brand registration. You just review and confirm.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>AI Builds Your Campaign</h3>
+            <p>Tell us what kind of messages you send in plain English. Our AI generates TCR-compliant campaign descriptions, sample messages with proper opt-out language, and validates your privacy policy and ToS.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Pre-Validate & Submit</h3>
+            <p>Our engine runs 80+ compliance checks against known rejection patterns. Fix any issues with one-click AI suggestions. Then submit — and track carrier approval status in real time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Features</div>
+            <h2 class="section-title">Everything You Need to <span class="accent-text">Get Approved</span></h2>
+            <p class="section-copy">Built by people who've navigated the 10DLC maze — so you don't have to.</p>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🤖</span>
+            <h3>AI Smart Form-Filling</h3>
+            <p>Enter your URL and EIN. Our AI extracts your business details, cross-references public records, and auto-completes all 40+ registration fields.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🛡️</span>
+            <h3>Pre-Validation Engine</h3>
+            <p>80+ compliance checks run before you submit. Catches merge fields, missing STOP language, vague descriptions, policy gaps — the works.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">✍️</span>
+            <h3>Smart Description Writer</h3>
+            <p>AI generates TCR-compliant campaign descriptions that explicitly state WHO, WHAT, and HOW — trained on thousands of approved submissions.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔧</span>
+            <h3>Rejection Auto-Fix</h3>
+            <p>If a rejection does happen, our AI parses the error codes, diagnoses the issue, and generates a corrected submission — one click to resubmit.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📊</span>
+            <h3>Real-Time Status Dashboard</h3>
+            <p>Track your registration across TCR, T-Mobile, AT&T, and Verizon from one unified dashboard. Get alerts on every status change.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📋</span>
+            <h3>Compliance Toolkit</h3>
+            <p>Generate SMS-compliant privacy policy sections, Terms of Service clauses, and embeddable opt-in widgets — all pre-approved for TCR.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🏢</span>
+            <h3>Agency Bulk Tools</h3>
+            <p>Manage 10DLC registrations for dozens of clients from one dashboard. Sub-accounts, bulk uploads, and white-label options available.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔗</span>
+            <h3>Multi-Carrier Parallel Submit</h3>
+            <p>Submit to all carrier DCAs simultaneously. Independent tracking per carrier with automatic retry logic for transient failures.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔔</span>
+            <h3>Inactivity Monitoring</h3>
+            <p>Get alerts before T-Mobile's 60-day inactivity window hits. Never get surprised by a $250 non-use fee again.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-band" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Pricing</div>
+            <h2 class="section-title">Simple, Transparent <span class="accent-text">Pricing</span></h2>
+            <p class="section-copy">Pay per registration or subscribe for volume. No hidden fees. All carrier pass-through costs included.</p>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-label">Pay Per Registration</div>
+            <div class="pricing-price">$149 <span>/ registration</span></div>
+            <p class="pricing-desc">Perfect for businesses registering 1-3 campaigns.</p>
+            <ul class="pricing-features">
+              <li>AI form-filling from URL + EIN</li>
+              <li>Smart campaign description writer</li>
+              <li>80+ pre-validation checks</li>
+              <li>TCR + carrier submission</li>
+              <li>Real-time status dashboard</li>
+              <li>Email status notifications</li>
+              <li>1 rejection fix included</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-secondary btn-wide">Get Started</a>
+          </div>
+          <div class="pricing-card featured" style="position:relative;">
+            <div class="pricing-label">Agency Plan</div>
+            <div class="pricing-price">$199 <span>/ month</span></div>
+            <p class="pricing-desc">For agencies managing 10DLC for multiple clients.</p>
+            <ul class="pricing-features">
+              <li>25 registrations per month</li>
+              <li>Everything in Pay Per Registration</li>
+              <li>Bulk registration tools</li>
+              <li>Client sub-accounts</li>
+              <li>Priority carrier submission</li>
+              <li>Unlimited rejection fixes</li>
+              <li>Compliance toolkit access</li>
+              <li>API access</li>
+            </ul>
+            <a href="#waitlist" class="btn btn-primary btn-wide">Join Waitlist</a>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-label">Enterprise</div>
+            <div class="pricing-price">Custom</div>
+            <p class="pricing-desc">White-label, high volume, and custom integrations.</p>
+            <ul class="pricing-features">
+              <li>Unlimited registrations</li>
+              <li>White-label platform</li>
+              <li>Custom API integrations</li>
+              <li>Dedicated account manager</li>
+              <li>SLA guarantees</li>
+              <li>Custom compliance rules</li>
+              <li>GoHighLevel / HubSpot integrations</li>
+              <li>Volume discounts</li>
+            </ul>
+            <a href="book.html" class="btn btn-secondary btn-wide">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Built For</div>
+            <h2 class="section-title">Who Uses <span class="accent-text">10DLC Express</span>?</h2>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-kicker">SMBs</div>
+            <h3>Business Owners</h3>
+            <p class="card-copy">You want to text your customers appointment reminders, promotions, or updates. You don't want to become a telecom compliance expert. We handle it.</p>
+          </div>
+          <div class="card">
+            <div class="card-kicker">Agencies</div>
+            <h3>Marketing Agencies</h3>
+            <p class="card-copy">Managing 10DLC for 20, 50, 100+ clients? Our bulk tools, sub-accounts, and AI-powered descriptions save hours per registration.</p>
+          </div>
+          <div class="card">
+            <div class="card-kicker">Platforms</div>
+            <h3>SaaS & CPaaS Providers</h3>
+            <p class="card-copy">Embed 10DLC registration directly into your platform with our API. White-label available. Your customers never leave your product.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Waitlist -->
+    <section class="cta-band" id="waitlist">
+      <div class="container">
+        <div style="max-width:680px;">
+          <div class="eyebrow">Early Access</div>
+          <h2 class="cta-title">Stop Fighting <span class="accent-text">10DLC</span>. Start Sending.</h2>
+          <p style="color:var(--text-muted);font-size:1.05rem;margin-top:16px;margin-bottom:28px;">Join the waitlist for early access. Be among the first to experience AI-powered 10DLC registration. Limited beta spots available.</p>
+          <form class="waitlist-form" id="waitlist-form" onsubmit="return handleWaitlist(event)">
+            <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary">Join Waitlist</button>
+          </form>
+          <p id="waitlist-success" class="is-hidden" style="color:var(--mint);font-weight:700;margin-top:16px;">✓ You're on the list! We'll be in touch soon.</p>
+          <p style="color:var(--text-subtle);font-size:0.86rem;margin-top:14px;">No spam. We'll only email you about 10DLC Express updates and launch access.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="section-title" style="margin-bottom:42px;">Common <span class="accent-text">Questions</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time" style="min-width:auto;">Q</div>
+            <div>
+              <h3>What is 10DLC and why do I need it?</h3>
+              <p>10DLC (10-Digit Long Code) is the mandatory registration system for businesses sending text messages in the US. As of February 2025, all carriers block unregistered business SMS. If you text customers from a business number, you need 10DLC registration.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time" style="min-width:auto;">Q</div>
+            <div>
+              <h3>How fast will my registration be approved?</h3>
+              <p>Our AI gets your submission ready in under an hour. TCR and carrier approval typically takes 2-5 business days with a pre-validated submission, vs. 2-6 weeks with manual registration and rejections.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time" style="min-width:auto;">Q</div>
+            <div>
+              <h3>What if my registration gets rejected?</h3>
+              <p>Our pre-validation catches 95%+ of rejection causes before submission. If a rejection does occur, our AI parses the error, generates a fix, and resubmits — often within minutes.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time" style="min-width:auto;">Q</div>
+            <div>
+              <h3>Do I need to be technical to use this?</h3>
+              <p>Not at all. If you can paste a URL and type your EIN, you can use 10DLC Express. We've eliminated all telecom jargon and technical complexity.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time" style="min-width:auto;">Q</div>
+            <div>
+              <h3>Which carriers are supported?</h3>
+              <p>We submit to all three major US carriers: T-Mobile, AT&T, and Verizon — simultaneously, with independent tracking for each.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
+          <p>AI-powered 10DLC registration that gets businesses approved in hours. A product by MindPress AI.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About MindPress</a>
+          <a href="services.html">AI Services</a>
+          <a href="book.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#waitlist">Join Waitlist</a>
+          <a href="book.html">Book Consultation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 MindPress AI. 10DLC Express is a product of MindPress. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleWaitlist(e) {
+      e.preventDefault();
+      const form = document.getElementById('waitlist-form');
+      const success = document.getElementById('waitlist-success');
+      // In production, this would POST to an API endpoint
+      form.style.display = 'none';
+      success.classList.remove('is-hidden');
+      return false;
+    }
+  </script>
+</body>
+</html>
