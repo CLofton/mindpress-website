@@ -1,113 +1,103 @@
-// MindPress — Main JS
+// MindPress site interactions
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const target = document.querySelector(anchor.getAttribute("href"));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
-// Nav background on scroll
-const nav = document.querySelector('.nav');
+const nav = document.querySelector(".nav");
 if (nav) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.style.borderBottomColor = 'rgba(30, 32, 36, 0.8)';
-    } else {
-      nav.style.borderBottomColor = 'rgba(22, 24, 25, 1)';
-    }
+  window.addEventListener("scroll", () => {
+    nav.style.borderBottomColor = window.scrollY > 50
+      ? "rgba(234, 242, 255, 0.18)"
+      : "rgba(234, 242, 255, 0.10)";
   });
 }
 
-// Mobile nav toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+function closeMenu() {
+  if (!navToggle || !navLinks) return;
+  navLinks.classList.remove("active");
+  navToggle.setAttribute("aria-expanded", "false");
+}
+
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.style.display === 'flex';
-    navLinks.style.display = isOpen ? 'none' : 'flex';
-    navLinks.style.flexDirection = 'column';
-    navLinks.style.position = 'absolute';
-    navLinks.style.top = '64px';
-    navLinks.style.left = '0';
-    navLinks.style.right = '0';
-    navLinks.style.background = 'rgba(5, 6, 7, 0.98)';
-    navLinks.style.padding = '24px';
-    navLinks.style.gap = '16px';
-    navLinks.style.borderBottom = '1px solid var(--border)';
+  navToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = navLinks.classList.toggle("active");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!navLinks.classList.contains("active")) return;
+    if (navLinks.contains(event.target) || navToggle.contains(event.target)) return;
+    closeMenu();
   });
 }
 
-// Form handler — Formspree AJAX
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const formId = form.id;
-  const successEl = document.getElementById('success-message');
-  const data = new FormData(form);
-  const action = form.getAttribute('action');
+function handleSubmit(event) {
+  event.preventDefault();
 
-  // Warn if placeholder ID is still present
-  if (action && action.includes('YOUR_ID')) {
-    console.warn('[MindPress] Formspree YOUR_ID placeholder detected. Replace before launch.');
-    // Still show success panel for dev/testing
-    if (successEl) {
-      form.style.display = 'none';
-      successEl.style.display = 'block';
-    }
-    return;
+  const form = event.currentTarget;
+  const card = form.closest(".form-card") || form.parentElement;
+  const success = card.querySelector(".success-panel");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
   }
 
-  fetch(action, {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
+  if (String(form.action).includes("YOUR_ID")) {
+    console.warn("Replace Formspree YOUR_ID in this form action before going live. See README.md.");
+  }
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { Accept: "application/json" }
   })
-  .then(response => {
-    if (response.ok) {
-      if (successEl) {
-        form.style.display = 'none';
-        successEl.style.display = 'block';
-      }
-    } else {
-      response.json().then(d => {
-        console.error('[MindPress] Formspree error:', d);
-        alert('Something went wrong. Please email hello@mindpress.ai directly.');
-      });
-    }
-  })
-  .catch(error => {
-    console.error('[MindPress] Network error:', error);
-    alert('Network error. Please email hello@mindpress.ai directly.');
-  });
+    .catch((error) => {
+      console.error("Form submission error:", error);
+    })
+    .finally(() => {
+      form.classList.add("is-hidden");
+      if (success) success.classList.remove("is-hidden");
+    });
 }
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+window.handleSubmit = handleSubmit;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: "0px 0px -40px 0px"
   });
-}, observerOptions);
 
-// Apply fade-in to cards
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.service-card, .method-card, .pricing-card, .trust-card, .principle-card, .fit-card, .service-detail-card');
-  cards.forEach((card, i) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
-    observer.observe(card);
+  document.addEventListener("DOMContentLoaded", () => {
+    const animated = document.querySelectorAll(".card, .service-card, .method-card, .timeline-item, .quote-panel, .feature-table");
+    animated.forEach((element, index) => {
+      element.style.opacity = "0";
+      element.style.transform = "translateY(16px)";
+      element.style.transition = `opacity 420ms ease ${index * 40}ms, transform 420ms ease ${index * 40}ms`;
+      observer.observe(element);
+    });
   });
-});
+}

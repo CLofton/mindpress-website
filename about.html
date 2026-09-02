@@ -6,141 +6,174 @@
   <title>About MindPress | Forward-deployed AI engineering</title>
   <meta name="description" content="MindPress is a forward-deployed engineering practice founded by Chris Lofton. Sister brand to Austin AI School. We install production AI in customer operations.">
   <meta name="theme-color" content="#050607">
-  <link rel="canonical" href="https://mindpress.ai/about.html">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">◆</span> MindPress
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            <div class="nav-links">
         <a href="services.html">Services</a>
         <a href="index.html#method">Method</a>
         <a href="about.html" class="active">About</a>
         <a href="intake.html">Qualify</a>
         <a href="book.html" class="btn btn-nav">Start Diagnostic</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="about-hero">
-    <div class="container">
-      <div class="section-badge">About MindPress</div>
-      <h1 class="hero-title">Operator-led engineers who install<br><span class="gradient-text">AI in production.</span></h1>
-    </div>
-  </section>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">About MindPress</div>
+          <h1 class="page-title">Operator-led engineers who install AI in production.</h1>
+          <p class="page-copy">MindPress exists to move companies past experiments. We embed with the team that owns the work, pick 1–2 workflows, and install working systems in the customer environment.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Origin -->
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <div class="origin-section">
-        <div class="section-header" style="text-align: left;">
+    <section class="section">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Origin</div>
           <h2 class="section-title">Built from operating complexity, not AI novelty.</h2>
         </div>
         <div class="quote-panel">
-          <p>MindPress was founded by Chris Lofton after years of operating large education programs across hundreds of locations and instructors. The most valuable AI work is inside repeatable processes. It needs embedded engineers, integration, controls, adoption — not a workshop and not a sandbox demo.</p>
+          <p class="muted-copy">MindPress was founded by Chris Lofton after years of operating large education programs across hundreds of locations and instructors. At that scale, every back-office delay compounds: payroll, reporting, hiring, forecasting, compliance, and management cadence all become leverage points.</p>
+          <p class="muted-copy">The insight is direct: the most valuable AI work is inside the repeatable processes that already run the company. Those workflows need embedded engineers, system integration, controls, and adoption—not a workshop and not a demo that never leaves a sandbox.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Sister brand -->
-  <section class="section">
-    <div class="container">
-      <div class="origin-section">
-        <h2 class="section-title">Related to Austin AI School, built for implementation.</h2>
-        <p style="font-size: 17px; color: var(--text-secondary); line-height: 1.7; margin: 16px 0 32px;">Austin AI School helps people understand and use AI. MindPress is the implementation arm.</p>
-        <div class="sister-table">
-          <div class="sister-cell">
-            <h4>Shared DNA</h4>
-            <p>Same founder, same belief that AI belongs in real work, not in a slide deck.</p>
+    <section class="section section-band">
+      <div class="container feature-row">
+        <div>
+          <div class="eyebrow">Sister brand</div>
+          <h2 class="section-title">Related to Austin AI School, built for implementation.</h2>
+          <p class="section-copy">Austin AI School helps people understand and use AI. MindPress takes that same commitment to practical fluency and applies it as forward-deployed engineering: production systems, in the customer environment, with an owner.</p>
+        </div>
+        <div class="feature-table" role="table" aria-label="Brand relationship">
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Shared DNA</div>
+            <div class="feature-table-value" role="cell">Technical confidence, practical education, and a belief that AI should make operators more capable.</div>
           </div>
-          <div class="sister-cell">
-            <h4>MindPress shift</h4>
-            <p>From education to production. Forward-deployed engineering, not curriculum.</p>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">MindPress shift</div>
+            <div class="feature-table-value" role="cell">Embedded production engineering. Controls, systems of record, ROI, and a named owner—not an agency retainer.</div>
           </div>
-          <div class="sister-cell">
-            <h4>Visual link</h4>
-            <p>Deep dark, cyan and mint, cobalt and brass.</p>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Visual link</div>
+            <div class="feature-table-value" role="cell">Deep dark base, cyan and mint continuity, with cobalt and brass added for consulting authority.</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Principles -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Principles</div>
-      </div>
-      <div class="principles-grid">
-        <div class="principle-card">
-          <div class="principle-number">01</div>
-          <h3>Production before theater.</h3>
-          <p>Ship working systems on real data, not demo environments.</p>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Principles</div>
+            <h2 class="section-title">The standards behind every engagement.</h2>
+          </div>
+          <p class="section-copy">MindPress is designed for leadership teams that need AI to perform inside real constraints.</p>
         </div>
-        <div class="principle-card">
-          <div class="principle-number">02</div>
-          <h3>Controls before scale.</h3>
-          <p>Guardrails, HITL, and exception handling before expanding scope.</p>
-        </div>
-        <div class="principle-card">
-          <div class="principle-number">03</div>
-          <h3>Measurement before claims.</h3>
-          <p>Evals, tracing, and weekly numbers before publishing results.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Leadership -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Leadership</div>
-      </div>
-      <div class="founder-card">
-        <div class="founder-kicker">Founder</div>
-        <h3>Chris Lofton</h3>
-        <p>Operator who built and ran large education programs across hundreds of locations, then turned to production AI. MindPress exists because the most valuable AI work is inside repeatable processes — and it needs embedded engineers, not a workshop.</p>
-        <ul class="check-list">
-          <li>Multi-location operations background</li>
-          <li>Production over workshops</li>
-          <li>Sister work with Austin AI School</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <h2>A two-week diagnostic is enough to know.</h2>
-        <div class="hero-ctas">
-          <a href="book.html" class="btn btn-primary btn-lg">Start a 2-week diagnostic →</a>
-          <a href="services.html" class="btn btn-ghost btn-lg">View services</a>
+        <div class="grid-3">
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <div>
+              <h3>Production before theater</h3>
+              <p>We prioritize workflows with a real owner, a system of record, and a path into the customer environment.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">02</span>
+            <div>
+              <h3>Controls before scale</h3>
+              <p>Evals, guardrails, tracing, and human-in-the-loop before a system touches sensitive work.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <div>
+              <h3>Measurement before claims</h3>
+              <p>Every install should tie back to cycle time, quality, margin, risk reduction, or revenue lift.</p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <section class="section section-band">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Leadership</div>
+          <h2 class="section-title">Led by an operator who understands scale.</h2>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Founder</span>
+          <h3>Chris Lofton</h3>
+          <p class="card-copy">Chris brings operating experience from education, distributed teams, and AI implementation. MindPress translates that background into a forward-deployed practice: engineers in the customer environment, installing systems operators will actually run.</p>
+          <ul class="check-list">
+            <li>Large multi-location operations experience</li>
+            <li>Bias toward production installs over workshops</li>
+            <li>Sister work with Austin AI School on practical AI fluency</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">Start focused</div>
+          <h2 class="cta-title">A two-week diagnostic is enough to know.</h2>
+          <p>We pick 1–2 workflows, name the owner, and define done. If they are worth installing, the next step is production.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-primary">Start a 2-week diagnostic</a>
+          <a href="services.html" class="btn btn-secondary">View services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
           <p>Forward-deployed engineering for companies that need production AI in operations, not another demo.</p>
         </div>
         <div class="footer-col">
@@ -150,12 +183,12 @@
           <a href="services.html">Data and integration</a>
           <a href="services.html">Quality plus adoption</a>
         </div>
-        <div class="footer-col">
+                <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
           <a href="index.html#method">Method</a>
           <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work / results</a>
+          <a href="case-studies.html">Work</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">

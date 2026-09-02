@@ -6,192 +6,293 @@
   <title>MindPress | Forward-deployed AI for production operations</title>
   <meta name="description" content="MindPress embeds forward-deployed engineers to install production AI in your operations. A two-week diagnostic picks 1–2 workflows, then a paid install into your environment.">
   <meta name="theme-color" content="#050607">
-  <link rel="canonical" href="https://mindpress.ai/">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">◆</span> MindPress
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            <div class="nav-links">
         <a href="services.html">Services</a>
         <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
         <a href="intake.html">Qualify</a>
         <a href="book.html" class="btn btn-nav">Start Diagnostic</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge">Forward-deployed engineering</div>
-      <h1 class="hero-title">Production AI, installed in<br><span class="gradient-text">your operations.</span></h1>
-      <p class="hero-subtitle">MindPress embeds engineers in the customer environment to ship working systems—not slides, not a sandbox demo. A two-week diagnostic picks one or two workflows. Then we install them into production.</p>
-      <div class="hero-ctas">
-        <a href="book.html" class="btn btn-primary btn-lg">Start a 2-week diagnostic →</a>
-        <a href="intake.html" class="btn btn-ghost btn-lg">Qualify a workflow</a>
+  <main>
+    <section class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.34" stroke="#6b8cff" stroke-width="1">
+            <path d="M125 630 C280 520 335 690 494 572 S765 380 942 506 1175 637 1320 500" fill="none"/>
+            <path d="M70 336 C260 270 376 402 520 312 S820 122 1006 280 1160 400 1380 290" fill="none"/>
+            <path d="M190 760 C420 650 552 708 690 590 S938 444 1240 700" fill="none"/>
+          </g>
+          <g opacity="0.92">
+            <circle cx="280" cy="520" r="5" fill="#2ad9d0"/>
+            <circle cx="494" cy="572" r="5" fill="#7ce7b8"/>
+            <circle cx="742" cy="430" r="7" fill="#d9a24c"/>
+            <circle cx="942" cy="506" r="5" fill="#2ad9d0"/>
+            <circle cx="1168" cy="610" r="5" fill="#6b8cff"/>
+            <circle cx="376" cy="402" r="5" fill="#6b8cff"/>
+            <circle cx="820" cy="122" r="6" fill="#2ad9d0"/>
+            <circle cx="1006" cy="280" r="5" fill="#d9a24c"/>
+          </g>
+          <g opacity="0.16" fill="none" stroke="#eef4ff">
+            <rect x="848" y="210" width="276" height="180" rx="8"/>
+            <path d="M884 262h154M884 304h202M884 346h108"/>
+            <rect x="220" y="248" width="210" height="132" rx="8"/>
+            <path d="M254 294h118M254 336h146"/>
+            <rect x="980" y="562" width="240" height="126" rx="8"/>
+            <path d="M1014 608h144M1014 650h92"/>
+          </g>
+        </svg>
       </div>
-      <!-- Proof strip -->
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-value">2 wk</div>
-          <div class="stat-label">Diagnostic that picks 1–2 workflows</div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Forward-deployed engineering</div>
+          <h1 class="hero-title">Production AI, installed in your operations.</h1>
+          <p class="hero-copy">MindPress embeds engineers in the customer environment to ship working systems—not slides, not a sandbox demo. A two-week diagnostic picks one or two workflows. Then we install them into production.</p>
+          <div class="hero-actions">
+            <a href="book.html" class="btn btn-primary">
+              Start a 2-week diagnostic
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h10M10 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="intake.html" class="btn btn-secondary">Qualify a workflow</a>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <div class="stat-value">FDE</div>
-          <div class="stat-label">Engineers embedded in your environment</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <div class="stat-value">Prod</div>
-          <div class="stat-label">Working systems on your stack</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <div class="stat-value">HITL</div>
-          <div class="stat-label">Evals, guardrails, tracing, runbooks</div>
-        </div>
+      </div>
+    </section>
+
+    <div class="proof-strip" aria-label="MindPress proof points">
+      <div class="proof-item">
+        <span class="proof-value">2 wk</span>
+        <span class="proof-label">Diagnostic that picks 1–2 workflows</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">FDE</span>
+        <span class="proof-label">Engineers embedded in your environment</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">Prod</span>
+        <span class="proof-label">Working systems on your stack</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-value">HITL</span>
+        <span class="proof-label">Evals, guardrails, tracing, runbooks</span>
       </div>
     </div>
-    <div class="hero-glow"></div>
-  </section>
 
-  <!-- Where we work -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Where we work</div>
-        <h2 class="section-title">Four places production AI actually belongs.</h2>
-        <p class="section-subtitle">Not a catalog of seven SKUs. One first engagement that lands in one of these buckets. The diagnostic chooses. The install ships.</p>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Where we work</div>
+            <h2 class="section-title">Four places production AI actually belongs.</h2>
+          </div>
+          <p class="section-copy">Not a catalog of seven SKUs. One first engagement that lands in one of these buckets. The diagnostic chooses. The install ships.</p>
+        </div>
+        <div class="grid-2">
+          <article class="service-card">
+            <span class="service-kicker">CRO · COO · CFO</span>
+            <h3>Internal workflows</h3>
+            <p>Revenue workflows and operations / back-office, wired into systems of record. Agents that draft, route, and execute—with owners, exceptions, and audit trails.</p>
+            <ul class="service-list">
+              <li>Quote-to-cash, pipeline ops, and deal-desk workflows for the CRO</li>
+              <li>Close, AP/AR, hiring, reporting, and operating cadence for COO / CFO</li>
+              <li>Not ads, SEO, or social. Not a marketing retainer.</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">CCO · VP Support</span>
+            <h3>Customer-facing agents</h3>
+            <p>Voice, chat, and email agents that call your APIs. Sierra- and Decagon-shaped work: resolve, route, and act inside the tools the customer already uses.</p>
+            <ul class="service-list">
+              <li>Support, success, and service agents with live system actions</li>
+              <li>Identity, permissions, and escalation into a human queue</li>
+              <li>Not a FAQ chatbot dropped on the website</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">CIO</span>
+            <h3>Data and integration</h3>
+            <p>Connectors, identity, and retrieval over ERP, CRM, DMS, and warehouse. KPI monitoring, ERP access, and AI reporting live here—not as a separate product line.</p>
+            <ul class="service-list">
+              <li>Systems of record connected with the right identity and permissions</li>
+              <li>RAG over the documents and tables operators already trust</li>
+              <li>Reporting and KPI watchers as a byproduct of the data layer</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Governance · Enablement</span>
+            <h3>Quality plus adoption</h3>
+            <p>The work that keeps a production system honest after go-live: evals, guardrails, tracing, human-in-the-loop, diagnostic, enablement, and runbooks.</p>
+            <ul class="service-list">
+              <li>Evaluation harnesses, tracing, and review queues before scale</li>
+              <li>Operator enablement, SOPs, and a named owner</li>
+              <li>Not a ChatGPT workshop. Not foundation-model training.</li>
+            </ul>
+          </article>
+        </div>
       </div>
-      <div class="service-grid">
-        <!-- Card 1 -->
-        <div class="service-card">
-          <div class="service-kicker">CRO · COO · CFO</div>
-          <h3>Internal workflows</h3>
-          <p>Revenue workflows and operations / back-office, wired into systems of record. Agents that draft, route, and execute—with owners, exceptions, and audit trails.</p>
-          <ul>
-            <li>Quote-to-cash, pipeline ops, deal-desk (CRO)</li>
-            <li>Close, AP/AR, hiring, reporting, operating cadence (COO/CFO)</li>
+    </section>
+
+    <section class="section section-band">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">Not an agency</div>
+          <h2 class="section-title">Embedded production engineering, not a slide deck.</h2>
+          <p class="section-copy">The deliverable is a working system in the customer environment. MindPress sits with your operators, connects the systems of record, and leaves you with something that runs—plus the controls to trust it.</p>
+          <ul class="check-list">
+            <li>Forward-deployed engineers in your stack, not a remote prompt factory</li>
+            <li>One first engagement: diagnostic, then a paid install of 1–2 workflows</li>
+            <li>Human-in-the-loop for sensitive decisions, with escalation paths</li>
+            <li>Documentation, runbooks, and adoption so the system survives handoff</li>
           </ul>
-          <p class="service-not">Not ads, SEO, or social. Not a marketing retainer.</p>
         </div>
-        <!-- Card 2 -->
-        <div class="service-card">
-          <div class="service-kicker">CCO · VP Support</div>
-          <h3>Customer-facing agents</h3>
-          <p>Voice, chat, email that call APIs. Sierra- and Decagon-shaped. Not a FAQ chatbot.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="service-card">
-          <div class="service-kicker">CIO</div>
-          <h3>Data and integration</h3>
-          <p>Connectors, identity, RAG over ERP/CRM/DMS/warehouse. KPI monitoring and AI reporting live here, not as a separate product line.</p>
-        </div>
-        <!-- Card 4 -->
-        <div class="service-card">
-          <div class="service-kicker">Governance · Enablement</div>
-          <h3>Quality plus adoption</h3>
-          <p>Evals, guardrails, tracing, HITL, diagnostic, enablement, runbooks.</p>
-          <p class="service-not">Not a ChatGPT workshop. Not foundation-model training.</p>
+        <div class="signal-panel" aria-hidden="true">
+          <svg viewBox="0 0 640 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="#263342">
+              <path d="M96 112h148l78 92h190"/>
+              <path d="M96 250h178l86-92h152"/>
+              <path d="M96 388h148l76-92h192"/>
+              <path d="M320 204v92"/>
+            </g>
+            <g>
+              <rect x="54" y="80" width="130" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="54" y="218" width="130" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="54" y="356" width="130" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="456" y="172" width="132" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <rect x="456" y="264" width="132" height="64" rx="8" fill="#10161f" stroke="rgba(234,242,255,.16)"/>
+              <circle cx="320" cy="250" r="54" fill="#050607" stroke="#2ad9d0" stroke-width="2"/>
+              <circle cx="320" cy="250" r="18" fill="#2ad9d0"/>
+              <circle cx="96" cy="112" r="7" fill="#6b8cff"/>
+              <circle cx="96" cy="250" r="7" fill="#d9a24c"/>
+              <circle cx="96" cy="388" r="7" fill="#7ce7b8"/>
+              <circle cx="512" cy="204" r="7" fill="#2ad9d0"/>
+              <circle cx="512" cy="296" r="7" fill="#6b8cff"/>
+            </g>
+          </svg>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Not an agency -->
-  <section class="section not-agency">
-    <div class="container">
-      <div class="not-agency-content">
-        <h2>Embedded production engineering, not a slide deck.</h2>
-        <ul class="check-list">
-          <li>FDE in your stack</li>
-          <li>One first engagement</li>
-          <li>HITL for sensitive decisions</li>
-          <li>Runbooks so it survives handoff</li>
-        </ul>
+    <section id="method" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Method</div>
+            <h2 class="section-title">Map. Install. Optimize.</h2>
+          </div>
+          <p class="section-copy">Every engagement moves from diagnosis to a working production system, with executive clarity at each step.</p>
+        </div>
+        <div class="grid-3">
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <div>
+              <h3>Map</h3>
+              <p>Two weeks. We identify 1–2 high-frequency workflows, decision points, systems of record, owners, and what “done” means.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">02</span>
+            <div>
+              <h3>Install</h3>
+              <p>Paid production install. We wire agents and automations into your environment, write operating procedures, and test exception paths.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <div>
+              <h3>Optimize</h3>
+              <p>Evals, tracing, adoption, cycle time, and error rates. The system improves after launch instead of rotting in a demo.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Method -->
-  <section id="method" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Method</div>
-        <h2 class="section-title">Map. Install. Optimize.</h2>
+    <section class="section section-band">
+      <div class="container feature-row">
+        <div>
+          <div class="eyebrow">Trust model</div>
+          <h2 class="section-title">Engineering discipline for systems that have to hold.</h2>
+          <p class="section-copy">AI should create leverage without weakening judgment, compliance, or accountability. That is the whole job.</p>
+        </div>
+        <div class="feature-table" role="table" aria-label="MindPress trust model">
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Production</div>
+            <div class="feature-table-value" role="cell">Working systems in your environment, on your identity, against your systems of record.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Controls</div>
+            <div class="feature-table-value" role="cell">Approvals, thresholds, logging, evals, guardrails, and owner accountability before launch.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Enablement</div>
+            <div class="feature-table-value" role="cell">Train operators on when to trust, when to review, and how to run the system after we leave.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Measurement</div>
+            <div class="feature-table-value" role="cell">Cycle time, throughput, quality, cost avoidance, and whether the workflow is actually used.</div>
+          </div>
+        </div>
       </div>
-      <div class="method-grid">
-        <div class="method-card">
-          <div class="method-number">01</div>
-          <h3>Map</h3>
-          <p>Two weeks. Identify 1–2 high-frequency workflows, decision points, systems of record, owners, and what "done" means.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">02</div>
-          <h3>Install</h3>
-          <p>Paid production install. Wire agents into the environment, write operating procedures, test exception paths.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">03</div>
-          <h3>Optimize</h3>
-          <p>Evals, tracing, adoption, cycle time, error rates.</p>
-        </div>
-      </div>
+    </section>
 
-      <!-- Trust model -->
-      <div class="trust-grid" style="margin-top: 64px;">
-        <div class="trust-card">
-          <h4>Production</h4>
-          <p>Real data, system of record, named owner, approval path, log, weekly number.</p>
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">First engagement</div>
+          <h2 class="cta-title">Start with one diagnostic. Not a menu of six.</h2>
+          <p>A two-week diagnostic picks 1–2 workflows. If they are worth installing, the next step is a paid production install. Book that first conversation.</p>
         </div>
-        <div class="trust-card">
-          <h4>Controls</h4>
-          <p>Guardrails, HITL, exception handling, audit trail.</p>
-        </div>
-        <div class="trust-card">
-          <h4>Enablement</h4>
-          <p>Runbooks, named operator, adoption tracking.</p>
-        </div>
-        <div class="trust-card">
-          <h4>Measurement</h4>
-          <p>Evals, tracing, cycle time, error rates, weekly review.</p>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-primary">Start a 2-week diagnostic</a>
+          <a href="intake.html" class="btn btn-secondary">Qualify a workflow</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="section-badge">First engagement</div>
-        <h2>Start with one diagnostic.<br>Not a menu of six.</h2>
-        <div class="hero-ctas">
-          <a href="book.html" class="btn btn-primary btn-lg">Start a 2-week diagnostic →</a>
-          <a href="intake.html" class="btn btn-ghost btn-lg">Qualify a workflow</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
           <p>Forward-deployed engineering for companies that need production AI in operations, not another demo.</p>
         </div>
         <div class="footer-col">
@@ -201,12 +302,12 @@
           <a href="services.html">Data and integration</a>
           <a href="services.html">Quality plus adoption</a>
         </div>
-        <div class="footer-col">
+                <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
           <a href="index.html#method">Method</a>
           <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work / results</a>
+          <a href="case-studies.html">Work</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">

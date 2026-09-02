@@ -6,117 +6,108 @@
   <title>Pricing | MindPress</title>
   <meta name="description" content="MindPress first engagement: a $12,500 two-week diagnostic, then a $25–45k production install of 1–2 workflows. Not agent-team retainers.">
   <meta name="theme-color" content="#050607">
-  <link rel="canonical" href="https://mindpress.ai/pricing.html">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
-      <div class="nav-links">
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            <div class="nav-links">
         <a href="services.html">Services</a>
         <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
         <a href="intake.html">Qualify</a>
         <a href="book.html" class="btn btn-nav">Start Diagnostic</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
-
-  <!-- Hero -->
-  <section class="hero" style="padding-bottom: 40px;">
-    <div class="container">
-      <div class="hero-badge">How we engage</div>
-      <h1 class="hero-title" style="font-size: clamp(32px, 5vw, 56px);">A paid diagnostic.<br><span class="gradient-text">Then a production install.</span></h1>
-      <p class="hero-subtitle">We do not sell $5k or $15k "agent teams." The first engagement is two weeks on one real workflow. If it can go to production, we quote a fixed install. If it cannot, we stop.</p>
-    </div>
-  </section>
-
-  <!-- Pricing Cards -->
-  <section class="section" style="padding-top: 20px;">
-    <div class="container">
-      <div class="pricing-grid">
-        <!-- Diagnostic -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Week 1–2</div>
-          <div class="pricing-price">$12,500</div>
-          <p class="pricing-desc">Sit with the people who do the work. Map 8–12 candidate workflows. Pick one, maybe two. Kill the rest in writing. You get a yes/no, a production design, and a fixed install price.</p>
-          <ul class="pricing-features">
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">How we engage</div>
+          <h1 class="page-title">A paid diagnostic. Then a production install.</h1>
+          <p class="page-copy">We do not sell $5k or $15k “agent teams.” The first engagement is two weeks on one real workflow. If it can go to production, we quote a fixed install. If it cannot, we stop.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container grid-2">
+        <article class="service-card">
+          <span class="service-kicker">Week 1–2</span>
+          <h3>$12,500 diagnostic</h3>
+          <p>Sit with the people who do the work. Map 8–12 candidate workflows. Pick one, maybe two. Kill the rest in writing. You get a yes/no, a production design, and a fixed install price.</p>
+          <ul class="service-list">
             <li>Shadow the operator, not the slide version of the process</li>
             <li>Baseline: cycle time, rework, hours/week, cost of missing</li>
             <li>50% credits to the install if you start within 30 days</li>
           </ul>
-          <a href="book.html" class="btn btn-primary" style="width: 100%;">Start a 2-week diagnostic</a>
-        </div>
-
-        <!-- Install -->
-        <div class="pricing-card">
-          <div class="pricing-tier">After the diagnostic</div>
-          <div class="pricing-price">$25–45K</div>
-          <p class="pricing-desc">One workflow in production on your real data, in the system of record, with a named owner, an approval path, a log, and a weekly number. Optional operate month after that.</p>
-          <ul class="pricing-features">
+        </article>
+        <article class="service-card">
+          <span class="service-kicker">After the diagnostic</span>
+          <h3>$25,000–$45,000 install</h3>
+          <p>One workflow in production on your real data, in the system of record, with a named owner, an approval path, a log, and a weekly number. Optional operate month after that.</p>
+          <ul class="service-list">
             <li>Fixed price after we have seen the work</li>
             <li>Optional operate: $8,000–$12,000/month, 90-day minimum</li>
             <li>A demo on sample data is not production. We do not bill it as such.</li>
           </ul>
-          <a href="book.html" class="btn btn-ghost" style="width: 100%;">Start with the diagnostic</a>
-        </div>
+        </article>
       </div>
-
-      <!-- Will not sell -->
-      <div style="margin-top: 80px;">
+    </section>
+    <section class="section section-band">
+      <div class="container">
         <div class="section-header">
-          <h2 class="section-title">We will not sell</h2>
-        </div>
-        <div class="will-not-grid">
-          <div class="will-not-card">
-            <h4>SEO retainers, ads, or social calendars</h4>
-            <p>No SEO retainers, paid media, social calendars, or lead-gen as a marketing service.</p>
-          </div>
-          <div class="will-not-card">
-            <h4>ChatGPT workshops or "train the company on AI"</h4>
-            <p>No ChatGPT lunch-and-learns, prompt classes, or generic AI literacy sold as delivery.</p>
-          </div>
-          <div class="will-not-card">
-            <h4>Foundation-model training</h4>
-            <p>No foundation-model training, fine-tune-as-a-product, or "custom AI training" as a peer SKU.</p>
-          </div>
-          <div class="will-not-card">
-            <h4>Monthly "AI agent team" packages</h4>
-            <p>No monthly "AI agent team" packages that go live in 48 hours.</p>
+          <div>
+            <div class="eyebrow">We will not sell</div>
+            <h2 class="section-title">Not on this site, not in a proposal.</h2>
           </div>
         </div>
+        <ul class="check-list">
+          <li>SEO retainers, ads, or social calendars</li>
+          <li>ChatGPT workshops or “train the company on AI”</li>
+          <li>Foundation-model training</li>
+          <li>Monthly “AI agent team” packages that go live in 48 hours</li>
+        </ul>
+        <p class="section-copy" style="margin-top:2rem"><a href="book.html" class="btn btn-primary">Start a 2-week diagnostic</a></p>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="hero-badge">First engagement</div>
-        <h2>Start with one diagnostic.<br>Not a menu of six.</h2>
-        <p>Two weeks. One real workflow. A yes or a no.</p>
-        <div class="hero-ctas">
-          <a href="book.html" class="btn btn-primary btn-lg">Start a 2-week diagnostic</a>
-          <a href="intake.html" class="btn btn-ghost btn-lg">Qualify a workflow</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
+    </section>
+  </main>
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
           <p>Forward-deployed engineering for companies that need production AI in operations, not another demo.</p>
         </div>
         <div class="footer-col">
@@ -126,12 +117,12 @@
           <a href="services.html">Data and integration</a>
           <a href="services.html">Quality plus adoption</a>
         </div>
-        <div class="footer-col">
+                <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
           <a href="index.html#method">Method</a>
           <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work / results</a>
+          <a href="case-studies.html">Work</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">
@@ -146,7 +137,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

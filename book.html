@@ -6,153 +6,203 @@
   <title>Start a 2-week diagnostic | MindPress</title>
   <meta name="description" content="Book the MindPress first engagement: a two-week diagnostic that picks 1–2 workflows, then a paid production install. Qualify company, function, systems, owner, and done.">
   <meta name="theme-color" content="#050607">
-  <link rel="canonical" href="https://mindpress.ai/book.html">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> MindPress</a>
-      <div class="nav-links">
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            <div class="nav-links">
         <a href="services.html">Services</a>
         <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
         <a href="intake.html">Qualify</a>
         <a href="book.html" class="btn btn-nav active">Start Diagnostic</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <section class="book-section">
-    <div class="container" style="text-align: center;">
-      <div class="hero-badge">First engagement</div>
-      <h1 class="hero-title" style="font-size: clamp(32px, 5vw, 52px);">Book the <span class="gradient-text">2-week diagnostic.</span></h1>
-
-      <!-- Timeline -->
-      <div class="timeline">
-        <div class="timeline-step">
-          <h4>Before</h4>
-          <p>Qualification review</p>
-        </div>
-        <div class="timeline-step">
-          <h4>During</h4>
-          <p>Workflow mapping</p>
-        </div>
-        <div class="timeline-step">
-          <h4>After</h4>
-          <p>Diagnostic proposal</p>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">First engagement</div>
+          <h1 class="page-title">Book the 2-week diagnostic.</h1>
+          <p class="page-copy">One conversation to start. We use it to qualify the company, the function, the systems of record, who owns the work, and what done means. Then we pick 1–2 workflows for a paid production install.</p>
         </div>
       </div>
+    </section>
 
-      <div class="book-card">
-        <form id="booking-form" action="https://formspree.io/f/YOUR_ID" method="POST" onsubmit="handleSubmit(event)">
-          <input type="hidden" name="form_name" value="book_diagnostic">
-
-          <div class="form-group">
-            <label for="name">Full name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="Jane Smith">
+    <section class="section">
+      <div class="container split-layout">
+        <div>
+          <div class="eyebrow">What to expect</div>
+          <h2 class="section-title">A scoping conversation, not a generic demo.</h2>
+          <p class="section-copy">The first engagement is the diagnostic. It is not a catalog of six offers. We choose 1–2 workflows that can be installed into production.</p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">Before</div>
+              <div>
+                <h3>Qualification review</h3>
+                <p>We read company, function, systems, owner, and definition of done before the call.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">During</div>
+              <div>
+                <h3>Workflow mapping</h3>
+                <p>We pressure-test systems of record, owners, constraints, and whether production install is realistic.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-time">After</div>
+              <div>
+                <h3>Diagnostic proposal</h3>
+                <p>If there is a fit, you get a two-week diagnostic scoped to 1–2 workflows and a path to paid install.</p>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="email">Work email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="jane@company.com">
+        <div class="form-card">
+          <form id="booking-form" action="https://formspree.io/f/YOUR_ID" method="POST" onsubmit="handleSubmit(event)">
+            <input type="hidden" name="form_name" value="book_diagnostic">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full name *</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+              </div>
+              <div class="form-group">
+                <label for="email">Work email *</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+              </div>
+              <div class="form-group">
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="company" required autocomplete="organization" placeholder="Acme Corp">
+              </div>
+              <div class="form-group">
+                <label for="title">Your title</label>
+                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="VP Operations">
+              </div>
+              <div class="form-group">
+                <label for="function">Function *</label>
+                <select id="function" name="function" required>
+                  <option value="">Select one</option>
+                  <option value="internal">Internal workflows (revenue or operations)</option>
+                  <option value="customer">Customer-facing agents</option>
+                  <option value="data">Data and integration</option>
+                  <option value="unsure">Not sure — start with the diagnostic</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="size">Company size</label>
+                <select id="size" name="size">
+                  <option value="">Select one</option>
+                  <option value="1-10">1–10 employees</option>
+                  <option value="11-50">11–50 employees</option>
+                  <option value="51-200">51–200 employees</option>
+                  <option value="201-1000">201–1,000 employees</option>
+                  <option value="1000+">1,000+ employees</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="systems">Systems of record *</label>
+                <textarea id="systems" name="systems" required placeholder="ERP, CRM, DMS, warehouse, ticketing, identity — name the systems the work already lives in."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="owner">Who owns this? *</label>
+                <input type="text" id="owner" name="owner" required placeholder="Name and role of the executive owner">
+              </div>
+              <div class="form-group">
+                <label for="done">What does “done” mean? *</label>
+                <input type="text" id="done" name="done" required placeholder="A working production system that…">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-wide">Request the diagnostic</button>
+            <p class="form-note">MindPress will respond with scheduling details. No spam or newsletter opt-in.</p>
+          </form>
+
+          <div id="success-message" class="success-panel is-hidden">
+            <h3>Request received.</h3>
+            <p class="muted-copy">MindPress will follow up with scheduling details and any clarifying questions before the diagnostic conversation.</p>
+            <div class="hero-actions">
+              <a href="intake.html" class="btn btn-secondary">Add more workflow context</a>
+            </div>
           </div>
-
-          <div class="form-group">
-            <label for="company">Company <span class="required">*</span></label>
-            <input type="text" id="company" name="company" required placeholder="Acme Corp">
-          </div>
-
-          <div class="form-group">
-            <label for="title">Your title</label>
-            <input type="text" id="title" name="title" placeholder="VP Operations">
-          </div>
-
-          <div class="form-group">
-            <label for="function">Function <span class="required">*</span></label>
-            <select id="function" name="function" required>
-              <option value="">Select a function…</option>
-              <option value="internal">Internal workflows (revenue or operations)</option>
-              <option value="customer">Customer-facing agents</option>
-              <option value="data">Data and integration</option>
-              <option value="unsure">Not sure — start with the diagnostic</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="size">Company size</label>
-            <select id="size" name="size">
-              <option value="">Select size…</option>
-              <option value="1-10">1–10 employees</option>
-              <option value="11-50">11–50 employees</option>
-              <option value="51-200">51–200 employees</option>
-              <option value="201-1000">201–1,000 employees</option>
-              <option value="1000+">1,000+ employees</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="systems">Systems of record <span class="required">*</span></label>
-            <textarea id="systems" name="systems" required placeholder="e.g., Salesforce, NetSuite, HubSpot, Google Sheets, internal tools…"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="owner">Who owns this? <span class="required">*</span></label>
-            <input type="text" id="owner" name="owner" required placeholder="Name and title of the person who will use it weekly">
-          </div>
-
-          <div class="form-group">
-            <label for="done">What does "done" mean? <span class="required">*</span></label>
-            <input type="text" id="done" name="done" required placeholder="e.g., Quote-to-cash cycle under 24 hours with no manual handoffs">
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
-            Request the diagnostic
-          </button>
-          <p class="form-note">MindPress will respond with scheduling details. No spam or newsletter opt-in.</p>
-        </form>
-
-        <div id="success-message" class="success-message">
-          <h3>Request received.</h3>
-          <p>We will follow up with scheduling details.</p>
-          <a href="intake.html" class="btn btn-ghost">Add more workflow context →</a>
         </div>
       </div>
+    </section>
 
-      <!-- Good-fit cards -->
-      <div class="fit-grid">
-        <div class="fit-card">
-          <h4>Internal</h4>
-          <p>Revenue workflows and operations wired into systems of record.</p>
+    <section class="section section-band">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Good fit</div>
+            <h2 class="section-title">This call is useful when production is the goal.</h2>
+          </div>
+          <p class="section-copy">MindPress is strongest when the work is repeated, owned, measurable, and important enough to deserve controls.</p>
         </div>
-        <div class="fit-card">
-          <h4>Customer</h4>
-          <p>Voice, chat, email that call APIs. Not a FAQ chatbot.</p>
-        </div>
-        <div class="fit-card">
-          <h4>Data</h4>
-          <p>Connectors, identity, RAG over ERP/CRM/DMS/warehouse.</p>
-        </div>
-        <div class="fit-card">
-          <h4>Quality</h4>
-          <p>Evals, guardrails, tracing, HITL, runbooks.</p>
+        <div class="grid-4">
+          <div class="card">
+            <span class="card-kicker">Internal</span>
+            <h3>Revenue and operations</h3>
+            <p>CRO / COO / CFO workflows with a system of record and a named owner.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Customer</span>
+            <h3>Agents that call APIs</h3>
+            <p>CCO / VP Support work: voice, chat, or email that has to resolve, not deflect.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Data</span>
+            <h3>Identity and retrieval</h3>
+            <p>CIO work: connectors, RAG, and reporting over ERP, CRM, DMS, or warehouse.</p>
+          </div>
+          <div class="card">
+            <span class="card-kicker">Quality</span>
+            <h3>Evals and adoption</h3>
+            <p>Guardrails, tracing, HITL, runbooks—so the install holds after go-live.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
           <p>Forward-deployed engineering for companies that need production AI in operations, not another demo.</p>
         </div>
         <div class="footer-col">
@@ -162,12 +212,12 @@
           <a href="services.html">Data and integration</a>
           <a href="services.html">Quality plus adoption</a>
         </div>
-        <div class="footer-col">
+                <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
           <a href="index.html#method">Method</a>
           <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work / results</a>
+          <a href="case-studies.html">Work</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">

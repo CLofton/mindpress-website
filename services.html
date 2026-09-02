@@ -6,203 +6,224 @@
   <title>Services | MindPress production AI</title>
   <meta name="description" content="MindPress installs production AI: revenue and operations workflows, customer-facing agents, data and integration, plus quality and adoption. Not SEO, workshops, or model training.">
   <meta name="theme-color" content="#050607">
-  <link rel="canonical" href="https://mindpress.ai/services.html">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">◆</span> MindPress
+      <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-word">MindPress</span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            <div class="nav-links">
         <a href="services.html" class="active">Services</a>
         <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
         <a href="intake.html">Qualify</a>
         <a href="book.html" class="btn btn-nav">Start Diagnostic</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero" style="padding: 160px 0 80px;">
-    <div class="container">
-      <div class="hero-badge">Implementation, not a catalog</div>
-      <h1 class="hero-title">Production systems for the people<br><span class="gradient-text">who own the work.</span></h1>
-      <p class="hero-subtitle">MindPress is a forward-deployed engineering practice. The first engagement is a two-week diagnostic that picks 1–2 workflows, then a paid install into production. These six offers describe where that work lands—not a menu you shop from.</p>
-      <div class="hero-ctas">
-        <a href="book.html" class="btn btn-primary btn-lg">Start a 2-week diagnostic →</a>
-        <a href="intake.html" class="btn btn-ghost btn-lg">Qualify a workflow</a>
+  <main>
+    <section class="hero page-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Implementation, not a catalog</div>
+          <h1 class="page-title">Production systems for the people who own the work.</h1>
+          <p class="page-copy">MindPress is a forward-deployed engineering practice. The first engagement is a two-week diagnostic that picks 1–2 workflows, then a paid install into production. These six offers describe where that work lands—not a menu you shop from.</p>
+          <div class="hero-actions">
+            <a href="book.html" class="btn btn-primary">Start a 2-week diagnostic</a>
+            <a href="intake.html" class="btn btn-secondary">Qualify a workflow</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="hero-glow"></div>
-  </section>
+    </section>
 
-  <!-- Six service cards -->
-  <section class="section" style="padding-top: 40px;">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Six places a diagnostic usually lands.</h2>
-      </div>
-      <div class="services-detail-grid">
-
-        <!-- 1. Revenue workflows -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-kicker">CRO</div>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Offers</div>
+            <h2 class="section-title">Six places a diagnostic usually lands.</h2>
+          </div>
+          <p class="section-copy">Buyer titles are listed so the right executive can own the work. You still start with one engagement, not six projects.</p>
+        </div>
+        <div class="grid-3">
+          <article class="service-card">
+            <span class="service-kicker">CRO</span>
             <h3>Revenue workflows</h3>
-          </div>
-          <div class="service-detail-body">
-            <p>CRM, CPQ, billing, deal desk, quote-to-cash.</p>
-            <p class="service-will-not">Will not do: Outbound SEO, ads, social.</p>
-          </div>
-        </div>
-
-        <!-- 2. Operations and back-office -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-kicker">COO · CFO</div>
+            <p>For commercial operators who need agents and automations on the revenue path—wired to CRM, CPQ, billing, and the people who already own the deal.</p>
+            <ul class="service-list">
+              <li>Quote-to-cash, deal desk, and pipeline hygiene</li>
+              <li>Handoffs between sales, CS, and finance</li>
+              <li>Not outbound SEO, ads, or social campaigns</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">COO · CFO</span>
             <h3>Operations and back-office</h3>
-          </div>
-          <div class="service-detail-body">
-            <p>Close, payables, hiring, reporting.</p>
-            <p class="service-will-not">Will not do: Chatbot layer.</p>
-          </div>
-        </div>
-
-        <!-- 3. Customer-facing agents -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-kicker">CCO · VP Support</div>
+            <p>For operators who run the company: close, payables, hiring, reporting, and the repeatable work that compounds when it is slow.</p>
+            <ul class="service-list">
+              <li>Agents plus systems of record, with review paths</li>
+              <li>Exception routing, audit trails, and named owners</li>
+              <li>Finance, people, and operating cadence—not a chatbot layer</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">CCO · VP Support</span>
             <h3>Customer-facing agents</h3>
-          </div>
-          <div class="service-detail-body">
-            <p>Voice/chat/email that call APIs.</p>
-            <p class="service-will-not">Will not do: FAQ widget.</p>
-          </div>
-        </div>
-
-        <!-- 4. Knowledge and systems of record -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-kicker">CIO</div>
+            <p>For customer, support, and success leaders. Voice, chat, and email that call APIs and resolve work—Sierra- and Decagon-shaped, not a FAQ widget.</p>
+            <ul class="service-list">
+              <li>Live actions against tickets, orders, accounts, and billing</li>
+              <li>Identity, permissions, and human escalation</li>
+              <li>Measured on resolution and quality, not chat volume</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">CIO</span>
             <h3>Knowledge and systems of record</h3>
-          </div>
-          <div class="service-detail-body">
-            <p>Connectors, identity, RAG, KPI/reporting as byproduct.</p>
-            <p class="service-will-not">Will not do: Separate reporting SKU.</p>
-          </div>
-        </div>
-
-        <!-- 5. Quality and governance -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-kicker">Quality</div>
+            <p>For technology leaders who need connectors, identity, and retrieval over ERP, CRM, DMS, and warehouse. KPI monitoring and AI reporting live here.</p>
+            <ul class="service-list">
+              <li>Identity, permissions, and integration fabric</li>
+              <li>RAG over documents and tables operators already trust</li>
+              <li>Reporting and watchers as a byproduct, not a separate SKU</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Quality</span>
             <h3>Quality and governance</h3>
-          </div>
-          <div class="service-detail-body">
-            <p>Evals, guardrails, tracing, HITL.</p>
-            <p class="service-will-not">Will not do: Unmeasured model in front of customers or the ledger.</p>
-          </div>
-        </div>
-
-        <!-- 6. Adoption and operating change -->
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-kicker">Adoption</div>
+            <p>For leaders who will not put an unmeasured model in front of customers or the ledger. Evals, guardrails, tracing, and human-in-the-loop.</p>
+            <ul class="service-list">
+              <li>Evaluation harnesses and regression tests for the workflow</li>
+              <li>Tracing, logging, and review queues</li>
+              <li>Policy, thresholds, and kill switches before scale</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-kicker">Adoption</span>
             <h3>Adoption and operating change</h3>
+            <p>For teams that have watched tools land and die. Diagnostic, enablement, runbooks, and a named operator so the system is used after go-live.</p>
+            <ul class="service-list">
+              <li>Operator training, SOPs, and on-call paths</li>
+              <li>Change management with the people who do the work</li>
+              <li>Not a custom AI training program sold as a peer SKU</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-band">
+      <div class="container feature-row">
+        <div>
+          <div class="eyebrow">What we will not do</div>
+          <h2 class="section-title">Clear edges. No retainers in disguise.</h2>
+          <p class="section-copy">MindPress is embedded production engineering. If the work is marketing, a workshop, or training a foundation model, we will say no.</p>
+        </div>
+        <div class="feature-table" role="table" aria-label="Work MindPress will not take">
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">SEO and ads</div>
+            <div class="feature-table-value" role="cell">No SEO retainers, paid media, social calendars, or lead-gen as a marketing service.</div>
           </div>
-          <div class="service-detail-body">
-            <p>Enablement, runbooks, named operator.</p>
-            <p class="service-will-not">Will not do: Custom AI training as a peer SKU.</p>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Workshops</div>
+            <div class="feature-table-value" role="cell">No ChatGPT lunch-and-learns, prompt classes, or generic AI literacy sold as delivery.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Model training</div>
+            <div class="feature-table-value" role="cell">No foundation-model training, fine-tune-as-a-product, or “custom AI training” as a peer SKU.</div>
+          </div>
+          <div class="feature-table-row" role="row">
+            <div class="feature-table-label" role="cell">Demos</div>
+            <div class="feature-table-value" role="cell">No sandbox prototypes that never connect to identity, systems of record, or an owner.</div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Engagement design</div>
+            <h2 class="section-title">One first engagement, then production.</h2>
+          </div>
+          <p class="section-copy">The homepage CTA is not “which of six.” It is a diagnostic that chooses, then an install that ships.</p>
+        </div>
+        <div class="grid-3">
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <div>
+              <h3>Map</h3>
+              <p>Two-week diagnostic. Systems of record, owners, constraints, and a written definition of done for 1–2 workflows.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">02</span>
+            <div>
+              <h3>Install</h3>
+              <p>Paid production install in your environment. Agents, integrations, guardrails, and operating procedures.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <div>
+              <h3>Optimize</h3>
+              <p>Evals, tracing, adoption, and quality. The system is measured after launch, not declared done at demo day.</p>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What we will not do -->
-  <section class="section" style="padding-top: 40px;">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">What we will not do.</h2>
-      </div>
-      <div class="will-not-grid">
-        <div class="will-not-card">
-          <h4>SEO and ads</h4>
-          <p>No SEO retainers, paid media, social calendars, or lead-gen as a marketing service.</p>
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <div class="eyebrow">First engagement</div>
+          <h2 class="cta-title">Book the diagnostic. We will pick the workflow.</h2>
+          <p>Share the company, the function, the systems of record, who owns it, and what done means. Then we map 1–2 installs.</p>
         </div>
-        <div class="will-not-card">
-          <h4>Workshops</h4>
-          <p>No ChatGPT lunch-and-learns, prompt classes, or generic AI literacy sold as delivery.</p>
-        </div>
-        <div class="will-not-card">
-          <h4>Model training</h4>
-          <p>No foundation-model training, fine-tune-as-a-product, or "custom AI training" as a peer SKU.</p>
-        </div>
-        <div class="will-not-card">
-          <h4>Demos</h4>
-          <p>No sandbox prototypes that never connect to identity, systems of record, or an owner.</p>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-primary">Start a 2-week diagnostic</a>
+          <a href="intake.html" class="btn btn-secondary">Qualify a workflow</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Engagement design: Method -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Engagement design</div>
-        <h2 class="section-title">Map. Install. Optimize.</h2>
-      </div>
-      <div class="method-grid">
-        <div class="method-card">
-          <div class="method-number">01</div>
-          <h3>Map</h3>
-          <p>Two weeks. Identify 1–2 high-frequency workflows, decision points, systems of record, owners, and what "done" means.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">02</div>
-          <h3>Install</h3>
-          <p>Paid production install. Wire agents into the environment, write operating procedures, test exception paths.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">03</div>
-          <h3>Optimize</h3>
-          <p>Evals, tracing, adoption, cycle time, error rates.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="section-badge">First engagement</div>
-        <h2>Book the diagnostic.<br>We will pick the workflow.</h2>
-        <div class="hero-ctas">
-          <a href="book.html" class="btn btn-primary btn-lg">Start a 2-week diagnostic →</a>
-          <a href="intake.html" class="btn btn-ghost btn-lg">Qualify a workflow</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="logo-icon">◆</span> <strong>MindPress</strong>
+          <a href="index.html" class="brand-lockup" aria-label="MindPress home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+              <circle class="logo-core" cx="24" cy="24" r="5"/>
+              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+            </svg>
+            <span class="brand-word">MindPress</span>
+          </a>
           <p>Forward-deployed engineering for companies that need production AI in operations, not another demo.</p>
         </div>
         <div class="footer-col">
@@ -212,12 +233,12 @@
           <a href="services.html">Data and integration</a>
           <a href="services.html">Quality plus adoption</a>
         </div>
-        <div class="footer-col">
+                <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
           <a href="index.html#method">Method</a>
           <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work / results</a>
+          <a href="case-studies.html">Work</a>
           <a href="mailto:hello@mindpress.ai">Contact</a>
         </div>
         <div class="footer-col">
