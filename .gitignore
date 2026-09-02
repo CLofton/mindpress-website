@@ -1,0 +1,5 @@
+# Keep Python bytecode off the GitHub Pages tree
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
