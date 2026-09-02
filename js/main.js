@@ -58,10 +58,6 @@ function handleSubmit(event) {
     submitBtn.textContent = "Sending...";
   }
 
-  if (String(form.action).includes("YOUR_ID")) {
-    console.warn("Replace Formspree YOUR_ID in this form action before going live. See README.md.");
-  }
-
   fetch(form.action, {
     method: "POST",
     body: new FormData(form),
