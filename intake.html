@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qualify the desk | MindPress</title>
-  <meta name="description" content="Qualify a MindPress follow-up desk in writing: which use case, last week’s volume, owner, and what booked means. No chatbot. No book-a-call.">
+  <title>Qualify in writing | MindPress</title>
+  <meta name="description" content="Qualify in writing: career school or healthcare staffing, last week’s unworked volume, owner, and what booked means.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,11 @@
         <span></span><span></span><span></span>
       </button>
             <div class="nav-links">
-        <a href="services.html">Desk</a>
-        <a href="index.html#method">Method</a>
+        <a href="services.html">Who</a>
+        <a href="index.html#how">How</a>
         <a href="about.html">About</a>
         <a href="intake.html" class="active">Qualify</a>
-        <a href="book.html" class="btn btn-nav">Send last week’s log</a>
+        <a href="book.html" class="btn btn-nav">Send last week’s unworked list</a>
       </div>
     </div>
   </nav>
@@ -44,8 +44,8 @@
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Qualification</div>
-          <h1 class="page-title">Tell us which desk. We will tell you if last week’s log is enough to start.</h1>
-          <p class="page-copy">This is a written qualifier, not a chatbot and not a call. Company, use case, volume, who owns Monday, and what booked means. Or skip this and send last week’s log.</p>
+          <h1 class="page-title">Tell us which pile. We will tell you if last week’s list is enough to start.</h1>
+          <p class="page-copy">Written qualifier, not a chatbot and not a call. Career school or healthcare staffing. Last week’s unworked volume. Who owns Monday. What booked means. Or skip this and send the list.</p>
         </div>
       </div>
     </section>
@@ -54,23 +54,23 @@
       <div class="container split-layout">
         <div>
           <div class="eyebrow">Start here</div>
-          <h2 class="section-title">Enough context to map leaks in five days.</h2>
-          <p class="section-copy">Skip the catalog. The desk is enrollment, host-practice follow-up, or multi-unit return visits. The log does the rest.</p>
+          <h2 class="section-title">Enough context to first-touch for five days.</h2>
+          <p class="section-copy">One job. Admissions inquiries or practice signups. The unworked list does the rest.</p>
           <ul class="check-list">
             <li>Name the company and the Monday owner</li>
-            <li>Choose enrollment, hosts, or AUV — not a four-bucket catalog</li>
-            <li>Say last week’s volume in totals, not names</li>
-            <li>Write what “booked” looks like in cash</li>
+            <li>Career school or healthcare staffing — not a catalog</li>
+            <li>Last week’s volume in totals, not names</li>
+            <li>What “booked a next step” means in cash</li>
           </ul>
           <div class="hero-actions">
-            <a href="book.html" class="btn btn-secondary">Send last week’s log</a>
+            <a href="book.html" class="btn btn-secondary">Send last week’s unworked list</a>
           </div>
         </div>
 
         <div class="form-card">
           <form id="intake-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="qualify_desk">
+            <input type="hidden" name="form_name" value="qualify_unworked">
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full name *</label>
@@ -86,21 +86,20 @@
               </div>
               <div class="form-group">
                 <label for="title">Your title</label>
-                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="Director of Enrollment">
+                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="Director of Admissions">
               </div>
               <div class="form-group full">
-                <label for="function">Desk *</label>
+                <label for="function">Who *</label>
                 <select id="function" name="function" required>
                   <option value="">Select one</option>
-                  <option value="enrollment">Career-school enrollment (inquiry to deposit)</option>
-                  <option value="hosts">Host-practice follow-up (1 business day)</option>
-                  <option value="auv">Multi-unit return visits / AUV</option>
-                  <option value="unsure">Not sure — start with last week’s log</option>
+                  <option value="schools">Career school — admissions inquiries</option>
+                  <option value="staffing">Healthcare staffing — practice signups</option>
+                  <option value="unsure">Not sure — start with last week’s unworked list</option>
                 </select>
               </div>
               <div class="form-group full">
-                <label for="systems">Where inquiries or partners land today *</label>
-                <textarea id="systems" name="systems" required placeholder="Form, CRM, SIS, phone, partner portal — name the queue, not student or patient records."></textarea>
+                <label for="systems">Where unworked leads sit today *</label>
+                <textarea id="systems" name="systems" required placeholder="Form, CRM, phone, partner portal — name the queue, not student or patient records."></textarea>
               </div>
               <div class="form-group">
                 <label for="owner">Who owns Monday? *</label>
@@ -118,16 +117,16 @@
                 </select>
               </div>
               <div class="form-group full">
-                <label for="done">What does “booked” mean in cash? *</label>
-                <textarea id="done" name="done" required placeholder="Deposit vs start. Signed host. Return visit / AUV. Who feels it Monday."></textarea>
+                <label for="done">What does “booked a next step” mean in cash? *</label>
+                <textarea id="done" name="done" required placeholder="Deposit. Signed practice. Who feels it Monday."></textarea>
               </div>
               <div class="form-group full">
                 <label for="current">How does follow-up run today?</label>
-                <textarea id="current" name="current" placeholder="Hours to first touch, who works the queue, where it sits overnight."></textarea>
+                <textarea id="current" name="current" placeholder="Hours to first touch, who works the queue, what sat overnight."></textarea>
               </div>
               <div class="form-group full">
                 <label for="constraints">Constraints</label>
-                <textarea id="constraints" name="constraints" placeholder="No student names, no patient names, no credentials in the first log. Anything else we must not receive."></textarea>
+                <textarea id="constraints" name="constraints" placeholder="No student names, no patient names, no credentials in the first list. Anything else we must not receive."></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-primary btn-wide">Submit qualification</button>
@@ -136,45 +135,11 @@
 
           <div class="success-panel is-hidden">
             <h3>Qualification received.</h3>
-            <p class="muted-copy">MindPress will review the desk, owner, and definition of booked, then ask for last week’s log if you have not sent it.</p>
+            <p class="muted-copy">MindPress will review the pile, owner, and definition of booked, then ask for last week’s unworked list if you have not sent it.</p>
             <div class="hero-actions">
-              <a href="book.html" class="btn btn-primary">Send last week’s log</a>
+              <a href="book.html" class="btn btn-primary">Send last week’s unworked list</a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-band">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="eyebrow">What we need</div>
-            <h2 class="section-title">Four facts that make the leak map useful.</h2>
-          </div>
-          <p class="section-copy">Vague “we want AI” notes produce a vague map. Last week’s log produces a desk.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card">
-            <span class="card-kicker">Desk</span>
-            <h3>Enrollment, hosts, or AUV</h3>
-            <p>Inquiry to deposit. 1-BD host follow-up. Return visits / AUV. Not a four-bucket install catalog.</p>
-          </article>
-          <article class="card">
-            <span class="card-kicker">Log</span>
-            <h3>Last week, totals only</h3>
-            <p>Counts, timestamps, unworked, booked. No student names. No patient names. No credentials.</p>
-          </article>
-          <article class="card">
-            <span class="card-kicker">Owner</span>
-            <h3>Who reads Monday</h3>
-            <p>A named executive or function lead. Desks without an owner do not hold.</p>
-          </article>
-          <article class="card">
-            <span class="card-kicker">Booked</span>
-            <h3>Cash, not a demo</h3>
-            <p>Deposit, signed host, or return visit. What you will call working in week 8.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -197,18 +162,18 @@
         </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>We follow up until they book. Remote. Written start.</p>
+          <p>We work last week’s unworked leads. Written start.</p>
+          <p class="muted-copy">Remote.</p>
         </div>
         <div class="footer-col">
-          <h4>Desk</h4>
-          <a href="services.html#enrollment">Career-school enrollment</a>
-          <a href="services.html#hosts">Host-practice follow-up</a>
-          <a href="services.html#auv">Multi-unit return visits</a>
+          <h4>Who</h4>
+          <a href="services.html#schools">Career schools</a>
+          <a href="services.html#staffing">Healthcare staffing</a>
         </div>
                 <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="index.html#method">Method</a>
+          <a href="index.html#how">How</a>
           <a href="pricing.html">Pricing</a>
           <a href="case-studies.html">Work</a>
           <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
@@ -216,9 +181,9 @@
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Send last week’s log</a>
+          <a href="book.html">Send last week’s unworked list</a>
           <a href="intake.html">Qualify in writing</a>
-          <a href="pricing.html">Leak map then $4k/mo</a>
+          <a href="pricing.html">5 days free, then $4k/mo</a>
         </div>
       </div>
       <div class="footer-bottom">

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Send last week’s log | MindPress</title>
-  <meta name="description" content="Send last week’s inquiry or partner log. Totals only. 5-day leak map, then a $4,000/month follow-up desk. Four outcome questions still help. A call later is optional.">
+  <title>Send last week’s unworked list | MindPress</title>
+  <meta name="description" content="Send last week’s unworked list. Totals only. Five days of first touch, then $4,000/month overnight. Written start.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,11 @@
         <span></span><span></span><span></span>
       </button>
             <div class="nav-links">
-        <a href="services.html">Desk</a>
-        <a href="index.html#method">Method</a>
+        <a href="services.html">Who</a>
+        <a href="index.html#how">How</a>
         <a href="about.html">About</a>
         <a href="intake.html">Qualify</a>
-        <a href="book.html" class="btn btn-nav active">Send last week’s log</a>
+        <a href="book.html" class="btn btn-nav active">Send last week’s unworked list</a>
       </div>
     </div>
   </nav>
@@ -44,8 +44,8 @@
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Written start</div>
-          <h1 class="page-title">Send last week’s log.</h1>
-          <p class="page-copy">Inquiry or partner log. Totals only — no student names, no patient names, no credentials. That is the front door. Email <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> or Telegram <a href="https://t.me/Mindpress_grok_bot">@Mindpress_grok_bot</a> if you would rather send it that way. A call later is optional. It is not the product.</p>
+          <h1 class="page-title">Send last week’s unworked list.</h1>
+          <p class="page-copy">Totals only — no student names, no patient names, no credentials. That is the front door. Email <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> or Telegram <a href="https://t.me/Mindpress_grok_bot">@Mindpress_grok_bot</a> if you would rather send it that way. A call later is optional. It is not the product.</p>
         </div>
       </div>
     </section>
@@ -54,28 +54,28 @@
       <div class="container split-layout">
         <div>
           <div class="eyebrow">What to expect</div>
-          <h2 class="section-title">A leak map, then a desk. Not a scoping call.</h2>
-          <p class="section-copy">You close. Agents follow up until they book. Five days to map where first touch is late and where the queue sits. Then $4,000/month, 90-day minimum. Proofs can start unpaid.</p>
+          <h2 class="section-title">Five days on the pile. Then overnight.</h2>
+          <p class="section-copy">You take the close. We first-touch last week’s unworked leads. Same-night or next-morning. Monday: sat more than 1 business day, got a reply, booked a next step. Then $4,000/month, 90-day minimum. A person reviews outbound.</p>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-time">Send</div>
               <div>
-                <h3>Last week’s log</h3>
-                <p>Inquiries, partner signups, or return-visit lists as they actually ran. Counts and timestamps. Totals only.</p>
+                <h3>Last week’s unworked list</h3>
+                <p>Counts and timestamps. Totals only. Admissions inquiries or practice signups as they actually sat.</p>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">Map</div>
+              <div class="timeline-time">5 days</div>
               <div>
-                <h3>Five days</h3>
-                <p>Where first touch is late. Where the queue sits. Where booked and cash events drop.</p>
+                <h3>We first-touch the pile</h3>
+                <p>Same-night or next-morning. Not a 60-second SMS promise. A person reviews outbound before it goes.</p>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">Desk</div>
+              <div class="timeline-time">Then</div>
               <div>
                 <h3>$4k / month</h3>
-                <p>Agents run follow-up overnight. You close. Monday number: inbound, hours to first touch, unworked, booked, cash events. Success fee is an ask, not a published rate.</p>
+                <p>Keep doing it overnight. 90-day minimum. You take the close.</p>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
         <div class="form-card">
           <form id="booking-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="send_last_week_log">
+            <input type="hidden" name="form_name" value="send_unworked_list">
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full name *</label>
@@ -100,11 +100,11 @@
               </div>
               <div class="form-group">
                 <label for="title">Your title</label>
-                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="VP Enrollment">
+                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="VP Admissions">
               </div>
               <div class="form-group full">
                 <label for="q1">If only one number moved in 90 days, which would you feel in cash / the business? *</label>
-                <textarea id="q1" name="cash_number" required placeholder="Deposits vs start. Signed hosts. Return visits / AUV. The number, and why cash would feel it."></textarea>
+                <textarea id="q1" name="cash_number" required placeholder="The number, and why cash would feel it."></textarea>
               </div>
               <div class="form-group full">
                 <label for="q2">What decision do you currently make late or blind because last week is not in one place? *</label>
@@ -119,54 +119,20 @@
                 <textarea id="q4" name="monday_owner" required placeholder="Name, role, and what changes."></textarea>
               </div>
               <div class="form-group full">
-                <label for="evidence">Last week’s inquiry or partner log *</label>
-                <textarea id="evidence" name="last_week_log" required placeholder="Paste last week’s log as it actually ran: counts, timestamps, unworked, booked. Totals only. No student names, no patient names, no credentials."></textarea>
+                <label for="evidence">Last week’s unworked list *</label>
+                <textarea id="evidence" name="last_week_unworked" required placeholder="Paste last week’s unworked list as it actually sat: counts, timestamps. Totals only. No student names, no patient names, no credentials."></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-wide">Send last week’s log</button>
-            <p class="form-note">This starts the leak map in writing. No calendar. Prefer email or Telegram? hello.mindpress@agentmail.to or @Mindpress_grok_bot.</p>
+            <button type="submit" class="btn btn-primary btn-wide">Send last week’s unworked list</button>
+            <p class="form-note">This starts five days of first touch in writing. No calendar. Prefer email or Telegram? hello.mindpress@agentmail.to or @Mindpress_grok_bot.</p>
           </form>
 
           <div id="success-message" class="success-panel is-hidden">
-            <h3>Log received.</h3>
+            <h3>List received.</h3>
             <p class="muted-copy">We will reply in writing. A call later is optional if you need Chris in the room. It is not required to start.</p>
             <div class="hero-actions">
-              <a href="intake.html" class="btn btn-secondary">Add desk context</a>
+              <a href="intake.html" class="btn btn-secondary">Add context</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-band">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="eyebrow">Where the desk sits</div>
-            <h2 class="section-title">Three places. One offer.</h2>
-          </div>
-          <p class="section-copy">Career-school enrollment. Host-practice 1-BD follow-up. Multi-unit return visits / AUV. Remote. Written start.</p>
-        </div>
-        <div class="grid-4">
-          <div class="card">
-            <span class="card-kicker">Enrollment</span>
-            <h3>Inquiry to deposit</h3>
-            <p>Speed-to-lead after apply, ZIP, or phone. Deposits vs start. Hours to first touch. Unworked inquiries.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Hosts</span>
-            <h3>1 business day</h3>
-            <p>3-minute signup, then a coordinator call. % first contact within 1 BD. Signed hosts. No SIS.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Multi-unit</span>
-            <h3>Return visits / AUV</h3>
-            <p>Drive-thru and local. Return visits, not B2B outbound. Not franchise SDR unless they are selling units.</p>
-          </div>
-          <div class="card">
-            <span class="card-kicker">Monday</span>
-            <h3>The number</h3>
-            <p>Inbound. Hours to first touch. Unworked. Booked. Cash events. Totals only.</p>
           </div>
         </div>
       </div>
@@ -190,18 +156,18 @@
         </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>We follow up until they book. Remote. Written start.</p>
+          <p>We work last week’s unworked leads. Written start.</p>
+          <p class="muted-copy">Remote.</p>
         </div>
         <div class="footer-col">
-          <h4>Desk</h4>
-          <a href="services.html#enrollment">Career-school enrollment</a>
-          <a href="services.html#hosts">Host-practice follow-up</a>
-          <a href="services.html#auv">Multi-unit return visits</a>
+          <h4>Who</h4>
+          <a href="services.html#schools">Career schools</a>
+          <a href="services.html#staffing">Healthcare staffing</a>
         </div>
                 <div class="footer-col">
           <h4>Company</h4>
           <a href="about.html">About</a>
-          <a href="index.html#method">Method</a>
+          <a href="index.html#how">How</a>
           <a href="pricing.html">Pricing</a>
           <a href="case-studies.html">Work</a>
           <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
@@ -209,9 +175,9 @@
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Send last week’s log</a>
+          <a href="book.html">Send last week’s unworked list</a>
           <a href="intake.html">Qualify in writing</a>
-          <a href="pricing.html">Leak map then $4k/mo</a>
+          <a href="pricing.html">5 days free, then $4k/mo</a>
         </div>
       </div>
       <div class="footer-bottom">
