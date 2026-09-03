@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qualify a workflow | MindPress</title>
-  <meta name="description" content="Qualify a MindPress workflow: company, function (internal / customer / data), systems of record, owner, and what done means. No chatbot. No seven-service picker.">
+  <title>Qualify the desk | MindPress</title>
+  <meta name="description" content="Qualify a MindPress follow-up desk in writing: which use case, last week’s volume, owner, and what booked means. No chatbot. No book-a-call.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,22 +31,21 @@
         <span></span><span></span><span></span>
       </button>
             <div class="nav-links">
-        <a href="services.html">Services</a>
+        <a href="services.html">Desk</a>
         <a href="index.html#method">Method</a>
         <a href="about.html">About</a>
         <a href="intake.html" class="active">Qualify</a>
-        <a href="book.html" class="btn btn-nav">Start Diagnostic</a>
+        <a href="book.html" class="btn btn-nav">Send last week’s log</a>
       </div>
     </div>
   </nav>
-
   <main>
     <section class="hero page-hero">
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Qualification</div>
-          <h1 class="page-title">Tell us the workflow. We will tell you if it is installable.</h1>
-          <p class="page-copy">This is a written qualifier, not a chatbot and not a call. Company, function, systems of record, who owns it, and what done means. Or start the diagnostic in writing with the four outcome questions.</p>
+          <h1 class="page-title">Tell us which desk. We will tell you if last week’s log is enough to start.</h1>
+          <p class="page-copy">This is a written qualifier, not a chatbot and not a call. Company, use case, volume, who owns Monday, and what booked means. Or skip this and send last week’s log.</p>
         </div>
       </div>
     </section>
@@ -55,23 +54,23 @@
       <div class="container split-layout">
         <div>
           <div class="eyebrow">Start here</div>
-          <h2 class="section-title">Enough context to pick 1–2 workflows.</h2>
-          <p class="section-copy">Skip the seven-service picker. Function is internal, customer-facing, or data. The diagnostic does the rest.</p>
+          <h2 class="section-title">Enough context to map leaks in five days.</h2>
+          <p class="section-copy">Skip the catalog. The desk is enrollment, host-practice follow-up, or multi-unit return visits. The log does the rest.</p>
           <ul class="check-list">
-            <li>Name the company and the executive owner</li>
-            <li>Choose internal, customer, or data—not a catalog SKU</li>
-            <li>List the systems of record the work already lives in</li>
-            <li>Write what “done” looks like in production</li>
+            <li>Name the company and the Monday owner</li>
+            <li>Choose enrollment, hosts, or AUV — not a four-bucket catalog</li>
+            <li>Say last week’s volume in totals, not names</li>
+            <li>Write what “booked” looks like in cash</li>
           </ul>
           <div class="hero-actions">
-            <a href="book.html" class="btn btn-secondary">Start the diagnostic in writing</a>
+            <a href="book.html" class="btn btn-secondary">Send last week’s log</a>
           </div>
         </div>
 
         <div class="form-card">
           <form id="intake-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
-                        <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="qualify_intake">
+            <input type="hidden" name="_subject" value="MindPress site form">
+            <input type="hidden" name="form_name" value="qualify_desk">
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full name *</label>
@@ -87,24 +86,24 @@
               </div>
               <div class="form-group">
                 <label for="title">Your title</label>
-                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="CIO">
+                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="Director of Enrollment">
               </div>
               <div class="form-group full">
-                <label for="function">Function *</label>
+                <label for="function">Desk *</label>
                 <select id="function" name="function" required>
                   <option value="">Select one</option>
-                  <option value="internal">Internal workflows (revenue or operations / back-office)</option>
-                  <option value="customer">Customer-facing agents (voice / chat / email)</option>
-                  <option value="data">Data and integration (connectors, identity, RAG)</option>
-                  <option value="unsure">Not sure — start with the diagnostic</option>
+                  <option value="enrollment">Career-school enrollment (inquiry to deposit)</option>
+                  <option value="hosts">Host-practice follow-up (1 business day)</option>
+                  <option value="auv">Multi-unit return visits / AUV</option>
+                  <option value="unsure">Not sure — start with last week’s log</option>
                 </select>
               </div>
               <div class="form-group full">
-                <label for="systems">Systems of record *</label>
-                <textarea id="systems" name="systems" required placeholder="Salesforce, NetSuite, ServiceNow, SharePoint, Snowflake, Okta — name what the work already runs on."></textarea>
+                <label for="systems">Where inquiries or partners land today *</label>
+                <textarea id="systems" name="systems" required placeholder="Form, CRM, SIS, phone, partner portal — name the queue, not student or patient records."></textarea>
               </div>
               <div class="form-group">
-                <label for="owner">Who owns this? *</label>
+                <label for="owner">Who owns Monday? *</label>
                 <input type="text" id="owner" name="owner" required placeholder="Executive owner and function">
               </div>
               <div class="form-group">
@@ -119,16 +118,16 @@
                 </select>
               </div>
               <div class="form-group full">
-                <label for="done">What does “done” mean? *</label>
-                <textarea id="done" name="done" required placeholder="A production system in our environment that does X, with Y review, owned by Z."></textarea>
+                <label for="done">What does “booked” mean in cash? *</label>
+                <textarea id="done" name="done" required placeholder="Deposit vs start. Signed host. Return visit / AUV. Who feels it Monday."></textarea>
               </div>
               <div class="form-group full">
-                <label for="current">How does the work run today?</label>
-                <textarea id="current" name="current" placeholder="Frequency, who touches it, where it breaks, what is already automated."></textarea>
+                <label for="current">How does follow-up run today?</label>
+                <textarea id="current" name="current" placeholder="Hours to first touch, who works the queue, where it sits overnight."></textarea>
               </div>
               <div class="form-group full">
                 <label for="constraints">Constraints</label>
-                <textarea id="constraints" name="constraints" placeholder="Security, compliance, HITL requirements, identity, data that cannot leave the environment."></textarea>
+                <textarea id="constraints" name="constraints" placeholder="No student names, no patient names, no credentials in the first log. Anything else we must not receive."></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-primary btn-wide">Submit qualification</button>
@@ -137,9 +136,9 @@
 
           <div class="success-panel is-hidden">
             <h3>Qualification received.</h3>
-            <p class="muted-copy">MindPress will review systems, owner, and definition of done, then follow up on the diagnostic.</p>
+            <p class="muted-copy">MindPress will review the desk, owner, and definition of booked, then ask for last week’s log if you have not sent it.</p>
             <div class="hero-actions">
-              <a href="book.html" class="btn btn-primary">Start the diagnostic in writing</a>
+              <a href="book.html" class="btn btn-primary">Send last week’s log</a>
             </div>
           </div>
         </div>
@@ -151,30 +150,30 @@
         <div class="section-header">
           <div>
             <div class="eyebrow">What we need</div>
-            <h2 class="section-title">Four facts that make the diagnostic useful.</h2>
+            <h2 class="section-title">Four facts that make the leak map useful.</h2>
           </div>
-          <p class="section-copy">Vague “we want AI” notes produce a vague diagnostic. Specific process context produces 1–2 installable workflows.</p>
+          <p class="section-copy">Vague “we want AI” notes produce a vague map. Last week’s log produces a desk.</p>
         </div>
         <div class="grid-2">
           <article class="card">
-            <span class="card-kicker">Function</span>
-            <h3>Internal, customer, or data</h3>
-            <p>Revenue / operations, customer-facing agents, or the CIO data layer. Not Accounting / HR / Tax / FP&amp;A / EOS / Sales as a picker.</p>
+            <span class="card-kicker">Desk</span>
+            <h3>Enrollment, hosts, or AUV</h3>
+            <p>Inquiry to deposit. 1-BD host follow-up. Return visits / AUV. Not a four-bucket install catalog.</p>
           </article>
           <article class="card">
-            <span class="card-kicker">Systems</span>
-            <h3>Where the record lives</h3>
-            <p>ERP, CRM, DMS, warehouse, ticketing, identity. If we cannot name the system of record, we cannot install.</p>
+            <span class="card-kicker">Log</span>
+            <h3>Last week, totals only</h3>
+            <p>Counts, timestamps, unworked, booked. No student names. No patient names. No credentials.</p>
           </article>
           <article class="card">
             <span class="card-kicker">Owner</span>
-            <h3>Who is accountable</h3>
-            <p>A named executive or function lead. Workflows without an owner do not survive go-live.</p>
+            <h3>Who reads Monday</h3>
+            <p>A named executive or function lead. Desks without an owner do not hold.</p>
           </article>
           <article class="card">
-            <span class="card-kicker">Done</span>
-            <h3>Production, not a demo</h3>
-            <p>What the system must do on your stack, with whose review, before you will call it installed.</p>
+            <span class="card-kicker">Booked</span>
+            <h3>Cash, not a demo</h3>
+            <p>Deposit, signed host, or return visit. What you will call working in week 8.</p>
           </article>
         </div>
       </div>
@@ -186,26 +185,25 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-lockup" aria-label="MindPress home">
-            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
-              <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
-              <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
-              <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
-              <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
-              <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
-              <circle class="logo-core" cx="24" cy="24" r="5"/>
-              <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
-            </svg>
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-frame" x="5" y="5" width="38" height="38" rx="8"/>
+          <path class="logo-link" d="M24 11.5 35.5 24 24 36.5 12.5 24 24 11.5Z"/>
+          <circle class="logo-node-a" cx="24" cy="11.5" r="3.4"/>
+          <circle class="logo-node-c" cx="35.5" cy="24" r="3.4"/>
+          <circle class="logo-node-d" cx="24" cy="36.5" r="3.4"/>
+          <circle class="logo-node-b" cx="12.5" cy="24" r="3.4"/>
+          <circle class="logo-core" cx="24" cy="24" r="5"/>
+          <path d="M24 18.5v11M18.5 24h11" stroke="#eef4ff" stroke-width="1.45" stroke-linecap="round"/>
+        </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>An AI-agent company. Production systems on your stack. We do not fly.</p>
+          <p>We follow up until they book. Remote. Written start.</p>
         </div>
         <div class="footer-col">
-          <h4>Work</h4>
-          <a href="services.html">Internal workflows</a>
-          <a href="services.html">Customer-facing agents</a>
-          <a href="services.html">Data and integration</a>
-          <a href="services.html">Quality plus adoption</a>
+          <h4>Desk</h4>
+          <a href="services.html#enrollment">Career-school enrollment</a>
+          <a href="services.html#hosts">Host-practice follow-up</a>
+          <a href="services.html#auv">Multi-unit return visits</a>
         </div>
                 <div class="footer-col">
           <h4>Company</h4>
@@ -218,9 +216,9 @@
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Start diagnostic</a>
-          <a href="intake.html">Qualify a workflow</a>
-          <a href="services.html">View services</a>
+          <a href="book.html">Send last week’s log</a>
+          <a href="intake.html">Qualify in writing</a>
+          <a href="pricing.html">Leak map then $4k/mo</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -228,7 +226,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
