@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start a 2-week diagnostic | MindPress</title>
-  <meta name="description" content="Book the MindPress first engagement: a two-week diagnostic that picks 1–2 workflows, then a paid production install. Qualify company, function, systems, owner, and done.">
+  <title>Start the diagnostic in writing | MindPress</title>
+  <meta name="description" content="Start the MindPress $12,500 two-week diagnostic in writing. Four outcome questions plus last week’s evidence. We do not fly. A call is an optional readout, not the product.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,9 +44,9 @@
     <section class="hero page-hero">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">First engagement</div>
-          <h1 class="page-title">Book the 2-week diagnostic.</h1>
-          <p class="page-copy">One conversation to start. We use it to qualify the company, the function, the systems of record, who owns the work, and what done means. Then we pick 1–2 workflows for a paid production install.</p>
+          <div class="eyebrow">First engagement · written start</div>
+          <h1 class="page-title">Start the diagnostic in writing.</h1>
+          <p class="page-copy">Four outcome questions plus last week’s evidence. That is the front door. Email <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> or Telegram <a href="https://t.me/Mindpress_grok_bot">@Mindpress_grok_bot</a> if you would rather send it that way. A call is an optional readout later if you need Chris in the room. It is not the product and not the CTA.</p>
         </div>
       </div>
     </section>
@@ -55,28 +55,28 @@
       <div class="container split-layout">
         <div>
           <div class="eyebrow">What to expect</div>
-          <h2 class="section-title">A scoping conversation, not a generic demo.</h2>
-          <p class="section-copy">The first engagement is the diagnostic. It is not a catalog of six offers. We choose 1–2 workflows that can be installed into production.</p>
+          <h2 class="section-title">A written diagnostic, not a scoping call.</h2>
+          <p class="section-copy">MindPress is an AI-agent company. We do not fly. The $12,500 two-week diagnostic picks 1–2 workflows for a paid production install. You start it here, in writing.</p>
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-time">Before</div>
+              <div class="timeline-time">Send</div>
               <div>
-                <h3>Qualification review</h3>
-                <p>We read company, function, systems, owner, and definition of done before the call.</p>
+                <h3>Four questions + evidence</h3>
+                <p>Answer the outcome questions and attach last week’s evidence: the work as it actually ran, not the slide version.</p>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">During</div>
+              <div class="timeline-time">Map</div>
               <div>
-                <h3>Workflow mapping</h3>
-                <p>We pressure-test systems of record, owners, constraints, and whether production install is realistic.</p>
+                <h3>1–2 workflows</h3>
+                <p>We map 8–12 candidates, pick one or two, and kill the rest in writing. Kill list included.</p>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">After</div>
+              <div class="timeline-time">Decide</div>
               <div>
-                <h3>Diagnostic proposal</h3>
-                <p>If there is a fit, you get a two-week diagnostic scoped to 1–2 workflows and a path to paid install.</p>
+                <h3>Yes, no, or wait</h3>
+                <p>You get a production design and a fixed install price ($25–45k) if it is worth installing. Optional readout call only if you need Chris in the room.</p>
               </div>
             </div>
           </div>
@@ -103,47 +103,34 @@
                 <label for="title">Your title</label>
                 <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="VP Operations">
               </div>
-              <div class="form-group">
-                <label for="function">Function *</label>
-                <select id="function" name="function" required>
-                  <option value="">Select one</option>
-                  <option value="internal">Internal workflows (revenue or operations)</option>
-                  <option value="customer">Customer-facing agents</option>
-                  <option value="data">Data and integration</option>
-                  <option value="unsure">Not sure — start with the diagnostic</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="size">Company size</label>
-                <select id="size" name="size">
-                  <option value="">Select one</option>
-                  <option value="1-10">1–10 employees</option>
-                  <option value="11-50">11–50 employees</option>
-                  <option value="51-200">51–200 employees</option>
-                  <option value="201-1000">201–1,000 employees</option>
-                  <option value="1000+">1,000+ employees</option>
-                </select>
+              <div class="form-group full">
+                <label for="q1">If only one number moved in 90 days, which would you feel in cash / the business? *</label>
+                <textarea id="q1" name="cash_number" required placeholder="The number, and why cash would feel it."></textarea>
               </div>
               <div class="form-group full">
-                <label for="systems">Systems of record *</label>
-                <textarea id="systems" name="systems" required placeholder="ERP, CRM, DMS, warehouse, ticketing, identity — name the systems the work already lives in."></textarea>
+                <label for="q2">What decision do you currently make late or blind because last week is not in one place? *</label>
+                <textarea id="q2" name="blind_decision" required placeholder="The decision, who makes it, and what is missing."></textarea>
               </div>
-              <div class="form-group">
-                <label for="owner">Who owns this? *</label>
-                <input type="text" id="owner" name="owner" required placeholder="Name and role of the executive owner">
+              <div class="form-group full">
+                <label for="q3">What does working look like in week 8? One sentence. *</label>
+                <textarea id="q3" name="week8" required placeholder="One sentence."></textarea>
               </div>
-              <div class="form-group">
-                <label for="done">What does “done” mean? *</label>
-                <input type="text" id="done" name="done" required placeholder="A working production system that…">
+              <div class="form-group full">
+                <label for="q4">Who has to change their Monday if that is real? *</label>
+                <textarea id="q4" name="monday_owner" required placeholder="Name, role, and what changes."></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="evidence">Last week’s evidence *</label>
+                <textarea id="evidence" name="last_week_evidence" required placeholder="Paste last week’s work as it actually ran: excerpts, counts, tickets, a week of the queue, the spreadsheet, the thread. Not the slide version."></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-wide">Request the diagnostic</button>
-            <p class="form-note">MindPress will respond with scheduling details. No spam or newsletter opt-in.</p>
+            <button type="submit" class="btn btn-primary btn-wide">Start the diagnostic</button>
+            <p class="form-note">This starts the diagnostic in writing. No calendar. Prefer email or Telegram? hello.mindpress@agentmail.to or @Mindpress_grok_bot.</p>
           </form>
 
           <div id="success-message" class="success-panel is-hidden">
-            <h3>Request received.</h3>
-            <p class="muted-copy">MindPress will follow up with scheduling details and any clarifying questions before the diagnostic conversation.</p>
+            <h3>Diagnostic start received.</h3>
+            <p class="muted-copy">We will reply in writing. A call is an optional readout later if you need Chris in the room. It is not required to start.</p>
             <div class="hero-actions">
               <a href="intake.html" class="btn btn-secondary">Add more workflow context</a>
             </div>
@@ -157,9 +144,9 @@
         <div class="section-header">
           <div>
             <div class="eyebrow">Good fit</div>
-            <h2 class="section-title">This call is useful when production is the goal.</h2>
+            <h2 class="section-title">This diagnostic is useful when production is the goal.</h2>
           </div>
-          <p class="section-copy">MindPress is strongest when the work is repeated, owned, measurable, and important enough to deserve controls.</p>
+          <p class="section-copy">MindPress is strongest when the work is repeated, owned, measurable, and important enough to deserve controls. We do not fly on-site.</p>
         </div>
         <div class="grid-4">
           <div class="card">
@@ -204,7 +191,7 @@
             </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>Forward-deployed engineering for companies that need production AI in operations, not another demo.</p>
+          <p>An AI-agent company. Production systems on your stack. We do not fly.</p>
         </div>
         <div class="footer-col">
           <h4>Work</h4>
@@ -219,7 +206,8 @@
           <a href="index.html#method">Method</a>
           <a href="pricing.html">Pricing</a>
           <a href="case-studies.html">Work</a>
-          <a href="mailto:hello.mindpress@agentmail.to">Contact</a>
+          <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
+          <a href="https://t.me/Mindpress_grok_bot">Telegram @Mindpress_grok_bot</a>
         </div>
         <div class="footer-col">
           <h4>Start</h4>
