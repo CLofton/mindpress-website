@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qualify in writing | MindPress</title>
-  <meta name="description" content="Qualify in writing: career school or healthcare staffing, last week’s inbound volume, owner, and the SLA you already publish.">
+  <title>Send last week’s inquiries | MindPress</title>
+  <meta name="description" content="If you don’t have an AI team, we are it. Dental groups, physician practices, property managers, career schools, staffing.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,9 @@
         <span></span><span></span><span></span>
       </button>
             <div class="nav-links">
-        <a href="services.html">Who</a>
+        <a href="index.html#who">Who</a>
         <a href="index.html#how">How</a>
-        <a href="about.html">About</a>
-        <a href="intake.html" class="active">Qualify</a>
-        <a href="book.html" class="btn btn-nav">Send last week’s inbound queue</a>
+        <a href="book.html" class="btn btn-nav">Send last week’s inquiries</a>
       </div>
     </div>
   </nav>
@@ -43,95 +41,51 @@
     <section class="hero page-hero">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">Qualification</div>
-          <h1 class="page-title">Tell us which queue. We will tell you if last week is enough to start.</h1>
-          <p class="page-copy">Written qualifier, not a chatbot and not a call. Career school or healthcare staffing. Last week’s inbound volume. Who owns Monday. The SLA you already publish. Or skip this and send the queue.</p>
+          <h1 class="page-title">Send last week’s inquiries.</h1>
+          <p class="page-copy">Email last week’s list to <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> — or the form. Five days free. Then $4,000 a month.</p>
         </div>
       </div>
     </section>
-
     <section class="section">
-      <div class="container split-layout">
-        <div>
-          <div class="eyebrow">Start here</div>
-          <h2 class="section-title">Enough context to age last week against your SLA.</h2>
-          <p class="section-copy">One list. Admissions inbound or practice signups. Default SLA is 1 business day if you have not published another.</p>
-          <ul class="check-list">
-            <li>Name the company and the Monday owner</li>
-            <li>Career school or healthcare staffing — not a catalog</li>
-            <li>Last week’s volume in totals, not names</li>
-            <li>The SLA you already publish, and the weekly number that is blocked</li>
-          </ul>
-          <div class="hero-actions">
-            <a href="book.html" class="btn btn-secondary">Send last week’s inbound queue</a>
-          </div>
-        </div>
-
-        <div class="form-card">
+      <div class="container">
+        <div class="form-card" style="max-width:640px">
           <form id="intake-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="qualify_call_pack">
+            <input type="hidden" name="form_name" value="send_inquiries_intake">
             <div class="form-grid">
               <div class="form-group">
-                <label for="name">Full name *</label>
-                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
               </div>
               <div class="form-group">
-                <label for="email">Work email *</label>
-                <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
-              </div>
-              <div class="form-group">
-                <label for="company">Company *</label>
-                <input type="text" id="company" name="company" required autocomplete="organization" placeholder="Acme Corp">
-              </div>
-              <div class="form-group">
-                <label for="title">Your title</label>
-                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="Director of Admissions">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
               </div>
               <div class="form-group full">
-                <label for="function">Who *</label>
-                <select id="function" name="function" required>
+                <label for="company">Company *</label>
+                <input type="text" id="company" name="company" required autocomplete="organization">
+              </div>
+              <div class="form-group full">
+                <label for="who">Who</label>
+                <select id="who" name="who">
                   <option value="">Select one</option>
-                  <option value="schools">Career school — admissions inbound</option>
-                  <option value="staffing">Healthcare staffing — practice signups</option>
-                  <option value="unsure">Not sure — start with last week’s inbound queue</option>
+                  <option value="dental">Dental / DSO</option>
+                  <option value="physician">Physician</option>
+                  <option value="property">Property</option>
+                  <option value="schools-staffing">Schools and staffing</option>
                 </select>
               </div>
               <div class="form-group full">
-                <label for="systems">Where inbound sits today *</label>
-                <textarea id="systems" name="systems" required placeholder="Form, CRM, phone, partner portal — name the queue, not student or patient records."></textarea>
-              </div>
-              <div class="form-group">
-                <label for="owner">Who owns Monday? *</label>
-                <input type="text" id="owner" name="owner" required placeholder="Executive owner and function">
-              </div>
-              <div class="form-group">
-                <label for="sla">Published SLA</label>
-                <input type="text" id="sla" name="sla" placeholder="Default 1 business day if blank">
-              </div>
-              <div class="form-group full">
-                <label for="done">What weekly number is blocked, and by which missing field? *</label>
-                <textarea id="done" name="done" required placeholder="The number. The field. Who feels it Monday."></textarea>
-              </div>
-              <div class="form-group full">
-                <label for="current">How does first touch run today?</label>
-                <textarea id="current" name="current" placeholder="Who works the queue, what sat overnight, what is older than 1 business day."></textarea>
-              </div>
-              <div class="form-group full">
-                <label for="constraints">Constraints</label>
-                <textarea id="constraints" name="constraints" placeholder="No student names, no patient names, no credentials in the first queue. Anything else we must not receive."></textarea>
+                <label for="evidence">Last week’s inquiries *</label>
+                <textarea id="evidence" name="last_week_inquiries" required placeholder="Counts and timestamps. No patient or student names."></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-wide">Submit qualification</button>
-            <p class="form-note">No chatbot. A person reads this and follows up. No spam or newsletter opt-in.</p>
+            <button type="submit" class="btn btn-primary btn-wide">Send last week’s inquiries</button>
+            <p class="form-note">Counts and timestamps. No patient or student names.</p>
           </form>
-
           <div class="success-panel is-hidden">
-            <h3>Qualification received.</h3>
-            <p class="muted-copy">MindPress will review the queue, owner, and SLA, then ask for last week’s inbound queue if you have not sent it.</p>
-            <div class="hero-actions">
-              <a href="book.html" class="btn btn-primary">Send last week’s inbound queue</a>
-            </div>
+            <h3>List received.</h3>
+            <p class="muted-copy">Five days free. Then $4,000 a month.</p>
           </div>
         </div>
       </div>
@@ -155,28 +109,12 @@
         </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>Tomorrow’s call list. Written start.</p>
-          <p class="muted-copy">Remote.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Who</h4>
-          <a href="services.html#schools">Career schools</a>
-          <a href="services.html#staffing">Healthcare staffing</a>
-        </div>
-                <div class="footer-col">
-          <h4>Company</h4>
-          <a href="about.html">About</a>
-          <a href="index.html#how">How</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work</a>
-          <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
-          <a href="https://t.me/Mindpress_grok_bot">Telegram @Mindpress_grok_bot</a>
+          <p>We put AI to work in your office.</p>
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Send last week’s inbound queue</a>
-          <a href="intake.html">Qualify in writing</a>
-          <a href="pricing.html">8am Call Pack, then $4k/mo</a>
+          <a href="book.html">Send last week’s inquiries</a>
+          <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
         </div>
       </div>
       <div class="footer-bottom">

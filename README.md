@@ -1,19 +1,20 @@
 # MindPress static site
 
-GitHub Pages files for **mindpress.ai**. Custom domain stays `mindpress.ai` via `CNAME`. Do not change DNS.
+GitHub Pages for **mindpress.ai**. Custom domain stays `mindpress.ai` via `CNAME`. Do not change DNS.
 
 ## Offer lock
 
-Tomorrow’s call list. Nothing older than one business day. You take the live conversation.
+Copy on the live pages is the board-approved sentences only. Do not add slogans. Do not add a “not ads / not SEO / not a leak map” section.
 
-- Who: career schools and healthcare staffing. No Gravity/AUV on the homepage. Do not name a school as a customer.
-- Free 5 days = 8am Call Pack. Not a leak map. Not running their inbox.
-- They send last week’s inbound queue (totals only) to `hello.mindpress@agentmail.to`.
-- Age every row against the SLA they already publish (default 1 business day).
-- Friday: ranked Monday list — N inbound / N unworked / N past SLA, three scripts, missing field that blocks the weekly number.
-- Then `$4,000/month` to keep producing that list and first-touch overnight. HITL. 90-day min.
-- Kill: “We follow up until they book,” three desks, 60s SMS, ads/SEO, book-a-call, fictional logos.
+- Title: MindPress
+- H1: We put AI to work in your office.
+- Lead: If you don’t have an AI team, we are it. Dental groups, physician practices, property managers, career schools, staffing.
+- How: Send last week’s inquiries. Friday you get Monday’s call list. $4,000 a month to keep it running.
+- Your people take the live conversation.
+- Who: Dental / DSO, Physician, Property, Schools and staffing.
+- Start: email last week’s list to hello.mindpress@agentmail.to — or the form. Five days free. Then $4,000 a month.
+- Form helper: Counts and timestamps. No patient or student names.
 
-Forms post via FormSubmit AJAX to `hello.mindpress@agentmail.to`. Never restore `hello@mindpress.ai` (no MX). No Formspree `YOUR_ID`. No Calendly.
+Forms post via FormSubmit AJAX to `hello.mindpress@agentmail.to`. Never restore `hello@mindpress.ai`. No Calendly. Gravity stays off the homepage.
 
 Pages source: `main` root. Push via Git Data API as CLofton. No force push.

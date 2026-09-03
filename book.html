@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Send last week’s inbound queue | MindPress</title>
-  <meta name="description" content="Send last week’s inbound queue. Totals only. Five days free: an 8am Call Pack. Then $4,000/month overnight. Written start.">
+  <title>Send last week’s inquiries | MindPress</title>
+  <meta name="description" content="If you don’t have an AI team, we are it. Dental groups, physician practices, property managers, career schools, staffing.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,9 @@
         <span></span><span></span><span></span>
       </button>
             <div class="nav-links">
-        <a href="services.html">Who</a>
+        <a href="index.html#who">Who</a>
         <a href="index.html#how">How</a>
-        <a href="about.html">About</a>
-        <a href="intake.html">Qualify</a>
-        <a href="book.html" class="btn btn-nav active">Send last week’s inbound queue</a>
+        <a href="book.html" class="btn btn-nav active">Send last week’s inquiries</a>
       </div>
     </div>
   </nav>
@@ -43,96 +41,58 @@
     <section class="hero page-hero">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">Written start</div>
-          <h1 class="page-title">Send last week’s inbound queue.</h1>
-          <p class="page-copy">Totals only — no student names, no patient names, no credentials. That is the front door. Email <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> or Telegram <a href="https://t.me/Mindpress_grok_bot">@Mindpress_grok_bot</a> if you would rather send it that way. A call later is optional. It is not the product.</p>
+          <h1 class="page-title">Send last week’s inquiries.</h1>
+          <p class="page-copy">Email last week’s list to <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> — or the form. Five days free. Then $4,000 a month.</p>
         </div>
       </div>
     </section>
-
     <section class="section">
       <div class="container split-layout">
         <div>
-          <div class="eyebrow">What to expect</div>
-          <h2 class="section-title">Friday: an 8am Call Pack. Then overnight.</h2>
-          <p class="section-copy">You take the live conversation. We age every row against the SLA you already publish (default 1 business day). Friday: N inbound / N unworked / N past SLA, three scripts, and the missing field that blocks the weekly number. Then $4,000/month, 90-day minimum. A person reviews outbound.</p>
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-time">Send</div>
-              <div>
-                <h3>Last week’s inbound queue</h3>
-                <p>Counts and timestamps. Totals only. Admissions inbound or practice signups as they actually sat.</p>
-              </div>
+              <div class="timeline-time">1</div>
+              <div><h3>Send last week’s inquiries.</h3></div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">Friday</div>
-              <div>
-                <h3>8am Call Pack</h3>
-                <p>Ranked Monday list. Nothing older than one business day. Three scripts. The missing field that blocks the weekly number.</p>
-              </div>
+              <div class="timeline-time">2</div>
+              <div><h3>Friday you get Monday’s call list.</h3></div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">Then</div>
-              <div>
-                <h3>$4k / month</h3>
-                <p>Keep producing that list and first-touch overnight. 90-day minimum. You take the live conversation.</p>
-              </div>
+              <div class="timeline-time">3</div>
+              <div><h3>$4,000 a month to keep it running.</h3></div>
             </div>
           </div>
+          <p class="section-copy" style="margin-top:2rem">Your people take the live conversation.</p>
         </div>
-
         <div class="form-card">
           <form id="booking-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="send_inbound_queue">
+            <input type="hidden" name="form_name" value="send_inquiries">
             <div class="form-grid">
               <div class="form-group">
-                <label for="name">Full name *</label>
-                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
               </div>
               <div class="form-group">
-                <label for="email">Work email *</label>
-                <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@company.com">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
               </div>
-              <div class="form-group">
+              <div class="form-group full">
                 <label for="company">Company *</label>
-                <input type="text" id="company" name="company" required autocomplete="organization" placeholder="Acme Corp">
-              </div>
-              <div class="form-group">
-                <label for="title">Your title</label>
-                <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="VP Admissions">
+                <input type="text" id="company" name="company" required autocomplete="organization">
               </div>
               <div class="form-group full">
-                <label for="q1">If only one number moved in 90 days, which would you feel in cash / the business? *</label>
-                <textarea id="q1" name="cash_number" required placeholder="The number, and why cash would feel it."></textarea>
-              </div>
-              <div class="form-group full">
-                <label for="q2">What decision do you currently make late or blind because last week is not in one place? *</label>
-                <textarea id="q2" name="blind_decision" required placeholder="The decision, who makes it, and what is missing."></textarea>
-              </div>
-              <div class="form-group full">
-                <label for="q3">What does working look like in week 8? One sentence. *</label>
-                <textarea id="q3" name="week8" required placeholder="One sentence."></textarea>
-              </div>
-              <div class="form-group full">
-                <label for="q4">Who has to change their Monday if that is real? *</label>
-                <textarea id="q4" name="monday_owner" required placeholder="Name, role, and what changes."></textarea>
-              </div>
-              <div class="form-group full">
-                <label for="evidence">Last week’s inbound queue *</label>
-                <textarea id="evidence" name="last_week_inbound" required placeholder="Paste last week’s inbound queue as it actually sat: counts, timestamps. Totals only. No student names, no patient names, no credentials. Note the SLA you already publish if it is not 1 business day."></textarea>
+                <label for="evidence">Last week’s inquiries *</label>
+                <textarea id="evidence" name="last_week_inquiries" required placeholder="Counts and timestamps. No patient or student names."></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-wide">Send last week’s inbound queue</button>
-            <p class="form-note">This starts five days of an 8am Call Pack in writing. No calendar. Prefer email or Telegram? hello.mindpress@agentmail.to or @Mindpress_grok_bot.</p>
+            <button type="submit" class="btn btn-primary btn-wide">Send last week’s inquiries</button>
+            <p class="form-note">Counts and timestamps. No patient or student names.</p>
           </form>
-
           <div id="success-message" class="success-panel is-hidden">
-            <h3>Queue received.</h3>
-            <p class="muted-copy">We will reply in writing. A call later is optional if you need Chris in the room. It is not required to start.</p>
-            <div class="hero-actions">
-              <a href="intake.html" class="btn btn-secondary">Add context</a>
-            </div>
+            <h3>List received.</h3>
+            <p class="muted-copy">Five days free. Then $4,000 a month.</p>
           </div>
         </div>
       </div>
@@ -156,28 +116,12 @@
         </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>Tomorrow’s call list. Written start.</p>
-          <p class="muted-copy">Remote.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Who</h4>
-          <a href="services.html#schools">Career schools</a>
-          <a href="services.html#staffing">Healthcare staffing</a>
-        </div>
-                <div class="footer-col">
-          <h4>Company</h4>
-          <a href="about.html">About</a>
-          <a href="index.html#how">How</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="case-studies.html">Work</a>
-          <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
-          <a href="https://t.me/Mindpress_grok_bot">Telegram @Mindpress_grok_bot</a>
+          <p>We put AI to work in your office.</p>
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Send last week’s inbound queue</a>
-          <a href="intake.html">Qualify in writing</a>
-          <a href="pricing.html">8am Call Pack, then $4k/mo</a>
+          <a href="book.html">Send last week’s inquiries</a>
+          <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>
         </div>
       </div>
       <div class="footer-bottom">
