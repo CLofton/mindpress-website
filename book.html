@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Send last week’s unworked list | MindPress</title>
-  <meta name="description" content="Send last week’s unworked list. Totals only. Five days of first touch, then $4,000/month overnight. Written start.">
+  <title>Send last week’s inbound queue | MindPress</title>
+  <meta name="description" content="Send last week’s inbound queue. Totals only. Five days free: an 8am Call Pack. Then $4,000/month overnight. Written start.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
         <a href="index.html#how">How</a>
         <a href="about.html">About</a>
         <a href="intake.html">Qualify</a>
-        <a href="book.html" class="btn btn-nav active">Send last week’s unworked list</a>
+        <a href="book.html" class="btn btn-nav active">Send last week’s inbound queue</a>
       </div>
     </div>
   </nav>
@@ -44,7 +44,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Written start</div>
-          <h1 class="page-title">Send last week’s unworked list.</h1>
+          <h1 class="page-title">Send last week’s inbound queue.</h1>
           <p class="page-copy">Totals only — no student names, no patient names, no credentials. That is the front door. Email <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a> or Telegram <a href="https://t.me/Mindpress_grok_bot">@Mindpress_grok_bot</a> if you would rather send it that way. A call later is optional. It is not the product.</p>
         </div>
       </div>
@@ -54,28 +54,28 @@
       <div class="container split-layout">
         <div>
           <div class="eyebrow">What to expect</div>
-          <h2 class="section-title">Five days on the pile. Then overnight.</h2>
-          <p class="section-copy">You take the close. We first-touch last week’s unworked leads. Same-night or next-morning. Monday: sat more than 1 business day, got a reply, booked a next step. Then $4,000/month, 90-day minimum. A person reviews outbound.</p>
+          <h2 class="section-title">Friday: an 8am Call Pack. Then overnight.</h2>
+          <p class="section-copy">You take the live conversation. We age every row against the SLA you already publish (default 1 business day). Friday: N inbound / N unworked / N past SLA, three scripts, and the missing field that blocks the weekly number. Then $4,000/month, 90-day minimum. A person reviews outbound.</p>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-time">Send</div>
               <div>
-                <h3>Last week’s unworked list</h3>
-                <p>Counts and timestamps. Totals only. Admissions inquiries or practice signups as they actually sat.</p>
+                <h3>Last week’s inbound queue</h3>
+                <p>Counts and timestamps. Totals only. Admissions inbound or practice signups as they actually sat.</p>
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-time">5 days</div>
+              <div class="timeline-time">Friday</div>
               <div>
-                <h3>We first-touch the pile</h3>
-                <p>Same-night or next-morning. Not a 60-second SMS promise. A person reviews outbound before it goes.</p>
+                <h3>8am Call Pack</h3>
+                <p>Ranked Monday list. Nothing older than one business day. Three scripts. The missing field that blocks the weekly number.</p>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-time">Then</div>
               <div>
                 <h3>$4k / month</h3>
-                <p>Keep doing it overnight. 90-day minimum. You take the close.</p>
+                <p>Keep producing that list and first-touch overnight. 90-day minimum. You take the live conversation.</p>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
         <div class="form-card">
           <form id="booking-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="send_unworked_list">
+            <input type="hidden" name="form_name" value="send_inbound_queue">
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full name *</label>
@@ -119,16 +119,16 @@
                 <textarea id="q4" name="monday_owner" required placeholder="Name, role, and what changes."></textarea>
               </div>
               <div class="form-group full">
-                <label for="evidence">Last week’s unworked list *</label>
-                <textarea id="evidence" name="last_week_unworked" required placeholder="Paste last week’s unworked list as it actually sat: counts, timestamps. Totals only. No student names, no patient names, no credentials."></textarea>
+                <label for="evidence">Last week’s inbound queue *</label>
+                <textarea id="evidence" name="last_week_inbound" required placeholder="Paste last week’s inbound queue as it actually sat: counts, timestamps. Totals only. No student names, no patient names, no credentials. Note the SLA you already publish if it is not 1 business day."></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary btn-wide">Send last week’s unworked list</button>
-            <p class="form-note">This starts five days of first touch in writing. No calendar. Prefer email or Telegram? hello.mindpress@agentmail.to or @Mindpress_grok_bot.</p>
+            <button type="submit" class="btn btn-primary btn-wide">Send last week’s inbound queue</button>
+            <p class="form-note">This starts five days of an 8am Call Pack in writing. No calendar. Prefer email or Telegram? hello.mindpress@agentmail.to or @Mindpress_grok_bot.</p>
           </form>
 
           <div id="success-message" class="success-panel is-hidden">
-            <h3>List received.</h3>
+            <h3>Queue received.</h3>
             <p class="muted-copy">We will reply in writing. A call later is optional if you need Chris in the room. It is not required to start.</p>
             <div class="hero-actions">
               <a href="intake.html" class="btn btn-secondary">Add context</a>
@@ -156,7 +156,7 @@
         </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>We work last week’s unworked leads. Written start.</p>
+          <p>Tomorrow’s call list. Written start.</p>
           <p class="muted-copy">Remote.</p>
         </div>
         <div class="footer-col">
@@ -175,9 +175,9 @@
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Send last week’s unworked list</a>
+          <a href="book.html">Send last week’s inbound queue</a>
           <a href="intake.html">Qualify in writing</a>
-          <a href="pricing.html">5 days free, then $4k/mo</a>
+          <a href="pricing.html">8am Call Pack, then $4k/mo</a>
         </div>
       </div>
       <div class="footer-bottom">

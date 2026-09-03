@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qualify in writing | MindPress</title>
-  <meta name="description" content="Qualify in writing: career school or healthcare staffing, last week’s unworked volume, owner, and what booked means.">
+  <meta name="description" content="Qualify in writing: career school or healthcare staffing, last week’s inbound volume, owner, and the SLA you already publish.">
   <meta name="theme-color" content="#050607">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
         <a href="index.html#how">How</a>
         <a href="about.html">About</a>
         <a href="intake.html" class="active">Qualify</a>
-        <a href="book.html" class="btn btn-nav">Send last week’s unworked list</a>
+        <a href="book.html" class="btn btn-nav">Send last week’s inbound queue</a>
       </div>
     </div>
   </nav>
@@ -44,8 +44,8 @@
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Qualification</div>
-          <h1 class="page-title">Tell us which pile. We will tell you if last week’s list is enough to start.</h1>
-          <p class="page-copy">Written qualifier, not a chatbot and not a call. Career school or healthcare staffing. Last week’s unworked volume. Who owns Monday. What booked means. Or skip this and send the list.</p>
+          <h1 class="page-title">Tell us which queue. We will tell you if last week is enough to start.</h1>
+          <p class="page-copy">Written qualifier, not a chatbot and not a call. Career school or healthcare staffing. Last week’s inbound volume. Who owns Monday. The SLA you already publish. Or skip this and send the queue.</p>
         </div>
       </div>
     </section>
@@ -54,23 +54,23 @@
       <div class="container split-layout">
         <div>
           <div class="eyebrow">Start here</div>
-          <h2 class="section-title">Enough context to first-touch for five days.</h2>
-          <p class="section-copy">One job. Admissions inquiries or practice signups. The unworked list does the rest.</p>
+          <h2 class="section-title">Enough context to age last week against your SLA.</h2>
+          <p class="section-copy">One list. Admissions inbound or practice signups. Default SLA is 1 business day if you have not published another.</p>
           <ul class="check-list">
             <li>Name the company and the Monday owner</li>
             <li>Career school or healthcare staffing — not a catalog</li>
             <li>Last week’s volume in totals, not names</li>
-            <li>What “booked a next step” means in cash</li>
+            <li>The SLA you already publish, and the weekly number that is blocked</li>
           </ul>
           <div class="hero-actions">
-            <a href="book.html" class="btn btn-secondary">Send last week’s unworked list</a>
+            <a href="book.html" class="btn btn-secondary">Send last week’s inbound queue</a>
           </div>
         </div>
 
         <div class="form-card">
           <form id="intake-form" action="https://formsubmit.co/ajax/hello.mindpress@agentmail.to" method="POST" onsubmit="handleSubmit(event)">
             <input type="hidden" name="_subject" value="MindPress site form">
-            <input type="hidden" name="form_name" value="qualify_unworked">
+            <input type="hidden" name="form_name" value="qualify_call_pack">
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full name *</label>
@@ -92,13 +92,13 @@
                 <label for="function">Who *</label>
                 <select id="function" name="function" required>
                   <option value="">Select one</option>
-                  <option value="schools">Career school — admissions inquiries</option>
+                  <option value="schools">Career school — admissions inbound</option>
                   <option value="staffing">Healthcare staffing — practice signups</option>
-                  <option value="unsure">Not sure — start with last week’s unworked list</option>
+                  <option value="unsure">Not sure — start with last week’s inbound queue</option>
                 </select>
               </div>
               <div class="form-group full">
-                <label for="systems">Where unworked leads sit today *</label>
+                <label for="systems">Where inbound sits today *</label>
                 <textarea id="systems" name="systems" required placeholder="Form, CRM, phone, partner portal — name the queue, not student or patient records."></textarea>
               </div>
               <div class="form-group">
@@ -106,27 +106,20 @@
                 <input type="text" id="owner" name="owner" required placeholder="Executive owner and function">
               </div>
               <div class="form-group">
-                <label for="size">Company size</label>
-                <select id="size" name="size">
-                  <option value="">Select one</option>
-                  <option value="1-10">1–10 employees</option>
-                  <option value="11-50">11–50 employees</option>
-                  <option value="51-200">51–200 employees</option>
-                  <option value="201-1000">201–1,000 employees</option>
-                  <option value="1000+">1,000+ employees</option>
-                </select>
+                <label for="sla">Published SLA</label>
+                <input type="text" id="sla" name="sla" placeholder="Default 1 business day if blank">
               </div>
               <div class="form-group full">
-                <label for="done">What does “booked a next step” mean in cash? *</label>
-                <textarea id="done" name="done" required placeholder="Deposit. Signed practice. Who feels it Monday."></textarea>
+                <label for="done">What weekly number is blocked, and by which missing field? *</label>
+                <textarea id="done" name="done" required placeholder="The number. The field. Who feels it Monday."></textarea>
               </div>
               <div class="form-group full">
-                <label for="current">How does follow-up run today?</label>
-                <textarea id="current" name="current" placeholder="Hours to first touch, who works the queue, what sat overnight."></textarea>
+                <label for="current">How does first touch run today?</label>
+                <textarea id="current" name="current" placeholder="Who works the queue, what sat overnight, what is older than 1 business day."></textarea>
               </div>
               <div class="form-group full">
                 <label for="constraints">Constraints</label>
-                <textarea id="constraints" name="constraints" placeholder="No student names, no patient names, no credentials in the first list. Anything else we must not receive."></textarea>
+                <textarea id="constraints" name="constraints" placeholder="No student names, no patient names, no credentials in the first queue. Anything else we must not receive."></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-primary btn-wide">Submit qualification</button>
@@ -135,9 +128,9 @@
 
           <div class="success-panel is-hidden">
             <h3>Qualification received.</h3>
-            <p class="muted-copy">MindPress will review the pile, owner, and definition of booked, then ask for last week’s unworked list if you have not sent it.</p>
+            <p class="muted-copy">MindPress will review the queue, owner, and SLA, then ask for last week’s inbound queue if you have not sent it.</p>
             <div class="hero-actions">
-              <a href="book.html" class="btn btn-primary">Send last week’s unworked list</a>
+              <a href="book.html" class="btn btn-primary">Send last week’s inbound queue</a>
             </div>
           </div>
         </div>
@@ -162,7 +155,7 @@
         </svg>
             <span class="brand-word">MindPress</span>
           </a>
-          <p>We work last week’s unworked leads. Written start.</p>
+          <p>Tomorrow’s call list. Written start.</p>
           <p class="muted-copy">Remote.</p>
         </div>
         <div class="footer-col">
@@ -181,9 +174,9 @@
         </div>
         <div class="footer-col">
           <h4>Start</h4>
-          <a href="book.html">Send last week’s unworked list</a>
+          <a href="book.html">Send last week’s inbound queue</a>
           <a href="intake.html">Qualify in writing</a>
-          <a href="pricing.html">5 days free, then $4k/mo</a>
+          <a href="pricing.html">8am Call Pack, then $4k/mo</a>
         </div>
       </div>
       <div class="footer-bottom">
