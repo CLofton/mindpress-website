@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex,nofollow"/>
+<title>The Pirates of Private Equity</title>
+<style>
+  :root { --ink:#0b1220; --paper:#f7f3ea; --accent:#8b1e1e; --muted:#5c6575; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); }
+  .gate, .main { max-width: 40rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height:1.15; margin:0 0 1rem; }
+  .mission { font-size:1.15rem; line-height:1.45; margin:0 0 1.5rem; }
+  .motto { font-style:italic; color:var(--muted); margin:0 0 2rem; }
+  .strategy { margin:0 0 2rem; line-height:1.5; }
+  ul.lines { list-style:none; padding:0; margin:0 0 2.5rem; }
+  ul.lines li { padding:0.85rem 0; border-top:1px solid #ddd4c4; font-size:1.15rem; }
+  ul.lines li:last-child { border-bottom:1px solid #ddd4c4; }
+  label { display:block; font-size:0.9rem; margin-bottom:0.4rem; color:var(--muted); }
+  input[type=password] { width:100%; padding:0.75rem 0.9rem; font-size:1rem; border:1px solid #c9c0b0; background:#fff; }
+  button { margin-top:0.75rem; padding:0.7rem 1.1rem; background:var(--ink); color:var(--paper); border:0; cursor:pointer; font:inherit; }
+  button:hover { background:var(--accent); }
+  .err { color:var(--accent); font-size:0.9rem; margin-top:0.5rem; min-height:1.2em; }
+  .foot { margin-top:2.5rem; font-size:0.85rem; color:var(--muted); }
+  a { color:var(--accent); }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<section id="gate" class="gate">
+  <h1>The Pirates of Private Equity</h1>
+  <p class="motto">Private page. Enter the passphrase.</p>
+  <label for="pw">Passphrase</label>
+  <input id="pw" type="password" autocomplete="current-password"/>
+  <button type="button" id="go">Enter</button>
+  <p class="err" id="err"></p>
+</section>
+<section id="main" class="main hidden">
+  <h1>The Pirates of Private Equity</h1>
+  <p class="mission"><strong>Mission.</strong> Get private equity — and the machinery that put it over community life — out of the room where you meet your doctor, your vet, and your kid’s teacher.</p>
+  <p class="motto"><strong>Motto.</strong> Charge the lowest price while providing the highest level of service to improve the quality of life for the communities we serve.</p>
+  <p class="strategy"><strong>Strategy.</strong> Buy over-levered PE roll-ups in staffing, education, healthcare, and home services. Strip costs. AI-enable. Restore integrity.</p>
+  <ul class="lines">
+    <li>“You will be able to trust your doctor again.”</li>
+    <li>“You will be able to afford to take your dog to the vet.”</li>
+    <li>“Your kid’s education won’t suck anymore.”</li>
+  </ul>
+  <p class="foot">Not a public MindPress offer. Contact <a href="mailto:hello.mindpress@agentmail.to">hello.mindpress@agentmail.to</a>.</p>
+</section>
+<script>
+(function(){
+  var HASH = "d11cf7e60d8fff85d451dc14ec99bf9f693d471cc358348d56fc3e8b6bd95743";
+  async function sha256(s){
+    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,"0");}).join("");
+  }
+  function unlock(){
+    document.getElementById("gate").classList.add("hidden");
+    document.getElementById("main").classList.remove("hidden");
+    try { sessionStorage.setItem("pirates_ok","1"); } catch(e){}
+  }
+  if (sessionStorage.getItem("pirates_ok")==="1") unlock();
+  document.getElementById("go").onclick = async function(){
+    var v = document.getElementById("pw").value || "";
+    var h = await sha256(v);
+    if (h === HASH) unlock();
+    else document.getElementById("err").textContent = "Wrong passphrase.";
+  };
+  document.getElementById("pw").addEventListener("keydown", function(e){
+    if (e.key === "Enter") document.getElementById("go").click();
+  });
+})();
+</script>
+</body>
+</html>
