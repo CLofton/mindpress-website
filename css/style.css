@@ -426,30 +426,8 @@ textarea:focus-visible {
   font-size: 0.9rem;
 }
 
-.positioning-strip {
-  padding: 92px 0;
-  border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
-  background:
-    linear-gradient(110deg, rgba(107, 140, 255, 0.09), transparent 46%),
-    var(--bg-band);
-}
 
-.positioning-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(48px, 8vw, 112px);
-  align-items: end;
-}
 
-.positioning-lead {
-  margin: 0 0 16px;
-  color: var(--text-strong);
-  font-size: clamp(1.35rem, 2.5vw, 2.05rem);
-  font-weight: 760;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
-}
 
 .section {
   padding: 104px 0;
@@ -950,7 +928,6 @@ textarea::placeholder {
   }
 
   .proof-strip,
-  .positioning-grid,
   .grid-2,
   .grid-3,
   .grid-4,

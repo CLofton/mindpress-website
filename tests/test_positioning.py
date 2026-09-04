@@ -19,23 +19,25 @@ def visible_text(name):
     return " ".join(" ".join(parser.parts).split())
 
 
-def test_requested_tagline_is_used_consistently():
+def test_board_lock_tagline_is_used_consistently():
     home = visible_text("index.html")
-    assert "We put AI to work for you" in home
-    assert "We put AI to work in your office" not in home
+    assert "We put AI to work in your office." in home
+    assert "We put AI to work for you" not in home
+    assert "If you don’t have an AI team, we are it." in home
 
 
-def test_positioning_feedback_is_on_homepage():
+def test_forbidden_recut_copy_is_absent():
     home = visible_text("index.html")
     for phrase in (
-        "Forward-deployed AI engineering for operators who need working systems.",
+        "Forward-deployed AI engineering",
         "Diagnostic. Install. Operate.",
-        "You do not configure another platform. We do the engineering.",
         "No strategy decks. No sandbox demos. No AI workshops.",
+        "We follow up until they book",
+        "We work last week’s unworked leads",
+        "Tomorrow’s call list",
+        "8am Call Pack",
     ):
-        assert phrase in home
-    assert "weeks, not months" not in home
-    assert "No one else" not in home
+        assert phrase not in home
 
 
 def test_pricing_and_case_study_claims_remain_private_or_absent():
@@ -47,4 +49,8 @@ def test_pricing_and_case_study_claims_remain_private_or_absent():
     assert "$12,500" not in published
     assert "$25,000" not in published
     assert "$8,000" not in published
+    assert "$4,000" not in published
+    assert "$4k" not in published
+    assert "Four days free" not in published
+    assert "Five days free" not in published
     assert "87%" not in published
