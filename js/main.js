@@ -52,7 +52,17 @@ function handleSubmit(event) {
   const card = form.closest(".form-card") || form.parentElement;
   const success = card.querySelector(".success-panel");
   const submitBtn = form.querySelector('button[type="submit"]');
+  let err = card.querySelector(".form-error");
+  if (!err) {
+    err = document.createElement("p");
+    err.className = "form-error";
+    err.style.color = "#ff7a90";
+    err.style.marginTop = "0.75rem";
+    form.appendChild(err);
+  }
+  err.textContent = "";
 
+  const defaultLabel = submitBtn ? submitBtn.textContent : "";
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
@@ -63,12 +73,27 @@ function handleSubmit(event) {
     body: new FormData(form),
     headers: { Accept: "application/json" }
   })
-    .catch((error) => {
-      console.error("Form submission error:", error);
-    })
-    .finally(() => {
+    .then(async (response) => {
+      if (!response.ok) {
+        throw new Error("send_failed");
+      }
+      // FormSubmit returns JSON when Accept: application/json
+      try {
+        const data = await response.json();
+        if (data && data.success === false) throw new Error("send_failed");
+      } catch (e) {
+        if (e.message === "send_failed") throw e;
+        // non-JSON ok response still counts as success
+      }
       form.classList.add("is-hidden");
       if (success) success.classList.remove("is-hidden");
+    })
+    .catch(() => {
+      err.textContent = "Could not send. Email hello.mindpress@agentmail.to or try again.";
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = defaultLabel || "Send last week’s inquiries";
+      }
     });
 }
 

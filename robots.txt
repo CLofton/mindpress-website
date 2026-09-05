@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /pirates.html
+Disallow: /price-changes.png
 
 Sitemap: https://mindpress.ai/sitemap.xml
