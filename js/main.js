@@ -89,7 +89,7 @@ function handleSubmit(event) {
       if (success) success.classList.remove("is-hidden");
     })
     .catch(() => {
-      err.textContent = "Could not send. Email hello.mindpress@agentmail.to or try again.";
+      err.textContent = "Could not send. Try again.";
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.textContent = defaultLabel || "Send last week’s inquiries";
