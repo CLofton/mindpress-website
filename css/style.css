@@ -426,9 +426,6 @@ textarea:focus-visible {
   font-size: 0.9rem;
 }
 
-
-
-
 .section {
   padding: 104px 0;
 }
@@ -1013,4 +1010,31 @@ textarea::placeholder {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
+}
+
+
+/* Blog prose */
+.blog-prose {
+  max-width: 720px;
+}
+
+.blog-prose h2 {
+  margin: 2.25rem 0 0.85rem;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--text-strong);
+}
+
+.blog-prose p {
+  margin: 0 0 1.05rem;
+}
+
+.blog-prose a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-prose a:hover {
+  color: var(--mint);
 }
